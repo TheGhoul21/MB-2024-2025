@@ -1,0 +1,1745 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Your Name">
+<meta name="dcterms.date" content="2025-02-05">
+
+<title>Architettura del Genoma Umano – Your Site Name</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-6bd9cfa162949bde0a231f530c97869d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Your Site Name</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-list"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_1.mp4.html">
+            Lecture Notes on Molecular Mechanisms of Information Flow
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_10.mp4.html">
+            Lecture Notes on Chromatin Structure and DNA Replication
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_11.mp4.html">
+            Lecture Notes: DNA Replication - Processivity, Mechanism, and Regulation
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_12.mp4.html">
+            Replication Control in Prokaryotes and Eukaryotes
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_13.mp4.html">
+            Telomeres, Replication of Linear Chromosomes, and Nucleic Acid Quantification
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_14.mp4.html">
+            Telomeres, Senescence, and Genomic Instability
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_16.mp4.html">
+            Fundamentals of Epigenetic Regulation
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_17.mp4.html">
+            Regulation of Chromatin and RNA Processing
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_18.mp4.html">
+            Lecture Notes: RNA Degradation, Silencing, and Splicing
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_18bis.mp4.html">
+            Lecture Notes on RNA Splicing Mechanism and Regulation
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_19.mp4.html">
+            RNA Maturation and Protein Synthesis
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_20.mp4.html">
+            Functional Aspects of Protein Synthesis and Regulatory Events
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_21.mp4.html">
+            Lecture Notes on Translation and DNA Repair
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_3.mp4.html">
+            Lecture Notes on Protein-DNA Interactions and DNA Properties
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_4.mp4.html">
+            Lecture Notes on RNA, Ribozymes, and DNA Superstructures
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_5.mp4.html">
+            Topological Parameters of DNA and Genome Complexity
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_6.mp4.html">
+            Architettura del Genoma Umano
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_7.mp4.html">
+            Genomic Architecture and Gene Regulation
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_9.mp4.html">
+            Eukaryotic DNA Replication: Lecture Notes
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Videolezione_16.mp4.html">
+            Quantitative and Qualitative Gene Regulation in Prokaryotes
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Videolezione_18.mp4.html">
+            Eukaryotic Gene Transcription: Molecular Mechanisms and Specificity Control
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Videolezione_19.mp4.html">
+            Mechanisms of Transcription Factor Activation and Families of Transcription Factors
+            </a>
+          </li>
+      </ul>
+    </div>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#introduzione" id="toc-introduzione" class="nav-link active" data-scroll-target="#introduzione">Introduzione</a></li>
+  <li><a href="#genome-architecture-and-components" id="toc-genome-architecture-and-components" class="nav-link" data-scroll-target="#genome-architecture-and-components">Genome Architecture and Components</a>
+  <ul class="collapse">
+  <li><a href="#key-genomic-elements" id="toc-key-genomic-elements" class="nav-link" data-scroll-target="#key-genomic-elements">Key Genomic Elements</a></li>
+  <li><a href="#genomic-element-proportions" id="toc-genomic-element-proportions" class="nav-link" data-scroll-target="#genomic-element-proportions">Genomic Element Proportions</a></li>
+  <li><a href="#gene-organization" id="toc-gene-organization" class="nav-link" data-scroll-target="#gene-organization">Gene Organization</a></li>
+  <li><a href="#gene-density-and-regulation" id="toc-gene-density-and-regulation" class="nav-link" data-scroll-target="#gene-density-and-regulation">Gene Density and Regulation</a></li>
+  </ul></li>
+  <li><a href="#repetitive-dna" id="toc-repetitive-dna" class="nav-link" data-scroll-target="#repetitive-dna">Repetitive DNA</a>
+  <ul class="collapse">
+  <li><a href="#gene-duplication-and-evolution" id="toc-gene-duplication-and-evolution" class="nav-link" data-scroll-target="#gene-duplication-and-evolution">Gene Duplication and Evolution</a></li>
+  <li><a href="#classification-of-repetitive-sequences" id="toc-classification-of-repetitive-sequences" class="nav-link" data-scroll-target="#classification-of-repetitive-sequences">Classification of Repetitive Sequences</a></li>
+  <li><a href="#tandem-repeats-satellite-dna" id="toc-tandem-repeats-satellite-dna" class="nav-link" data-scroll-target="#tandem-repeats-satellite-dna">Tandem Repeats: Satellite DNA</a></li>
+  <li><a href="#interspersed-repeats-transposons" id="toc-interspersed-repeats-transposons" class="nav-link" data-scroll-target="#interspersed-repeats-transposons">Interspersed Repeats: Transposons</a></li>
+  </ul></li>
+  <li><a href="#pseudogenes" id="toc-pseudogenes" class="nav-link" data-scroll-target="#pseudogenes">Pseudogenes</a>
+  <ul class="collapse">
+  <li><a href="#origins-of-pseudogenes" id="toc-origins-of-pseudogenes" class="nav-link" data-scroll-target="#origins-of-pseudogenes">Origins of Pseudogenes</a></li>
+  <li><a href="#types-of-pseudogenes" id="toc-types-of-pseudogenes" class="nav-link" data-scroll-target="#types-of-pseudogenes">Types of Pseudogenes</a></li>
+  <li><a href="#functional-implications-of-pseudogenes" id="toc-functional-implications-of-pseudogenes" class="nav-link" data-scroll-target="#functional-implications-of-pseudogenes">Functional Implications of Pseudogenes</a></li>
+  </ul></li>
+  <li><a href="#genetic-polymorphisms-and-snps" id="toc-genetic-polymorphisms-and-snps" class="nav-link" data-scroll-target="#genetic-polymorphisms-and-snps">Genetic Polymorphisms and SNPs</a>
+  <ul class="collapse">
+  <li><a href="#interindividual-genetic-variation" id="toc-interindividual-genetic-variation" class="nav-link" data-scroll-target="#interindividual-genetic-variation">Interindividual Genetic Variation</a></li>
+  <li><a href="#genetic-polymorphisms-definition-and-types" id="toc-genetic-polymorphisms-definition-and-types" class="nav-link" data-scroll-target="#genetic-polymorphisms-definition-and-types">Genetic Polymorphisms: Definition and Types</a></li>
+  <li><a href="#single-nucleotide-polymorphisms-snps" id="toc-single-nucleotide-polymorphisms-snps" class="nav-link" data-scroll-target="#single-nucleotide-polymorphisms-snps">Single Nucleotide Polymorphisms (SNPs)</a></li>
+  <li><a href="#snps-in-personalized-medicine-and-pharmacogenomics" id="toc-snps-in-personalized-medicine-and-pharmacogenomics" class="nav-link" data-scroll-target="#snps-in-personalized-medicine-and-pharmacogenomics">SNPs in Personalized Medicine and Pharmacogenomics</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Architettura del Genoma Umano</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Your Name </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 5, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduzione" class="level1">
+<h1>Introduzione</h1>
+<p>Questa lezione introduce l’architettura del genoma umano, esplorando i componenti principali dei cromosomi, la loro organizzazione e il ruolo biologico. Verranno effettuati confronti filogenetici per comprendere l’evoluzione dell’architettura genomica umana. Un concetto chiave sarà la densità genica e come essa si riduce nel corso della filogenesi, illustrando come l’informazione genetica si è progressivamente "diluita" con l’inserimento di sequenze non codificanti. Si discuteranno gli elementi costitutivi del genoma umano, inclusi geni, sequenze intergeniche, sequenze ripetute (in tandem e interdisperse), e pseudogeni, evidenziando le loro proporzioni e funzioni. Infine, si introdurranno i polimorfismi genetici, in particolare gli SNPs, e la loro rilevanza nella variabilità interindividuale e nella medicina personalizzata.</p>
+</section>
+<section id="genome-architecture-and-components" class="level1">
+<h1>Genome Architecture and Components</h1>
+<section id="key-genomic-elements" class="level2">
+<h2 class="anchored" data-anchor-id="key-genomic-elements">Key Genomic Elements</h2>
+<p>Il genoma umano è costituito da diversi elementi chiave, classificabili come segue:</p>
+<ul>
+<li><p><strong>Geni:</strong> Unità fondamentali dell’ereditarietà, organizzati in <em>sequenze esoniche</em> codificanti proteine e <em>sequenze introniche</em> non codificanti ma con funzioni regolative. La lunghezza media di un gene umano è di circa 27 kb.</p></li>
+<li><p><strong>Sequenze Intergeniche:</strong> Regioni di DNA non codificante che separano i geni.</p></li>
+<li><p><strong>Geni in Copia Multipla:</strong> Geni ripetuti più volte nel genoma, derivanti da eventi di duplicazione genica. Spesso costituiscono <em>famiglie geniche</em> con funzioni correlate, come i geni <em>Hox</em>.</p></li>
+<li><p><strong>Sequenze Ripetute:</strong> Ampia frazione del genoma, distinte in:</p>
+<ul>
+<li><p><strong>Sequenze Ripetute Disperse (Interdisperse):</strong> Sequenze di grandi dimensioni (fino a decine di kb) distribuite in tutto il genoma. I <em>trasposoni</em> sono i principali componenti di questa categoria.</p></li>
+<li><p><strong>Sequenze Ripetute in Tandem:</strong> Unità brevi (2-8 nucleotidi) ripetute in serie migliaia di volte. Il <em>DNA satellite</em>, presente in regioni eterocromatiniche, telomeriche e centromeriche, appartiene a questa categoria.</p></li>
+</ul></li>
+<li><p><strong>Pseudogeni:</strong> Sequenze simili a geni ma non funzionali, presenti in bassa frequenza e derivanti dall’evoluzione del genoma.</p></li>
+</ul>
+</section>
+<section id="genomic-element-proportions" class="level2">
+<h2 class="anchored" data-anchor-id="genomic-element-proportions">Genomic Element Proportions</h2>
+<p>Le proporzioni approssimative degli elementi costitutivi del genoma umano sono:</p>
+<ul>
+<li><p><strong>Elementi Ripetuti:</strong> <span class="math inline">\(\approx 50\%\)</span> del genoma totale, comprendenti:</p>
+<ul>
+<li><p><strong>Trasposoni (Sequenze Ripetute Interdisperse):</strong> Componente maggioritario.</p></li>
+<li><p><strong>Grandi Duplicazioni Segmentali:</strong> Regioni ripetute originatesi tramite meccanismi diversi dalla trasposizione.</p></li>
+<li><p><strong>Sequenze Ripetute Semplici:</strong> <span class="math inline">\(\approx 3\%\)</span>, localizzate prevalentemente nell’eterocromatina centromerica e telomerica.</p></li>
+</ul></li>
+<li><p><strong>DNA Intergenico:</strong> <span class="math inline">\(\approx 22\%\)</span>.</p></li>
+<li><p><strong>Pseudogeni:</strong> <span class="math inline">\(\approx 0.1\%\)</span>.</p></li>
+<li><p><strong>Sequenze Geniche (Regioni associate all’espressione genica):</strong> <span class="math inline">\(\approx 25\%\)</span> del genoma, suddivise in:</p>
+<ul>
+<li><p><strong>Esoni (Sequenze Codificanti):</strong> <span class="math inline">\(\approx 1.8\%\)</span> del genoma.</p></li>
+<li><p><strong>Introni:</strong> <span class="math inline">\(\approx 24\%\)</span> del genoma.</p></li>
+</ul></li>
+</ul>
+<p>Sebbene circa un quarto del genoma sia associato all’informazione genica, solo una piccola frazione (<span class="math inline">\(\textless 2\%\)</span>) codifica direttamente per proteine. La maggior parte del genoma trascritto produce RNA non codificante, implicato in funzioni regolative, inclusa la modulazione dell’espressione dei geni codificanti.</p>
+</section>
+<section id="gene-organization" class="level2">
+<h2 class="anchored" data-anchor-id="gene-organization">Gene Organization</h2>
+<p>La struttura di un tipico gene umano include:</p>
+<ul>
+<li><p><strong>Esoni:</strong> Sequenze che possono contenere la <em>open reading frame</em> (ORF), ovvero la regione codificante per la proteina. Non tutti gli esoni contengono ORF.</p></li>
+<li><p><strong>Introni:</strong> Sequenze non codificanti interposte tra gli esoni, rimosse durante lo splicing dell’RNA.</p></li>
+<li><p><strong>Regioni UTR (Untranslated Regions):</strong> Regioni esoniche non tradotte localizzate alle estremità 5’ e 3’ del trascritto primario. Le regioni UTR svolgono un ruolo cruciale nella regolazione post-trascrizionale, influenzando la stabilità e la traduzione dell’mRNA.</p></li>
+</ul>
+<div id="fig:gene_structure" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="gene_structure.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Rappresentazione schematica di un’unità trascrizionale genica umana. Gli esoni gialli indicano le regioni contenenti l’ORF, mentre gli esoni bianchi rappresentano le regioni UTR. <em>Nota: Immagine fittizia, da sostituire con una rappresentazione grafica appropriata.</em></figcaption>
+</figure>
+</div>
+</section>
+<section id="gene-density-and-regulation" class="level2">
+<h2 class="anchored" data-anchor-id="gene-density-and-regulation">Gene Density and Regulation</h2>
+<p>La densità genica, definita come il numero di geni per unità di lunghezza del genoma, varia significativamente tra specie:</p>
+<ul>
+<li><p><em>Escherichia coli</em>: Densità genica elevata, <span class="math inline">\(\approx 950\)</span> geni per milione di paia di basi.</p></li>
+<li><p>Umano: Densità genica ridotta, <span class="math inline">\(\approx 6.25\)</span> geni per milione di paia di basi.</p></li>
+</ul>
+<p>La minore densità genica nel genoma umano è attribuibile alla maggiore presenza di sequenze introniche, ripetute e regioni regolative. La regolazione dell’espressione genica è un processo complesso che coinvolge:</p>
+<ul>
+<li><p><strong>Promotori:</strong> Elementi regolativi prossimali al sito di inizio della trascrizione (+1), essenziali per l’inizio della trascrizione.</p></li>
+<li><p><strong>Enhancer:</strong> Elementi regolativi distali, localizzati a monte, a valle o internamente agli introni dei geni. Gli enhancer modulano l’efficienza della trascrizione genica in risposta a segnali cellulari e ambientali.</p></li>
+</ul>
+<p>L’azione combinata di promotori ed enhancer consente una fine regolazione spazio-temporale dell’espressione genica, determinando la specificità cellulare e tissutale e le risposte dinamiche a stimoli fisiologici e patologici.</p>
+</section>
+</section>
+<section id="repetitive-dna" class="level1">
+<h1>Repetitive DNA</h1>
+<section id="gene-duplication-and-evolution" class="level2">
+<h2 class="anchored" data-anchor-id="gene-duplication-and-evolution">Gene Duplication and Evolution</h2>
+<p>La duplicazione genica rappresenta un meccanismo chiave nell’evoluzione dei genomi. Si ritiene che derivi da processi di riparazione del DNA per ricombinazione omologa non corretta, spesso in risposta a rotture della doppia elica (<em>double strand breaks</em>). La duplicazione di geni può innescare:</p>
+<ul>
+<li><p><strong>Guadagno di Funzione:</strong> Una copia del gene duplicato può subire mutazioni che le conferiscono nuove funzioni, ampliando il repertorio funzionale del genoma e promuovendo l’innovazione evolutiva. Questo processo è fondamentale per l’evoluzione molecolare.</p></li>
+<li><p><strong>Origine di Famiglie Geniche:</strong> Geni in copia multipla tendono a formare <em>famiglie geniche</em>, insiemi di geni strutturalmente simili e funzionalmente correlati. Un esempio emblematico sono i geni <em>Hox</em>, che regolano lo sviluppo embrionale e la definizione dell’asse corporeo antero-posteriore.</p></li>
+</ul>
+<p>Un gene duplicato è soggetto a minori vincoli selettivi rispetto a una copia singola, poiché la funzione essenziale è preservata dalla copia originale. Questa "libertà" evolutiva consente al gene duplicato di accumulare mutazioni con un tasso relativamente elevato. L’ambiente agisce come filtro selettivo, favorendo la fissazione di mutazioni che conferiscono un vantaggio adattativo (<em>fitness</em>) all’organismo.</p>
+<div class="tcolorbox">
+<p>Sebbene la duplicazione genica sia un potente motore evolutivo, essa può anche predisporre a riarrangiamenti genomici deleteri. La presenza di sequenze ripetute multiple aumenta il rischio di ricombinazione omologa non allelica, che può causare delezioni, duplicazioni o traslocazioni cromosomiche, potenzialmente associate a patologie.</p>
+</div>
+</section>
+<section id="classification-of-repetitive-sequences" class="level2">
+<h2 class="anchored" data-anchor-id="classification-of-repetitive-sequences">Classification of Repetitive Sequences</h2>
+<p>Le sequenze ripetute del genoma umano si suddividono in due classi principali:</p>
+<ul>
+<li><p><strong>Sequenze Ripetute in Tandem (DNA Satellite):</strong> Blocchi di sequenze ripetute adiacenti.</p></li>
+<li><p><strong>Sequenze Ripetute Interdisperse (Trasposoni):</strong> Sequenze ripetute distribuite in posizioni non contigue nel genoma.</p></li>
+</ul>
+</section>
+<section id="tandem-repeats-satellite-dna" class="level2">
+<h2 class="anchored" data-anchor-id="tandem-repeats-satellite-dna">Tandem Repeats: Satellite DNA</h2>
+<p>Il DNA satellite è costituito da sequenze nucleotidiche ripetute in tandem, con dimensioni unitarie variabili da pochi nucleotidi a centinaia di paia di basi, e ripetute migliaia di volte. Queste sequenze sono prevalentemente localizzate in regioni eterocromatiniche, in particolare nelle regioni centromeriche dei cromosomi.</p>
+<p><strong>Classificazione del DNA Satellite:</strong></p>
+<ul>
+<li><p><strong>DNA Satellite Classico (Satellite DNA in senso stretto):</strong> Suddiviso in sottoclassi in base alla sequenza e alla localizzazione cromosomica, tra cui Satellite 1 (cromosoma 1, ricco in AT), Satellite 2 e 3 (cromosomi 2 e 3), Satellite alfa (DNA alfoide) e SA 3A. Queste sequenze sono associate all’eterocromatina centromerica.</p></li>
+<li><p><strong>DNA Minisatellite:</strong> Unità ripetute di dimensioni maggiori (0.1-20 kb). Include:</p>
+<ul>
+<li><p><strong>Sequenze Telomeriche:</strong> Esamero TTAGGG ripetuto in tandem ai telomeri di tutti i cromosomi umani, per migliaia di ripetizioni per telomero. La sequenza telomerica è altamente conservata negli eucarioti per la sua funzione cruciale nella stabilità cromosomica.</p></li>
+<li><p><strong>Famiglie Ipervariabili (VNTR - Variable Number of Tandem Repeats):</strong> Sequenze di 9-24 nucleotidi ripetute in tandem, localizzate in prossimità dei telomeri e in altre regioni del genoma. Queste regioni mostrano un alto grado di polimorfismo nella popolazione umana in termini di numero di ripetizioni, e sono utilizzate per test di paternità e identificazione forense.</p></li>
+</ul></li>
+<li><p><strong>DNA Microsatellite (STR - Short Tandem Repeats):</strong> Unità ripetute molto brevi (fino a 8 nucleotidi), ripetute in tandem da alcune decine a centinaia di volte e distribuite in tutto il genoma. Analogamente ai minisatelliti ipervariabili, i microsatelliti sono altamente polimorfici nella popolazione umana e sfruttati per studi di genetica di popolazione, medicina molecolare e identificazione individuale.</p></li>
+</ul>
+<p><strong>Funzioni del DNA Satellite:</strong></p>
+<p>Il DNA satellite è prevalentemente non codificante e svolge un ruolo strutturale. In particolare, il DNA satellite centromerico è essenziale per:</p>
+<ul>
+<li><p><strong>Formazione dell’eterocromatina centromerica:</strong> Contribuisce all’organizzazione e alla compattazione della cromatina nelle regioni centromeriche.</p></li>
+<li><p><strong>Interazione con proteine centromeriche specializzate:</strong> Serve come piattaforma per l’assemblaggio del cinetocore e l’attacco delle fibre del fuso mitotico durante la divisione cellulare. Istoni centromerici specifici legano il DNA satellite e mediano l’interazione con il fuso mitotico per la corretta segregazione cromosomica.</p></li>
+</ul>
+<p><strong>Origine del Termine "Satellite DNA":</strong></p>
+<p>Il termine "satellite" deriva dalla tecnica di ultracentrifugazione in gradiente di densità. Il DNA satellite, tipicamente ricco in coppie AT, possiede una densità leggermente inferiore rispetto alla massa principale del DNA genomico (più ricco in GC). Durante l’ultracentrifugazione preparativa, il DNA satellite si separa formando una banda "satellite" distinta e minore rispetto alla banda principale del DNA genomico.</p>
+</section>
+<section id="interspersed-repeats-transposons" class="level2">
+<h2 class="anchored" data-anchor-id="interspersed-repeats-transposons">Interspersed Repeats: Transposons</h2>
+<p>Le sequenze ripetute interdisperse, in larga parte rappresentate dai trasposoni, costituiscono circa il 45% del genoma umano. I trasposoni sono elementi genetici mobili, capaci di trasposizione, ovvero di spostarsi e replicarsi in diverse posizioni all’interno del genoma, sia sullo stesso cromosoma che su cromosomi differenti.</p>
+<p><strong>Classi Principali di Trasposoni nel Genoma Umano:</strong></p>
+<ul>
+<li><p><strong>LINEs (Long Interspersed Nuclear Elements):</strong> Rappresentano circa il 21% del genoma umano. Sono <em>retrotrasposoni</em> autonomi, in quanto codificano le proteine necessarie per la loro retrotrasposizione. I LINEs prototipici, come LINE-1 (L1), possiedono due <em>open reading frames</em> (ORF): ORF1 codifica una proteina legante l’RNA, mentre ORF2 codifica una <em>endonucleasi</em> e una <em>trascrittasi inversa</em>, enzimi chiave per la retrotrasposizione.</p></li>
+<li><p><strong>SINEs (Short Interspersed Nuclear Elements):</strong> Costituiscono circa il 13% del genoma umano. Sono <em>retrotrasposoni non autonomi</em>, poiché non codificano per la trascrittasi inversa e dipendono dall’apparato enzimatico fornito dai LINEs per la loro mobilizzazione. Le sequenze <em>Alu</em> sono la famiglia di SINEs più abbondante nel genoma umano.</p></li>
+<li><p><strong>Retrotrasposoni LTR (Long Terminal Repeat):</strong> Simili strutturalmente ai retrovirus, sono caratterizzati dalla presenza di lunghe ripetizioni terminali dirette (LTR). Nel genoma umano, i retrotrasposoni LTR sono meno abbondanti rispetto a LINEs e SINEs.</p></li>
+</ul>
+<p><strong>Meccanismo di Retrotrasposizione (LINEs e SINEs):</strong></p>
+<p>La retrotrasposizione è un meccanismo di trasposizione "copia-incolla" che coinvolge un intermedio di RNA. Il processo generale per LINEs e SINEs comprende:</p>
+<ol type="1">
+<li><p><strong>Trascrizione:</strong> Trascrizione dell’elemento trasposonico in una molecola di RNA messaggero (mRNA) da parte della RNA polimerasi II cellulare.</p></li>
+<li><p><strong>Retrotrascrizione:</strong> La trascrittasi inversa, codificata dai LINEs (o fornita da LINEs per i SINEs), utilizza l’mRNA come stampo per sintetizzare una copia di DNA a doppio filamento (cDNA).</p></li>
+<li><p><strong>Inserimento:</strong> L’endonucleasi codificata dai LINEs introduce un taglio nel DNA genomico in una nuova posizione. Il cDNA viene integrato nel sito di taglio, spesso con duplicazione della sequenza bersaglio al sito di inserzione.</p></li>
+</ol>
+<p><strong>Conseguenze Biologiche e Patologiche dei Trasposoni:</strong></p>
+<p>L’attività trasposizionale dei retrotrasposoni può avere diverse implicazioni:</p>
+<ul>
+<li><p><strong>Mutagenesi Inserzionale:</strong> L’inserimento di trasposoni in nuove sedi genomiche è un processo intrinsecamente mutageno. L’inserzione all’interno di un gene codificante o di una regione regolativa può interrompere la funzione genica, causando inattivazione genica o alterazione dell’espressione.</p></li>
+<li><p><strong>Patologie Umane:</strong> Sebbene la maggior parte degli elementi trasponibili nel genoma umano sia inattiva, la retrotrasposizione de novo è stata implicata in alcune patologie, in particolare malattie neurodegenerative come la malattia di Alzheimer e alcune forme di cancro. L’accumulo di inserzioni di retrotrasposoni potrebbe contribuire alla disfunzione cellulare e alla patogenesi.</p></li>
+<li><p><strong>Regolazione Epigenetica e Silenziamento dei Trasposoni:</strong> Per limitare gli effetti mutageni della trasposizione, le cellule hanno sviluppato meccanismi epigenetici per reprimere l’attività dei trasposoni. La metilazione del DNA e le modificazioni degli istoni, associate alla formazione di eterocromatina, contribuiscono al silenziamento trascrizionale dei trasposoni, confinandoli spesso in regioni eterocromatiniche costitutive.</p></li>
+</ul>
+<p><strong>Variazioni Filogenetiche nell’Attività Trasposizionale:</strong></p>
+<p>La frequenza e l’importanza della retrotrasposizione variano significativamente tra i regni biologici. Negli animali, l’attività trasposizionale è generalmente mantenuta bassa da una forte selezione negativa, che elimina le inserzioni deleterie. Nelle piante, al contrario, la retrotrasposizione sembra essere un processo più frequente e rilevante, potenzialmente correlato alla maggiore plasticità e adattabilità dei genomi vegetali in risposta a stress ambientali. La diversa mobilità tra piante e animali potrebbe riflettere strategie adattative distinte in relazione alla motilità degli organismi e all’interazione con l’ambiente.</p>
+</section>
+</section>
+<section id="pseudogenes" class="level1">
+<h1>Pseudogenes</h1>
+<section id="origins-of-pseudogenes" class="level2">
+<h2 class="anchored" data-anchor-id="origins-of-pseudogenes">Origins of Pseudogenes</h2>
+<p>Gli pseudogeni sono definiti come copie non funzionali di geni normali, che hanno perso la capacità di codificare proteine funzionali a causa di mutazioni accumulate nel corso dell’evoluzione. Essi rappresentano vestigia dell’evoluzione genomica e si originano principalmente attraverso due meccanismi distinti:</p>
+<ul>
+<li><p><strong>Pseudogeni Non Processati (o Duplicati):</strong> Questi pseudogeni derivano da eventi di duplicazione genica. In seguito alla duplicazione, una delle copie geniche può accumulare mutazioni che ne compromettono la funzionalità. Questo processo può avvenire tramite diversi meccanismi, tra cui:</p>
+<ul>
+<li><p><em>Mutazioni Inattivanti:</em> Inserzione di codoni di stop prematuri, delezioni o inserzioni che alterano la cornice di lettura (frameshift), o mutazioni che danneggiano domini funzionali essenziali per l’attività della proteina.</p></li>
+<li><p><em>Perdita di Elementi Regolativi:</em> Mutazioni nelle regioni promotrici o enhancer che impediscono la corretta trascrizione del gene.</p></li>
+</ul>
+<p>La copia genica originale mantiene la sua funzione, mentre la copia duplicata, ora pseudogene, evolve sotto minori vincoli selettivi, accumulando mutazioni che ne determinano la non funzionalità.</p></li>
+<li><p><strong>Pseudogeni Processati (o Retrotrasposti):</strong> Questi pseudogeni si formano attraverso un meccanismo di retrotrascrizione e reinserimento nel genoma. Il processo prevede:</p>
+<ul>
+<li><p><em>Trascrizione e Retrotrascrizione:</em> L’mRNA di un gene funzionale viene retrotrascritto in cDNA (DNA complementare) tramite l’enzima trascrittasi inversa.</p></li>
+<li><p><em>Reinserimento Genomico:</em> Il cDNA viene reinserito in una nuova posizione all’interno del genoma, spesso in maniera casuale.</p></li>
+</ul>
+<p>Gli pseudogeni processati si distinguono dai non processati per alcune caratteristiche tipiche: mancano degli introni (assenti nell’mRNA di partenza), spesso presentano una coda poli-A all’estremità 3’ (derivata dalla poliadenilazione dell’mRNA), e sono tipicamente inseriti in regioni genomiche diverse dal gene parentale. Un aspetto cruciale è che, durante il processo di retrotrasposizione, gli pseudogeni processati perdono i promotori e gli enhancer del gene originario. Di conseguenza, essi sono generalmente inattivi trascrizionalmente e non funzionali.</p></li>
+</ul>
+</section>
+<section id="types-of-pseudogenes" class="level2">
+<h2 class="anchored" data-anchor-id="types-of-pseudogenes">Types of Pseudogenes</h2>
+<p>Come descritto, le due categorie principali di pseudogeni sono:</p>
+<ul>
+<li><p><strong>Pseudogeni Non Processati:</strong> Derivanti da duplicazione genica e successiva inattivazione per mutazione. Mantengono una struttura genica simile al gene parentale, inclusi introni (se presenti nel gene di origine) e regioni regolative non funzionali.</p></li>
+<li><p><strong>Pseudogeni Processati:</strong> Derivanti da retrotrasposizione di mRNA. Sono privi di introni e delle sequenze regolative del gene parentale, rendendoli tipicamente non trascritti e non funzionali.</p></li>
+</ul>
+</section>
+<section id="functional-implications-of-pseudogenes" class="level2">
+<h2 class="anchored" data-anchor-id="functional-implications-of-pseudogenes">Functional Implications of Pseudogenes</h2>
+<p>Sebbene classicamente considerati "DNA spazzatura" o "fossili genomici", gli pseudogeni possono avere implicazioni funzionali, dirette o indirette, nel contesto cellulare:</p>
+<ul>
+<li><p><strong>Problematiche nella Riparazione del DNA:</strong> La presenza di pseudogeni, data la loro elevata similarità di sequenza con i geni funzionali da cui derivano, può interferire con i meccanismi di riparazione del DNA basati sulla ricombinazione omologa. In particolare, durante la riparazione di <em>double strand breaks</em>, lo pseudogene mutato può essere erroneamente utilizzato come stampo per riparare il gene funzionale omologo. Questo fenomeno può portare alla <em>conversione genica</em> non desiderata, trasferendo le mutazioni presenti nello pseudogene al gene funzionale e compromettendone l’attività. Questo meccanismo rappresenta un potenziale fattore di instabilità genomica.</p></li>
+<li><p><strong>Potenziali Ruoli Regolativi (Meno Evidenziati nel Transcript):</strong> Sebbene non enfatizzato nel transcript, è importante notare che alcuni pseudogeni possono essere trascritti, generando trascritti di RNA non codificante. Questi RNA pseudogenici potrebbero, in alcuni casi, esercitare funzioni regolative, ad esempio modulando l’espressione dei geni parentali attraverso meccanismi competitivi per microRNA o altri fattori regolatori. Tuttavia, la comprensione dei ruoli regolativi degli pseudogeni è ancora un campo di ricerca in evoluzione e non era il focus principale della lezione.</p></li>
+</ul>
+</section>
+</section>
+<section id="genetic-polymorphisms-and-snps" class="level1">
+<h1>Genetic Polymorphisms and SNPs</h1>
+<section id="interindividual-genetic-variation" class="level2">
+<h2 class="anchored" data-anchor-id="interindividual-genetic-variation">Interindividual Genetic Variation</h2>
+<p>La diversità tra individui della specie umana si fonda su variazioni sia genetiche che epigenetiche.</p>
+<ul>
+<li><p><strong>Variazioni Genetiche (Polimorfismi Genetici):</strong> Differenze nella sequenza del DNA tra individui. Queste variazioni sono la base della diversità genetica umana.</p></li>
+<li><p><strong>Variazioni Epigenetiche:</strong> Modifiche ereditabili dell’espressione genica che non alterano la sequenza del DNA. I meccanismi epigenetici contribuiscono alla diversità fenotipica modulando l’attività dei geni (questo aspetto sarà approfondito in lezioni successive).</p></li>
+</ul>
+<p>È fondamentale sottolineare che la diversità genetica umana è di natura <em>quantitativa</em> e non qualitativa. Non esistono "geni diversi" che definiscono gruppi umani distinti ("razze"). La variabilità genetica si manifesta principalmente in differenze <em>quantitative</em> nell’espressione genica e nella funzione dei prodotti genici. I tratti fenotipici complessi sono determinati da fattori <em>multifattoriali</em>, risultanti dall’interazione di molteplici geni e fattori ambientali.</p>
+</section>
+<section id="genetic-polymorphisms-definition-and-types" class="level2">
+<h2 class="anchored" data-anchor-id="genetic-polymorphisms-definition-and-types">Genetic Polymorphisms: Definition and Types</h2>
+<div class="tcolorbox">
+<p>Un <strong>polimorfismo genetico</strong> è definito come una variazione nella sequenza del DNA che presenta una frequenza (prevalenza) superiore all’1% nella popolazione generale. Questa variazione può consistere in una sostituzione di base, una delezione o un’inserzione, e può localizzarsi sia in regioni codificanti che non codificanti del genoma.</p>
+</div>
+<p><strong>Caratteristiche distintive dei Polimorfismi Genetici:</strong></p>
+<ul>
+<li><p><strong>Prevalenza Popolazionale:</strong> Frequenza allelica maggiore dell’1% nella popolazione. Questo criterio distingue i polimorfismi genetici dalle mutazioni rare, che hanno frequenze inferiori.</p></li>
+<li><p><strong>Mantenimento Selettivo:</strong> I polimorfismi genetici sono mantenuti nelle popolazioni attraverso meccanismi di selezione naturale. A differenza delle mutazioni transitorie, che tendono ad essere eliminate dalla selezione negativa, i polimorfismi persistono in quanto non sono significativamente svantaggiosi o possono conferire vantaggi in specifici contesti ambientali.</p></li>
+<li><p><strong>Loci Polimorfici:</strong> Un <em>locus polimorfico</em> è una regione genomica in cui la frequenza di eterozigoti nella popolazione è almeno del 2%. Questo indica un elevato grado di variabilità genetica in quella specifica regione.</p></li>
+</ul>
+<p><strong>Classificazione dei Polimorfismi Genetici:</strong></p>
+<p>I polimorfismi genetici possono essere classificati in base alla natura della variazione e alla regione genomica coinvolta:</p>
+<ul>
+<li><p><strong>Polimorfismi nelle Sequenze Ripetute:</strong> Variazioni nel numero di unità ripetute in sequenze di DNA ripetuto.</p>
+<ul>
+<li><p><strong>Polimorfismi Macrosatellite:</strong> Variazioni nelle regioni di DNA satellite di grandi dimensioni, tipicamente localizzate nei centromeri.</p></li>
+<li><p><strong>Polimorfismi Minisatellite (VNTR):</strong> Variazioni nel numero di ripetizioni nelle sequenze minisatellite, come le famiglie ipervariabili telomeriche.</p></li>
+<li><p><strong>Polimorfismi Microsatellite (STR):</strong> Variazioni nel numero di ripetizioni nelle sequenze microsatellite, distribuite in tutto il genoma.</p></li>
+<li><p><strong>Single Nucleotide Polymorphisms (SNPs):</strong> Polimorfismi a singolo nucleotide, costituiti dalla sostituzione di una singola base nucleotidica. Rappresentano la classe più abbondante di polimorfismi genetici nel genoma umano.</p></li>
+</ul></li>
+<li><p><strong>Single Nucleotide Polymorphisms (SNPs):</strong> Polimorfismi a singolo nucleotide, costituiti dalla sostituzione di una singola base nucleotidica. Rappresentano la classe più abbondante di polimorfismi genetici nel genoma umano.</p></li>
+</ul>
+</section>
+<section id="single-nucleotide-polymorphisms-snps" class="level2">
+<h2 class="anchored" data-anchor-id="single-nucleotide-polymorphisms-snps">Single Nucleotide Polymorphisms (SNPs)</h2>
+<div class="tcolorbox">
+<p>Un <strong>Single Nucleotide Polymorphism (SNP)</strong> è una variazione polimorfica che coinvolge una singola base nucleotidica nel genoma. Uno SNP rappresenta una sostituzione di una base con un’altra in una specifica posizione del DNA, presente con una frequenza allelica superiore all’1% nella popolazione. Gli SNPs sono estremamente frequenti nel genoma umano, con una densità stimata di circa uno ogni 300-500 nucleotidi, e costituiscono circa il 90% della variabilità genetica umana conosciuta.</p>
+</div>
+<p><strong>Caratteristiche Principali degli SNPs:</strong></p>
+<p><strong>Aplotipi di SNPs e Studi di Associazione Genomica (GWAS):</strong></p>
+<p>Gli SNPs che si trovano sullo stesso cromosoma tendono ad essere ereditati insieme in blocchi, formando <em>aplotipi</em>. Un aplotipo SNP è una combinazione specifica di alleli di SNPs adiacenti su un cromosoma. L’analisi degli aplotipi è fondamentale negli studi di associazione genomica (<em>Genome-Wide Association Studies</em>, GWAS).</p>
+<p><strong>Genome-Wide Association Studies (GWAS):</strong></p>
+<p>Gli studi GWAS sono approcci su larga scala che analizzano le variazioni genetiche in tutto il genoma (tipicamente SNPs) in ampie popolazioni di individui, al fine di identificare associazioni tra specifici aplotipi di SNPs e tratti fenotipici complessi, come la predisposizione a malattie. In un tipico studio GWAS caso-controllo, vengono confrontati i genomi di un gruppo di individui affetti da una specifica patologia (casi) con quelli di un gruppo di individui sani (controlli). L’obiettivo è identificare SNPs o aplotipi che sono significativamente più frequenti nel gruppo dei casi rispetto ai controlli, suggerendo un’associazione tra la variazione genetica e la malattia.</p>
+<p>Gli studi GWAS sono strumenti potenti per:</p>
+</section>
+<section id="snps-in-personalized-medicine-and-pharmacogenomics" class="level2">
+<h2 class="anchored" data-anchor-id="snps-in-personalized-medicine-and-pharmacogenomics">SNPs in Personalized Medicine and Pharmacogenomics</h2>
+<p>Gli SNPs rivestono un ruolo centrale nella medicina personalizzata e nella farmacogenomica, discipline che mirano a integrare le informazioni genetiche individuali nella pratica clinica per migliorare la prevenzione, la diagnosi e il trattamento delle malattie.</p>
+<p><strong>Farmacogenomica:</strong></p>
+<p>La farmacogenomica studia come le variazioni genetiche individuali, in particolare gli SNPs, influenzano la risposta ai farmaci. L’obiettivo è comprendere la base genetica della variabilità interindividuale nella farmacocinetica (assorbimento, distribuzione, metabolismo ed eliminazione dei farmaci) e nella farmacodinamica (meccanismo d’azione e risposta biologica ai farmaci).</p>
+<p><strong>Obiettivi della Farmacogenomica:</strong></p>
+<p>Gli SNPs sono utilizzati come <em>marcatori prognostici</em> per prevedere l’evoluzione della malattia e come <em>marcatori predittivi</em> per anticipare la risposta individuale a specifiche terapie.</p>
+<div class="tcolorbox">
+<p><strong>Indicatore Prognostico:</strong> Fornisce informazioni sull’esito probabile di una malattia, indipendentemente dal trattamento. Aiuta a definire la prognosi e il decorso clinico atteso.</p>
+<p><strong>Indicatore Predittivo:</strong> Fornisce informazioni sulla probabilità di risposta a un trattamento specifico. Aiuta a prevedere se un paziente risponderà o meno a una determinata terapia.</p>
+</div>
+<p>Le banche dati di SNPs, come NCBI dbSNP (<a href="https://www.ncbi.nlm.nih.gov/snp/" class="uri">https://www.ncbi.nlm.nih.gov/snp/</a>), rappresentano risorse bioinformatiche essenziali per la ricerca e la pratica clinica, catalogando milioni di SNPs umani e fornendo informazioni sulla loro frequenza allelica, localizzazione genomica e associazioni con fenotipi e malattie. L’integrazione delle informazioni derivanti dagli studi sugli SNPs nella pratica medica apre la strada a una medicina sempre più personalizzata, preventiva e predittiva.</p>
+</section>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<p>In sintesi, questa lezione ha delineato l’architettura del genoma umano, ponendo in risalto la complessità strutturale e funzionale dei suoi componenti. Abbiamo esaminato la riduzione della densità genica nel corso dell’evoluzione filogenetica, un fenomeno correlato all’espansione delle regioni non codificanti, ricche di elementi regolativi e strutturali. L’analisi degli elementi costitutivi, quali geni, sequenze ripetute (DNA satellite e trasposoni) e pseudogeni, ha evidenziato le loro proporzioni genomiche e i rispettivi ruoli biologici. Un focus particolare è stato dedicato al DNA ripetuto, in special modo ai trasposoni e al DNA satellite, sottolineandone l’impatto sull’evoluzione del genoma e le potenziali implicazioni patologiche. Infine, l’introduzione ai polimorfismi genetici, con enfasi sugli SNPs, ha illustrato le basi molecolari della variabilità interindividuale e la loro crescente rilevanza nella medicina personalizzata e nella farmacogenomica.</p>
+<p><strong>Punti Chiave Rilevanti:</strong></p>
+<ul>
+<li><p>La componente preponderante del genoma umano è rappresentata da sequenze non codificanti, con una frazione cospicua costituita dal DNA ripetuto.</p></li>
+<li><p>La duplicazione genica e i meccanismi di trasposizione hanno agito come forze evolutive primarie nel plasmare l’architettura del genoma umano.</p></li>
+<li><p>Gli SNPs emergono come la forma più frequente di variazione genetica nella specie umana e si configurano come strumenti analitici di grande valore per la ricerca genetica e le applicazioni mediche.</p></li>
+<li><p>La medicina personalizzata sfrutta le informazioni derivanti dall’analisi del genoma, inclusi gli SNPs, per ottimizzare le strategie terapeutiche e migliorare la gestione prognostica dei pazienti.</p></li>
+</ul>
+<p><strong>Domande per la Prossima Lezione:</strong></p>
+<ul>
+<li><p>In che modo i meccanismi epigenetici concorrono a modulare la regolazione dell’espressione genica e a generare diversità fenotipica a livello individuale?</p></li>
+<li><p>Quali sono i meccanismi molecolari che regolano finemente i processi di trasposizione e retrotrasposizione degli elementi mobili del genoma?</p></li>
+<li><p>Come vengono applicati concretamente gli studi GWAS nella pratica clinica e nell’ambito della ricerca farmacologica per lo sviluppo di nuove terapie?</p></li>
+</ul>
+
+
+<!-- -->
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Architettura del Genoma Umano"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Your Name"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2025-02-05"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true  # Table of Contents</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">    toc-depth: 2</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">    theme: cosmo  # Or "journal" for Distill-like minimalism</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu"># Introduzione</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>Questa lezione introduce l'architettura del genoma umano, esplorando i</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>componenti principali dei cromosomi, la loro organizzazione e il ruolo</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>biologico. Verranno effettuati confronti filogenetici per comprendere</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>l'evoluzione dell'architettura genomica umana. Un concetto chiave sarà</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>la densità genica e come essa si riduce nel corso della filogenesi,</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>illustrando come l'informazione genetica si è progressivamente</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>\"diluita\" con l'inserimento di sequenze non codificanti. Si</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>discuteranno gli elementi costitutivi del genoma umano, inclusi geni,</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>sequenze intergeniche, sequenze ripetute (in tandem e interdisperse), e</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>pseudogeni, evidenziando le loro proporzioni e funzioni. Infine, si</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>introdurranno i polimorfismi genetici, in particolare gli SNPs, e la</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>loro rilevanza nella variabilità interindividuale e nella medicina</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>personalizzata.</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="fu"># Genome Architecture and Components</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="fu">## Key Genomic Elements</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>Il genoma umano è costituito da diversi elementi chiave, classificabili</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>come segue:</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Geni:** Unità fondamentali dell'ereditarietà, organizzati in</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>    *sequenze esoniche* codificanti proteine e *sequenze introniche* non</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>    codificanti ma con funzioni regolative. La lunghezza media di un</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>    gene umano è di circa 27 kb.</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Sequenze Intergeniche:** Regioni di DNA non codificante che</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    separano i geni.</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Geni in Copia Multipla:** Geni ripetuti più volte nel genoma,</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>    derivanti da eventi di duplicazione genica. Spesso costituiscono</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>    *famiglie geniche* con funzioni correlate, come i geni *Hox*.</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Sequenze Ripetute:** Ampia frazione del genoma, distinte in:</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>**Sequenze Ripetute Disperse (Interdisperse):** Sequenze di</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>        grandi dimensioni (fino a decine di kb) distribuite in tutto il</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>        genoma. I *trasposoni* sono i principali componenti di questa</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>        categoria.</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>**Sequenze Ripetute in Tandem:** Unità brevi (2-8 nucleotidi)</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>        ripetute in serie migliaia di volte. Il *DNA satellite*,</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>        presente in regioni eterocromatiniche, telomeriche e</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>        centromeriche, appartiene a questa categoria.</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Pseudogeni:** Sequenze simili a geni ma non funzionali, presenti</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>    in bassa frequenza e derivanti dall'evoluzione del genoma.</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="fu">## Genomic Element Proportions</span></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>Le proporzioni approssimative degli elementi costitutivi del genoma</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>umano sono:</span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Elementi Ripetuti:** $\approx 50\%$ del genoma totale,</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>    comprendenti:</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>**Trasposoni (Sequenze Ripetute Interdisperse):** Componente</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>        maggioritario.</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>**Grandi Duplicazioni Segmentali:** Regioni ripetute originatesi</span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>        tramite meccanismi diversi dalla trasposizione.</span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>**Sequenze Ripetute Semplici:** $\approx 3\%$, localizzate</span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>        prevalentemente nell'eterocromatina centromerica e telomerica.</span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**DNA Intergenico:** $\approx 22\%$.</span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Pseudogeni:** $\approx 0.1\%$.</span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Sequenze Geniche (Regioni associate all'espressione genica):**</span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>    $\approx 25\%$ del genoma, suddivise in:</span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>**Esoni (Sequenze Codificanti):** $\approx 1.8\%$ del genoma.</span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>**Introni:** $\approx 24\%$ del genoma.</span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>Sebbene circa un quarto del genoma sia associato all'informazione</span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>genica, solo una piccola frazione ($\textless 2\%$) codifica</span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>direttamente per proteine. La maggior parte del genoma trascritto</span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>produce RNA non codificante, implicato in funzioni regolative, inclusa</span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>la modulazione dell'espressione dei geni codificanti.</span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a><span class="fu">## Gene Organization</span></span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>La struttura di un tipico gene umano include:</span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Esoni:** Sequenze che possono contenere la *open reading frame*</span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>    (ORF), ovvero la regione codificante per la proteina. Non tutti gli</span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>    esoni contengono ORF.</span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Introni:** Sequenze non codificanti interposte tra gli esoni,</span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>    rimosse durante lo splicing dell'RNA.</span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Regioni UTR (Untranslated Regions):** Regioni esoniche non</span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a>    tradotte localizzate alle estremità 5' e 3' del trascritto primario.</span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>    Le regioni UTR svolgono un ruolo cruciale nella regolazione</span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>    post-trascrizionale, influenzando la stabilità e la traduzione</span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>    dell'mRNA.</span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>![Rappresentazione schematica di un'unità trascrizionale genica umana.</span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>Gli esoni gialli indicano le regioni contenenti l'ORF, mentre gli esoni</span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>bianchi rappresentano le regioni UTR. *Nota: Immagine fittizia, da</span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>sostituire con una rappresentazione grafica</span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>appropriata.*](gene_structure.png){#fig:gene_structure width="70%"}</span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a><span class="fu">## Gene Density and Regulation</span></span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>La densità genica, definita come il numero di geni per unità di</span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a>lunghezza del genoma, varia significativamente tra specie:</span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>*Escherichia coli*: Densità genica elevata, $\approx 950$ geni per</span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>    milione di paia di basi.</span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Umano: Densità genica ridotta, $\approx 6.25$ geni per milione di</span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a>    paia di basi.</span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a>La minore densità genica nel genoma umano è attribuibile alla maggiore</span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a>presenza di sequenze introniche, ripetute e regioni regolative. La</span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a>regolazione dell'espressione genica è un processo complesso che</span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>coinvolge:</span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Promotori:** Elementi regolativi prossimali al sito di inizio</span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>    della trascrizione (+1), essenziali per l'inizio della trascrizione.</span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Enhancer:** Elementi regolativi distali, localizzati a monte, a</span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>    valle o internamente agli introni dei geni. Gli enhancer modulano</span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a>    l'efficienza della trascrizione genica in risposta a segnali</span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>    cellulari e ambientali.</span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>L'azione combinata di promotori ed enhancer consente una fine</span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a>regolazione spazio-temporale dell'espressione genica, determinando la</span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>specificità cellulare e tissutale e le risposte dinamiche a stimoli</span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>fisiologici e patologici.</span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a><span class="fu"># Repetitive DNA</span></span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a><span class="fu">## Gene Duplication and Evolution</span></span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>La duplicazione genica rappresenta un meccanismo chiave nell'evoluzione</span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>dei genomi. Si ritiene che derivi da processi di riparazione del DNA per</span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a>ricombinazione omologa non corretta, spesso in risposta a rotture della</span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>doppia elica (*double strand breaks*). La duplicazione di geni può</span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>innescare:</span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Guadagno di Funzione:** Una copia del gene duplicato può subire</span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a>    mutazioni che le conferiscono nuove funzioni, ampliando il</span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a>    repertorio funzionale del genoma e promuovendo l'innovazione</span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a>    evolutiva. Questo processo è fondamentale per l'evoluzione</span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a>    molecolare.</span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Origine di Famiglie Geniche:** Geni in copia multipla tendono a</span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a>    formare *famiglie geniche*, insiemi di geni strutturalmente simili e</span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a>    funzionalmente correlati. Un esempio emblematico sono i geni *Hox*,</span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a>    che regolano lo sviluppo embrionale e la definizione dell'asse</span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>    corporeo antero-posteriore.</span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a>Un gene duplicato è soggetto a minori vincoli selettivi rispetto a una</span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a>copia singola, poiché la funzione essenziale è preservata dalla copia</span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a>originale. Questa \"libertà\" evolutiva consente al gene duplicato di</span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a>accumulare mutazioni con un tasso relativamente elevato. L'ambiente</span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a>agisce come filtro selettivo, favorendo la fissazione di mutazioni che</span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>conferiscono un vantaggio adattativo (*fitness*) all'organismo.</span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a>::: tcolorbox</span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a>Sebbene la duplicazione genica sia un potente motore evolutivo, essa può</span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a>anche predisporre a riarrangiamenti genomici deleteri. La presenza di</span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a>sequenze ripetute multiple aumenta il rischio di ricombinazione omologa</span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a>non allelica, che può causare delezioni, duplicazioni o traslocazioni</span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>cromosomiche, potenzialmente associate a patologie.</span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a><span class="fu">## Classification of Repetitive Sequences</span></span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a>Le sequenze ripetute del genoma umano si suddividono in due classi</span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>principali:</span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Sequenze Ripetute in Tandem (DNA Satellite):** Blocchi di sequenze</span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a>    ripetute adiacenti.</span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Sequenze Ripetute Interdisperse (Trasposoni):** Sequenze ripetute</span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>    distribuite in posizioni non contigue nel genoma.</span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a><span class="fu">## Tandem Repeats: Satellite DNA</span></span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a>Il DNA satellite è costituito da sequenze nucleotidiche ripetute in</span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a>tandem, con dimensioni unitarie variabili da pochi nucleotidi a</span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a>centinaia di paia di basi, e ripetute migliaia di volte. Queste sequenze</span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a>sono prevalentemente localizzate in regioni eterocromatiniche, in</span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a>particolare nelle regioni centromeriche dei cromosomi.</span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a>**Classificazione del DNA Satellite:**</span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**DNA Satellite Classico (Satellite DNA in senso stretto):**</span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a>    Suddiviso in sottoclassi in base alla sequenza e alla localizzazione</span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a>    cromosomica, tra cui Satellite 1 (cromosoma 1, ricco in AT),</span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a>    Satellite 2 e 3 (cromosomi 2 e 3), Satellite alfa (DNA alfoide) e SA</span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a>    3A. Queste sequenze sono associate all'eterocromatina centromerica.</span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**DNA Minisatellite:** Unità ripetute di dimensioni maggiori (0.1-20</span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a>    kb). Include:</span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>**Sequenze Telomeriche:** Esamero TTAGGG ripetuto in tandem ai</span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>        telomeri di tutti i cromosomi umani, per migliaia di ripetizioni</span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a>        per telomero. La sequenza telomerica è altamente conservata</span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a>        negli eucarioti per la sua funzione cruciale nella stabilità</span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>        cromosomica.</span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>**Famiglie Ipervariabili (VNTR - Variable Number of Tandem</span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>        Repeats):** Sequenze di 9-24 nucleotidi ripetute in tandem,</span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>        localizzate in prossimità dei telomeri e in altre regioni del</span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a>        genoma. Queste regioni mostrano un alto grado di polimorfismo</span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a>        nella popolazione umana in termini di numero di ripetizioni, e</span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a>        sono utilizzate per test di paternità e identificazione forense.</span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**DNA Microsatellite (STR - Short Tandem Repeats):** Unità ripetute</span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a>    molto brevi (fino a 8 nucleotidi), ripetute in tandem da alcune</span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>    decine a centinaia di volte e distribuite in tutto il genoma.</span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a>    Analogamente ai minisatelliti ipervariabili, i microsatelliti sono</span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a>    altamente polimorfici nella popolazione umana e sfruttati per studi</span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a>    di genetica di popolazione, medicina molecolare e identificazione</span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>    individuale.</span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a>**Funzioni del DNA Satellite:**</span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>Il DNA satellite è prevalentemente non codificante e svolge un ruolo</span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a>strutturale. In particolare, il DNA satellite centromerico è essenziale</span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a>per:</span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Formazione dell'eterocromatina centromerica:** Contribuisce</span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a>    all'organizzazione e alla compattazione della cromatina nelle</span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a>    regioni centromeriche.</span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Interazione con proteine centromeriche specializzate:** Serve come</span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a>    piattaforma per l'assemblaggio del cinetocore e l'attacco delle</span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a>    fibre del fuso mitotico durante la divisione cellulare. Istoni</span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a>    centromerici specifici legano il DNA satellite e mediano</span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a>    l'interazione con il fuso mitotico per la corretta segregazione</span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>    cromosomica.</span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a>**Origine del Termine \"Satellite DNA\":**</span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a>Il termine \"satellite\" deriva dalla tecnica di ultracentrifugazione in</span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a>gradiente di densità. Il DNA satellite, tipicamente ricco in coppie AT,</span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a>possiede una densità leggermente inferiore rispetto alla massa</span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a>principale del DNA genomico (più ricco in GC). Durante</span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a>l'ultracentrifugazione preparativa, il DNA satellite si separa formando</span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a>una banda \"satellite\" distinta e minore rispetto alla banda principale</span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a>del DNA genomico.</span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a><span class="fu">## Interspersed Repeats: Transposons</span></span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a>Le sequenze ripetute interdisperse, in larga parte rappresentate dai</span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a>trasposoni, costituiscono circa il 45% del genoma umano. I trasposoni</span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a>sono elementi genetici mobili, capaci di trasposizione, ovvero di</span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a>spostarsi e replicarsi in diverse posizioni all'interno del genoma, sia</span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a>sullo stesso cromosoma che su cromosomi differenti.</span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a>**Classi Principali di Trasposoni nel Genoma Umano:**</span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**LINEs (Long Interspersed Nuclear Elements):** Rappresentano circa</span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a>    il 21% del genoma umano. Sono *retrotrasposoni* autonomi, in quanto</span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a>    codificano le proteine necessarie per la loro retrotrasposizione. I</span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a>    LINEs prototipici, come LINE-1 (L1), possiedono due *open reading</span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a>    frames* (ORF): ORF1 codifica una proteina legante l'RNA, mentre ORF2</span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a>    codifica una *endonucleasi* e una *trascrittasi inversa*, enzimi</span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a>    chiave per la retrotrasposizione.</span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**SINEs (Short Interspersed Nuclear Elements):** Costituiscono circa</span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a>    il 13% del genoma umano. Sono *retrotrasposoni non autonomi*, poiché</span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a>    non codificano per la trascrittasi inversa e dipendono dall'apparato</span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a>    enzimatico fornito dai LINEs per la loro mobilizzazione. Le sequenze</span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a>    *Alu* sono la famiglia di SINEs più abbondante nel genoma umano.</span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Retrotrasposoni LTR (Long Terminal Repeat):** Simili</span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a>    strutturalmente ai retrovirus, sono caratterizzati dalla presenza di</span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a>    lunghe ripetizioni terminali dirette (LTR). Nel genoma umano, i</span>
+<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a>    retrotrasposoni LTR sono meno abbondanti rispetto a LINEs e SINEs.</span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a>**Meccanismo di Retrotrasposizione (LINEs e SINEs):**</span>
+<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a>La retrotrasposizione è un meccanismo di trasposizione \"copia-incolla\"</span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a>che coinvolge un intermedio di RNA. Il processo generale per LINEs e</span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a>SINEs comprende:</span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>**Trascrizione:** Trascrizione dell'elemento trasposonico in una</span>
+<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a>    molecola di RNA messaggero (mRNA) da parte della RNA polimerasi II</span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a>    cellulare.</span>
+<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>**Retrotrascrizione:** La trascrittasi inversa, codificata dai LINEs</span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a>    (o fornita da LINEs per i SINEs), utilizza l'mRNA come stampo per</span>
+<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a>    sintetizzare una copia di DNA a doppio filamento (cDNA).</span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>**Inserimento:** L'endonucleasi codificata dai LINEs introduce un</span>
+<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a>    taglio nel DNA genomico in una nuova posizione. Il cDNA viene</span>
+<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a>    integrato nel sito di taglio, spesso con duplicazione della sequenza</span>
+<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a>    bersaglio al sito di inserzione.</span>
+<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a>**Conseguenze Biologiche e Patologiche dei Trasposoni:**</span>
+<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a>L'attività trasposizionale dei retrotrasposoni può avere diverse</span>
+<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a>implicazioni:</span>
+<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Mutagenesi Inserzionale:** L'inserimento di trasposoni in nuove</span>
+<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a>    sedi genomiche è un processo intrinsecamente mutageno. L'inserzione</span>
+<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a>    all'interno di un gene codificante o di una regione regolativa può</span>
+<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a>    interrompere la funzione genica, causando inattivazione genica o</span>
+<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a>    alterazione dell'espressione.</span>
+<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Patologie Umane:** Sebbene la maggior parte degli elementi</span>
+<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a>    trasponibili nel genoma umano sia inattiva, la retrotrasposizione de</span>
+<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>    novo è stata implicata in alcune patologie, in particolare malattie</span>
+<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a>    neurodegenerative come la malattia di Alzheimer e alcune forme di</span>
+<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a>    cancro. L'accumulo di inserzioni di retrotrasposoni potrebbe</span>
+<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a>    contribuire alla disfunzione cellulare e alla patogenesi.</span>
+<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Regolazione Epigenetica e Silenziamento dei Trasposoni:** Per</span>
+<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a>    limitare gli effetti mutageni della trasposizione, le cellule hanno</span>
+<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a>    sviluppato meccanismi epigenetici per reprimere l'attività dei</span>
+<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a>    trasposoni. La metilazione del DNA e le modificazioni degli istoni,</span>
+<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a>    associate alla formazione di eterocromatina, contribuiscono al</span>
+<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a>    silenziamento trascrizionale dei trasposoni, confinandoli spesso in</span>
+<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a>    regioni eterocromatiniche costitutive.</span>
+<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a>**Variazioni Filogenetiche nell'Attività Trasposizionale:**</span>
+<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a>La frequenza e l'importanza della retrotrasposizione variano</span>
+<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a>significativamente tra i regni biologici. Negli animali, l'attività</span>
+<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a>trasposizionale è generalmente mantenuta bassa da una forte selezione</span>
+<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a>negativa, che elimina le inserzioni deleterie. Nelle piante, al</span>
+<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a>contrario, la retrotrasposizione sembra essere un processo più frequente</span>
+<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a>e rilevante, potenzialmente correlato alla maggiore plasticità e</span>
+<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a>adattabilità dei genomi vegetali in risposta a stress ambientali. La</span>
+<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a>diversa mobilità tra piante e animali potrebbe riflettere strategie</span>
+<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a>adattative distinte in relazione alla motilità degli organismi e</span>
+<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a>all'interazione con l'ambiente.</span>
+<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a><span class="fu"># Pseudogenes</span></span>
+<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a><span class="fu">## Origins of Pseudogenes</span></span>
+<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a>Gli pseudogeni sono definiti come copie non funzionali di geni normali,</span>
+<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a>che hanno perso la capacità di codificare proteine funzionali a causa di</span>
+<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a>mutazioni accumulate nel corso dell'evoluzione. Essi rappresentano</span>
+<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a>vestigia dell'evoluzione genomica e si originano principalmente</span>
+<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a>attraverso due meccanismi distinti:</span>
+<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Pseudogeni Non Processati (o Duplicati):** Questi pseudogeni</span>
+<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a>    derivano da eventi di duplicazione genica. In seguito alla</span>
+<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a>    duplicazione, una delle copie geniche può accumulare mutazioni che</span>
+<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a>    ne compromettono la funzionalità. Questo processo può avvenire</span>
+<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a>    tramite diversi meccanismi, tra cui:</span>
+<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>*Mutazioni Inattivanti:* Inserzione di codoni di stop prematuri,</span>
+<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a>        delezioni o inserzioni che alterano la cornice di lettura</span>
+<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a>        (frameshift), o mutazioni che danneggiano domini funzionali</span>
+<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a>        essenziali per l'attività della proteina.</span>
+<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>*Perdita di Elementi Regolativi:* Mutazioni nelle regioni</span>
+<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a>        promotrici o enhancer che impediscono la corretta trascrizione</span>
+<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a>        del gene.</span>
+<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a>    La copia genica originale mantiene la sua funzione, mentre la copia</span>
+<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a>    duplicata, ora pseudogene, evolve sotto minori vincoli selettivi,</span>
+<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a>    accumulando mutazioni che ne determinano la non funzionalità.</span>
+<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Pseudogeni Processati (o Retrotrasposti):** Questi pseudogeni si</span>
+<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a>    formano attraverso un meccanismo di retrotrascrizione e</span>
+<span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a>    reinserimento nel genoma. Il processo prevede:</span>
+<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>*Trascrizione e Retrotrascrizione:* L'mRNA di un gene funzionale</span>
+<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a>        viene retrotrascritto in cDNA (DNA complementare) tramite</span>
+<span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a>        l'enzima trascrittasi inversa.</span>
+<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>*Reinserimento Genomico:* Il cDNA viene reinserito in una nuova</span>
+<span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a>        posizione all'interno del genoma, spesso in maniera casuale.</span>
+<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a>    Gli pseudogeni processati si distinguono dai non processati per</span>
+<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a>    alcune caratteristiche tipiche: mancano degli introni (assenti</span>
+<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a>    nell'mRNA di partenza), spesso presentano una coda poli-A</span>
+<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a>    all'estremità 3' (derivata dalla poliadenilazione dell'mRNA), e sono</span>
+<span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a>    tipicamente inseriti in regioni genomiche diverse dal gene</span>
+<span id="cb1-396"><a href="#cb1-396" aria-hidden="true" tabindex="-1"></a>    parentale. Un aspetto cruciale è che, durante il processo di</span>
+<span id="cb1-397"><a href="#cb1-397" aria-hidden="true" tabindex="-1"></a>    retrotrasposizione, gli pseudogeni processati perdono i promotori e</span>
+<span id="cb1-398"><a href="#cb1-398" aria-hidden="true" tabindex="-1"></a>    gli enhancer del gene originario. Di conseguenza, essi sono</span>
+<span id="cb1-399"><a href="#cb1-399" aria-hidden="true" tabindex="-1"></a>    generalmente inattivi trascrizionalmente e non funzionali.</span>
+<span id="cb1-400"><a href="#cb1-400" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-401"><a href="#cb1-401" aria-hidden="true" tabindex="-1"></a><span class="fu">## Types of Pseudogenes</span></span>
+<span id="cb1-402"><a href="#cb1-402" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a>Come descritto, le due categorie principali di pseudogeni sono:</span>
+<span id="cb1-404"><a href="#cb1-404" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Pseudogeni Non Processati:** Derivanti da duplicazione genica e</span>
+<span id="cb1-406"><a href="#cb1-406" aria-hidden="true" tabindex="-1"></a>    successiva inattivazione per mutazione. Mantengono una struttura</span>
+<span id="cb1-407"><a href="#cb1-407" aria-hidden="true" tabindex="-1"></a>    genica simile al gene parentale, inclusi introni (se presenti nel</span>
+<span id="cb1-408"><a href="#cb1-408" aria-hidden="true" tabindex="-1"></a>    gene di origine) e regioni regolative non funzionali.</span>
+<span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-410"><a href="#cb1-410" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Pseudogeni Processati:** Derivanti da retrotrasposizione di mRNA.</span>
+<span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a>    Sono privi di introni e delle sequenze regolative del gene</span>
+<span id="cb1-412"><a href="#cb1-412" aria-hidden="true" tabindex="-1"></a>    parentale, rendendoli tipicamente non trascritti e non funzionali.</span>
+<span id="cb1-413"><a href="#cb1-413" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-414"><a href="#cb1-414" aria-hidden="true" tabindex="-1"></a><span class="fu">## Functional Implications of Pseudogenes</span></span>
+<span id="cb1-415"><a href="#cb1-415" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-416"><a href="#cb1-416" aria-hidden="true" tabindex="-1"></a>Sebbene classicamente considerati \"DNA spazzatura\" o \"fossili</span>
+<span id="cb1-417"><a href="#cb1-417" aria-hidden="true" tabindex="-1"></a>genomici\", gli pseudogeni possono avere implicazioni funzionali,</span>
+<span id="cb1-418"><a href="#cb1-418" aria-hidden="true" tabindex="-1"></a>dirette o indirette, nel contesto cellulare:</span>
+<span id="cb1-419"><a href="#cb1-419" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-420"><a href="#cb1-420" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Problematiche nella Riparazione del DNA:** La presenza di</span>
+<span id="cb1-421"><a href="#cb1-421" aria-hidden="true" tabindex="-1"></a>    pseudogeni, data la loro elevata similarità di sequenza con i geni</span>
+<span id="cb1-422"><a href="#cb1-422" aria-hidden="true" tabindex="-1"></a>    funzionali da cui derivano, può interferire con i meccanismi di</span>
+<span id="cb1-423"><a href="#cb1-423" aria-hidden="true" tabindex="-1"></a>    riparazione del DNA basati sulla ricombinazione omologa. In</span>
+<span id="cb1-424"><a href="#cb1-424" aria-hidden="true" tabindex="-1"></a>    particolare, durante la riparazione di *double strand breaks*, lo</span>
+<span id="cb1-425"><a href="#cb1-425" aria-hidden="true" tabindex="-1"></a>    pseudogene mutato può essere erroneamente utilizzato come stampo per</span>
+<span id="cb1-426"><a href="#cb1-426" aria-hidden="true" tabindex="-1"></a>    riparare il gene funzionale omologo. Questo fenomeno può portare</span>
+<span id="cb1-427"><a href="#cb1-427" aria-hidden="true" tabindex="-1"></a>    alla *conversione genica* non desiderata, trasferendo le mutazioni</span>
+<span id="cb1-428"><a href="#cb1-428" aria-hidden="true" tabindex="-1"></a>    presenti nello pseudogene al gene funzionale e compromettendone</span>
+<span id="cb1-429"><a href="#cb1-429" aria-hidden="true" tabindex="-1"></a>    l'attività. Questo meccanismo rappresenta un potenziale fattore di</span>
+<span id="cb1-430"><a href="#cb1-430" aria-hidden="true" tabindex="-1"></a>    instabilità genomica.</span>
+<span id="cb1-431"><a href="#cb1-431" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-432"><a href="#cb1-432" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Potenziali Ruoli Regolativi (Meno Evidenziati nel Transcript):**</span>
+<span id="cb1-433"><a href="#cb1-433" aria-hidden="true" tabindex="-1"></a>    Sebbene non enfatizzato nel transcript, è importante notare che</span>
+<span id="cb1-434"><a href="#cb1-434" aria-hidden="true" tabindex="-1"></a>    alcuni pseudogeni possono essere trascritti, generando trascritti di</span>
+<span id="cb1-435"><a href="#cb1-435" aria-hidden="true" tabindex="-1"></a>    RNA non codificante. Questi RNA pseudogenici potrebbero, in alcuni</span>
+<span id="cb1-436"><a href="#cb1-436" aria-hidden="true" tabindex="-1"></a>    casi, esercitare funzioni regolative, ad esempio modulando</span>
+<span id="cb1-437"><a href="#cb1-437" aria-hidden="true" tabindex="-1"></a>    l'espressione dei geni parentali attraverso meccanismi competitivi</span>
+<span id="cb1-438"><a href="#cb1-438" aria-hidden="true" tabindex="-1"></a>    per microRNA o altri fattori regolatori. Tuttavia, la comprensione</span>
+<span id="cb1-439"><a href="#cb1-439" aria-hidden="true" tabindex="-1"></a>    dei ruoli regolativi degli pseudogeni è ancora un campo di ricerca</span>
+<span id="cb1-440"><a href="#cb1-440" aria-hidden="true" tabindex="-1"></a>    in evoluzione e non era il focus principale della lezione.</span>
+<span id="cb1-441"><a href="#cb1-441" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-442"><a href="#cb1-442" aria-hidden="true" tabindex="-1"></a><span class="fu"># Genetic Polymorphisms and SNPs</span></span>
+<span id="cb1-443"><a href="#cb1-443" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-444"><a href="#cb1-444" aria-hidden="true" tabindex="-1"></a><span class="fu">## Interindividual Genetic Variation</span></span>
+<span id="cb1-445"><a href="#cb1-445" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-446"><a href="#cb1-446" aria-hidden="true" tabindex="-1"></a>La diversità tra individui della specie umana si fonda su variazioni sia</span>
+<span id="cb1-447"><a href="#cb1-447" aria-hidden="true" tabindex="-1"></a>genetiche che epigenetiche.</span>
+<span id="cb1-448"><a href="#cb1-448" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-449"><a href="#cb1-449" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Variazioni Genetiche (Polimorfismi Genetici):** Differenze nella</span>
+<span id="cb1-450"><a href="#cb1-450" aria-hidden="true" tabindex="-1"></a>    sequenza del DNA tra individui. Queste variazioni sono la base della</span>
+<span id="cb1-451"><a href="#cb1-451" aria-hidden="true" tabindex="-1"></a>    diversità genetica umana.</span>
+<span id="cb1-452"><a href="#cb1-452" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-453"><a href="#cb1-453" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Variazioni Epigenetiche:** Modifiche ereditabili dell'espressione</span>
+<span id="cb1-454"><a href="#cb1-454" aria-hidden="true" tabindex="-1"></a>    genica che non alterano la sequenza del DNA. I meccanismi</span>
+<span id="cb1-455"><a href="#cb1-455" aria-hidden="true" tabindex="-1"></a>    epigenetici contribuiscono alla diversità fenotipica modulando</span>
+<span id="cb1-456"><a href="#cb1-456" aria-hidden="true" tabindex="-1"></a>    l'attività dei geni (questo aspetto sarà approfondito in lezioni</span>
+<span id="cb1-457"><a href="#cb1-457" aria-hidden="true" tabindex="-1"></a>    successive).</span>
+<span id="cb1-458"><a href="#cb1-458" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-459"><a href="#cb1-459" aria-hidden="true" tabindex="-1"></a>È fondamentale sottolineare che la diversità genetica umana è di natura</span>
+<span id="cb1-460"><a href="#cb1-460" aria-hidden="true" tabindex="-1"></a>*quantitativa* e non qualitativa. Non esistono \"geni diversi\" che</span>
+<span id="cb1-461"><a href="#cb1-461" aria-hidden="true" tabindex="-1"></a>definiscono gruppi umani distinti (\"razze\"). La variabilità genetica</span>
+<span id="cb1-462"><a href="#cb1-462" aria-hidden="true" tabindex="-1"></a>si manifesta principalmente in differenze *quantitative*</span>
+<span id="cb1-463"><a href="#cb1-463" aria-hidden="true" tabindex="-1"></a>nell'espressione genica e nella funzione dei prodotti genici. I tratti</span>
+<span id="cb1-464"><a href="#cb1-464" aria-hidden="true" tabindex="-1"></a>fenotipici complessi sono determinati da fattori *multifattoriali*,</span>
+<span id="cb1-465"><a href="#cb1-465" aria-hidden="true" tabindex="-1"></a>risultanti dall'interazione di molteplici geni e fattori ambientali.</span>
+<span id="cb1-466"><a href="#cb1-466" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-467"><a href="#cb1-467" aria-hidden="true" tabindex="-1"></a><span class="fu">## Genetic Polymorphisms: Definition and Types</span></span>
+<span id="cb1-468"><a href="#cb1-468" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-469"><a href="#cb1-469" aria-hidden="true" tabindex="-1"></a>::: tcolorbox</span>
+<span id="cb1-470"><a href="#cb1-470" aria-hidden="true" tabindex="-1"></a>Un **polimorfismo genetico** è definito come una variazione nella</span>
+<span id="cb1-471"><a href="#cb1-471" aria-hidden="true" tabindex="-1"></a>sequenza del DNA che presenta una frequenza (prevalenza) superiore</span>
+<span id="cb1-472"><a href="#cb1-472" aria-hidden="true" tabindex="-1"></a>all'1% nella popolazione generale. Questa variazione può consistere in</span>
+<span id="cb1-473"><a href="#cb1-473" aria-hidden="true" tabindex="-1"></a>una sostituzione di base, una delezione o un'inserzione, e può</span>
+<span id="cb1-474"><a href="#cb1-474" aria-hidden="true" tabindex="-1"></a>localizzarsi sia in regioni codificanti che non codificanti del genoma.</span>
+<span id="cb1-475"><a href="#cb1-475" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-476"><a href="#cb1-476" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-477"><a href="#cb1-477" aria-hidden="true" tabindex="-1"></a>**Caratteristiche distintive dei Polimorfismi Genetici:**</span>
+<span id="cb1-478"><a href="#cb1-478" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-479"><a href="#cb1-479" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Prevalenza Popolazionale:** Frequenza allelica maggiore dell'1%</span>
+<span id="cb1-480"><a href="#cb1-480" aria-hidden="true" tabindex="-1"></a>    nella popolazione. Questo criterio distingue i polimorfismi genetici</span>
+<span id="cb1-481"><a href="#cb1-481" aria-hidden="true" tabindex="-1"></a>    dalle mutazioni rare, che hanno frequenze inferiori.</span>
+<span id="cb1-482"><a href="#cb1-482" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-483"><a href="#cb1-483" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Mantenimento Selettivo:** I polimorfismi genetici sono mantenuti</span>
+<span id="cb1-484"><a href="#cb1-484" aria-hidden="true" tabindex="-1"></a>    nelle popolazioni attraverso meccanismi di selezione naturale. A</span>
+<span id="cb1-485"><a href="#cb1-485" aria-hidden="true" tabindex="-1"></a>    differenza delle mutazioni transitorie, che tendono ad essere</span>
+<span id="cb1-486"><a href="#cb1-486" aria-hidden="true" tabindex="-1"></a>    eliminate dalla selezione negativa, i polimorfismi persistono in</span>
+<span id="cb1-487"><a href="#cb1-487" aria-hidden="true" tabindex="-1"></a>    quanto non sono significativamente svantaggiosi o possono conferire</span>
+<span id="cb1-488"><a href="#cb1-488" aria-hidden="true" tabindex="-1"></a>    vantaggi in specifici contesti ambientali.</span>
+<span id="cb1-489"><a href="#cb1-489" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-490"><a href="#cb1-490" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Loci Polimorfici:** Un *locus polimorfico* è una regione genomica</span>
+<span id="cb1-491"><a href="#cb1-491" aria-hidden="true" tabindex="-1"></a>    in cui la frequenza di eterozigoti nella popolazione è almeno del</span>
+<span id="cb1-492"><a href="#cb1-492" aria-hidden="true" tabindex="-1"></a>    2%. Questo indica un elevato grado di variabilità genetica in quella</span>
+<span id="cb1-493"><a href="#cb1-493" aria-hidden="true" tabindex="-1"></a>    specifica regione.</span>
+<span id="cb1-494"><a href="#cb1-494" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-495"><a href="#cb1-495" aria-hidden="true" tabindex="-1"></a>**Classificazione dei Polimorfismi Genetici:**</span>
+<span id="cb1-496"><a href="#cb1-496" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-497"><a href="#cb1-497" aria-hidden="true" tabindex="-1"></a>I polimorfismi genetici possono essere classificati in base alla natura</span>
+<span id="cb1-498"><a href="#cb1-498" aria-hidden="true" tabindex="-1"></a>della variazione e alla regione genomica coinvolta:</span>
+<span id="cb1-499"><a href="#cb1-499" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-500"><a href="#cb1-500" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Polimorfismi nelle Sequenze Ripetute:** Variazioni nel numero di</span>
+<span id="cb1-501"><a href="#cb1-501" aria-hidden="true" tabindex="-1"></a>    unità ripetute in sequenze di DNA ripetuto.</span>
+<span id="cb1-502"><a href="#cb1-502" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-503"><a href="#cb1-503" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>**Polimorfismi Macrosatellite:** Variazioni nelle regioni di DNA</span>
+<span id="cb1-504"><a href="#cb1-504" aria-hidden="true" tabindex="-1"></a>        satellite di grandi dimensioni, tipicamente localizzate nei</span>
+<span id="cb1-505"><a href="#cb1-505" aria-hidden="true" tabindex="-1"></a>        centromeri.</span>
+<span id="cb1-506"><a href="#cb1-506" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-507"><a href="#cb1-507" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>**Polimorfismi Minisatellite (VNTR):** Variazioni nel numero di</span>
+<span id="cb1-508"><a href="#cb1-508" aria-hidden="true" tabindex="-1"></a>        ripetizioni nelle sequenze minisatellite, come le famiglie</span>
+<span id="cb1-509"><a href="#cb1-509" aria-hidden="true" tabindex="-1"></a>        ipervariabili telomeriche.</span>
+<span id="cb1-510"><a href="#cb1-510" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-511"><a href="#cb1-511" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>**Polimorfismi Microsatellite (STR):** Variazioni nel numero di</span>
+<span id="cb1-512"><a href="#cb1-512" aria-hidden="true" tabindex="-1"></a>        ripetizioni nelle sequenze microsatellite, distribuite in tutto</span>
+<span id="cb1-513"><a href="#cb1-513" aria-hidden="true" tabindex="-1"></a>        il genoma.</span>
+<span id="cb1-514"><a href="#cb1-514" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-515"><a href="#cb1-515" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>**Single Nucleotide Polymorphisms (SNPs):** Polimorfismi a</span>
+<span id="cb1-516"><a href="#cb1-516" aria-hidden="true" tabindex="-1"></a>        singolo nucleotide, costituiti dalla sostituzione di una singola</span>
+<span id="cb1-517"><a href="#cb1-517" aria-hidden="true" tabindex="-1"></a>        base nucleotidica. Rappresentano la classe più abbondante di</span>
+<span id="cb1-518"><a href="#cb1-518" aria-hidden="true" tabindex="-1"></a>        polimorfismi genetici nel genoma umano.</span>
+<span id="cb1-519"><a href="#cb1-519" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-520"><a href="#cb1-520" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Single Nucleotide Polymorphisms (SNPs):** Polimorfismi a singolo</span>
+<span id="cb1-521"><a href="#cb1-521" aria-hidden="true" tabindex="-1"></a>    nucleotide, costituiti dalla sostituzione di una singola base</span>
+<span id="cb1-522"><a href="#cb1-522" aria-hidden="true" tabindex="-1"></a>    nucleotidica. Rappresentano la classe più abbondante di polimorfismi</span>
+<span id="cb1-523"><a href="#cb1-523" aria-hidden="true" tabindex="-1"></a>    genetici nel genoma umano.</span>
+<span id="cb1-524"><a href="#cb1-524" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-525"><a href="#cb1-525" aria-hidden="true" tabindex="-1"></a><span class="fu">## Single Nucleotide Polymorphisms (SNPs)</span></span>
+<span id="cb1-526"><a href="#cb1-526" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-527"><a href="#cb1-527" aria-hidden="true" tabindex="-1"></a>::: tcolorbox</span>
+<span id="cb1-528"><a href="#cb1-528" aria-hidden="true" tabindex="-1"></a>Un **Single Nucleotide Polymorphism (SNP)** è una variazione polimorfica</span>
+<span id="cb1-529"><a href="#cb1-529" aria-hidden="true" tabindex="-1"></a>che coinvolge una singola base nucleotidica nel genoma. Uno SNP</span>
+<span id="cb1-530"><a href="#cb1-530" aria-hidden="true" tabindex="-1"></a>rappresenta una sostituzione di una base con un'altra in una specifica</span>
+<span id="cb1-531"><a href="#cb1-531" aria-hidden="true" tabindex="-1"></a>posizione del DNA, presente con una frequenza allelica superiore all'1%</span>
+<span id="cb1-532"><a href="#cb1-532" aria-hidden="true" tabindex="-1"></a>nella popolazione. Gli SNPs sono estremamente frequenti nel genoma</span>
+<span id="cb1-533"><a href="#cb1-533" aria-hidden="true" tabindex="-1"></a>umano, con una densità stimata di circa uno ogni 300-500 nucleotidi, e</span>
+<span id="cb1-534"><a href="#cb1-534" aria-hidden="true" tabindex="-1"></a>costituiscono circa il 90% della variabilità genetica umana conosciuta.</span>
+<span id="cb1-535"><a href="#cb1-535" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-536"><a href="#cb1-536" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-537"><a href="#cb1-537" aria-hidden="true" tabindex="-1"></a>**Caratteristiche Principali degli SNPs:**</span>
+<span id="cb1-538"><a href="#cb1-538" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-539"><a href="#cb1-539" aria-hidden="true" tabindex="-1"></a>**Aplotipi di SNPs e Studi di Associazione Genomica (GWAS):**</span>
+<span id="cb1-540"><a href="#cb1-540" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-541"><a href="#cb1-541" aria-hidden="true" tabindex="-1"></a>Gli SNPs che si trovano sullo stesso cromosoma tendono ad essere</span>
+<span id="cb1-542"><a href="#cb1-542" aria-hidden="true" tabindex="-1"></a>ereditati insieme in blocchi, formando *aplotipi*. Un aplotipo SNP è una</span>
+<span id="cb1-543"><a href="#cb1-543" aria-hidden="true" tabindex="-1"></a>combinazione specifica di alleli di SNPs adiacenti su un cromosoma.</span>
+<span id="cb1-544"><a href="#cb1-544" aria-hidden="true" tabindex="-1"></a>L'analisi degli aplotipi è fondamentale negli studi di associazione</span>
+<span id="cb1-545"><a href="#cb1-545" aria-hidden="true" tabindex="-1"></a>genomica (*Genome-Wide Association Studies*, GWAS).</span>
+<span id="cb1-546"><a href="#cb1-546" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-547"><a href="#cb1-547" aria-hidden="true" tabindex="-1"></a>**Genome-Wide Association Studies (GWAS):**</span>
+<span id="cb1-548"><a href="#cb1-548" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-549"><a href="#cb1-549" aria-hidden="true" tabindex="-1"></a>Gli studi GWAS sono approcci su larga scala che analizzano le variazioni</span>
+<span id="cb1-550"><a href="#cb1-550" aria-hidden="true" tabindex="-1"></a>genetiche in tutto il genoma (tipicamente SNPs) in ampie popolazioni di</span>
+<span id="cb1-551"><a href="#cb1-551" aria-hidden="true" tabindex="-1"></a>individui, al fine di identificare associazioni tra specifici aplotipi</span>
+<span id="cb1-552"><a href="#cb1-552" aria-hidden="true" tabindex="-1"></a>di SNPs e tratti fenotipici complessi, come la predisposizione a</span>
+<span id="cb1-553"><a href="#cb1-553" aria-hidden="true" tabindex="-1"></a>malattie. In un tipico studio GWAS caso-controllo, vengono confrontati i</span>
+<span id="cb1-554"><a href="#cb1-554" aria-hidden="true" tabindex="-1"></a>genomi di un gruppo di individui affetti da una specifica patologia</span>
+<span id="cb1-555"><a href="#cb1-555" aria-hidden="true" tabindex="-1"></a>(casi) con quelli di un gruppo di individui sani (controlli).</span>
+<span id="cb1-556"><a href="#cb1-556" aria-hidden="true" tabindex="-1"></a>L'obiettivo è identificare SNPs o aplotipi che sono significativamente</span>
+<span id="cb1-557"><a href="#cb1-557" aria-hidden="true" tabindex="-1"></a>più frequenti nel gruppo dei casi rispetto ai controlli, suggerendo</span>
+<span id="cb1-558"><a href="#cb1-558" aria-hidden="true" tabindex="-1"></a>un'associazione tra la variazione genetica e la malattia.</span>
+<span id="cb1-559"><a href="#cb1-559" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-560"><a href="#cb1-560" aria-hidden="true" tabindex="-1"></a>Gli studi GWAS sono strumenti potenti per:</span>
+<span id="cb1-561"><a href="#cb1-561" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-562"><a href="#cb1-562" aria-hidden="true" tabindex="-1"></a><span class="fu">## SNPs in Personalized Medicine and Pharmacogenomics</span></span>
+<span id="cb1-563"><a href="#cb1-563" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-564"><a href="#cb1-564" aria-hidden="true" tabindex="-1"></a>Gli SNPs rivestono un ruolo centrale nella medicina personalizzata e</span>
+<span id="cb1-565"><a href="#cb1-565" aria-hidden="true" tabindex="-1"></a>nella farmacogenomica, discipline che mirano a integrare le informazioni</span>
+<span id="cb1-566"><a href="#cb1-566" aria-hidden="true" tabindex="-1"></a>genetiche individuali nella pratica clinica per migliorare la</span>
+<span id="cb1-567"><a href="#cb1-567" aria-hidden="true" tabindex="-1"></a>prevenzione, la diagnosi e il trattamento delle malattie.</span>
+<span id="cb1-568"><a href="#cb1-568" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-569"><a href="#cb1-569" aria-hidden="true" tabindex="-1"></a>**Farmacogenomica:**</span>
+<span id="cb1-570"><a href="#cb1-570" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-571"><a href="#cb1-571" aria-hidden="true" tabindex="-1"></a>La farmacogenomica studia come le variazioni genetiche individuali, in</span>
+<span id="cb1-572"><a href="#cb1-572" aria-hidden="true" tabindex="-1"></a>particolare gli SNPs, influenzano la risposta ai farmaci. L'obiettivo è</span>
+<span id="cb1-573"><a href="#cb1-573" aria-hidden="true" tabindex="-1"></a>comprendere la base genetica della variabilità interindividuale nella</span>
+<span id="cb1-574"><a href="#cb1-574" aria-hidden="true" tabindex="-1"></a>farmacocinetica (assorbimento, distribuzione, metabolismo ed</span>
+<span id="cb1-575"><a href="#cb1-575" aria-hidden="true" tabindex="-1"></a>eliminazione dei farmaci) e nella farmacodinamica (meccanismo d'azione e</span>
+<span id="cb1-576"><a href="#cb1-576" aria-hidden="true" tabindex="-1"></a>risposta biologica ai farmaci).</span>
+<span id="cb1-577"><a href="#cb1-577" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-578"><a href="#cb1-578" aria-hidden="true" tabindex="-1"></a>**Obiettivi della Farmacogenomica:**</span>
+<span id="cb1-579"><a href="#cb1-579" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-580"><a href="#cb1-580" aria-hidden="true" tabindex="-1"></a>Gli SNPs sono utilizzati come *marcatori prognostici* per prevedere</span>
+<span id="cb1-581"><a href="#cb1-581" aria-hidden="true" tabindex="-1"></a>l'evoluzione della malattia e come *marcatori predittivi* per anticipare</span>
+<span id="cb1-582"><a href="#cb1-582" aria-hidden="true" tabindex="-1"></a>la risposta individuale a specifiche terapie.</span>
+<span id="cb1-583"><a href="#cb1-583" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-584"><a href="#cb1-584" aria-hidden="true" tabindex="-1"></a>::: tcolorbox</span>
+<span id="cb1-585"><a href="#cb1-585" aria-hidden="true" tabindex="-1"></a>**Indicatore Prognostico:** Fornisce informazioni sull'esito probabile</span>
+<span id="cb1-586"><a href="#cb1-586" aria-hidden="true" tabindex="-1"></a>di una malattia, indipendentemente dal trattamento. Aiuta a definire la</span>
+<span id="cb1-587"><a href="#cb1-587" aria-hidden="true" tabindex="-1"></a>prognosi e il decorso clinico atteso.</span>
+<span id="cb1-588"><a href="#cb1-588" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-589"><a href="#cb1-589" aria-hidden="true" tabindex="-1"></a>**Indicatore Predittivo:** Fornisce informazioni sulla probabilità di</span>
+<span id="cb1-590"><a href="#cb1-590" aria-hidden="true" tabindex="-1"></a>risposta a un trattamento specifico. Aiuta a prevedere se un paziente</span>
+<span id="cb1-591"><a href="#cb1-591" aria-hidden="true" tabindex="-1"></a>risponderà o meno a una determinata terapia.</span>
+<span id="cb1-592"><a href="#cb1-592" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-593"><a href="#cb1-593" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-594"><a href="#cb1-594" aria-hidden="true" tabindex="-1"></a>Le banche dati di SNPs, come NCBI dbSNP</span>
+<span id="cb1-595"><a href="#cb1-595" aria-hidden="true" tabindex="-1"></a>(<span class="ot">&lt;https://www.ncbi.nlm.nih.gov/snp/&gt;</span>), rappresentano risorse</span>
+<span id="cb1-596"><a href="#cb1-596" aria-hidden="true" tabindex="-1"></a>bioinformatiche essenziali per la ricerca e la pratica clinica,</span>
+<span id="cb1-597"><a href="#cb1-597" aria-hidden="true" tabindex="-1"></a>catalogando milioni di SNPs umani e fornendo informazioni sulla loro</span>
+<span id="cb1-598"><a href="#cb1-598" aria-hidden="true" tabindex="-1"></a>frequenza allelica, localizzazione genomica e associazioni con fenotipi</span>
+<span id="cb1-599"><a href="#cb1-599" aria-hidden="true" tabindex="-1"></a>e malattie. L'integrazione delle informazioni derivanti dagli studi</span>
+<span id="cb1-600"><a href="#cb1-600" aria-hidden="true" tabindex="-1"></a>sugli SNPs nella pratica medica apre la strada a una medicina sempre più</span>
+<span id="cb1-601"><a href="#cb1-601" aria-hidden="true" tabindex="-1"></a>personalizzata, preventiva e predittiva.</span>
+<span id="cb1-602"><a href="#cb1-602" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-603"><a href="#cb1-603" aria-hidden="true" tabindex="-1"></a><span class="fu"># Conclusion</span></span>
+<span id="cb1-604"><a href="#cb1-604" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-605"><a href="#cb1-605" aria-hidden="true" tabindex="-1"></a>In sintesi, questa lezione ha delineato l'architettura del genoma umano,</span>
+<span id="cb1-606"><a href="#cb1-606" aria-hidden="true" tabindex="-1"></a>ponendo in risalto la complessità strutturale e funzionale dei suoi</span>
+<span id="cb1-607"><a href="#cb1-607" aria-hidden="true" tabindex="-1"></a>componenti. Abbiamo esaminato la riduzione della densità genica nel</span>
+<span id="cb1-608"><a href="#cb1-608" aria-hidden="true" tabindex="-1"></a>corso dell'evoluzione filogenetica, un fenomeno correlato all'espansione</span>
+<span id="cb1-609"><a href="#cb1-609" aria-hidden="true" tabindex="-1"></a>delle regioni non codificanti, ricche di elementi regolativi e</span>
+<span id="cb1-610"><a href="#cb1-610" aria-hidden="true" tabindex="-1"></a>strutturali. L'analisi degli elementi costitutivi, quali geni, sequenze</span>
+<span id="cb1-611"><a href="#cb1-611" aria-hidden="true" tabindex="-1"></a>ripetute (DNA satellite e trasposoni) e pseudogeni, ha evidenziato le</span>
+<span id="cb1-612"><a href="#cb1-612" aria-hidden="true" tabindex="-1"></a>loro proporzioni genomiche e i rispettivi ruoli biologici. Un focus</span>
+<span id="cb1-613"><a href="#cb1-613" aria-hidden="true" tabindex="-1"></a>particolare è stato dedicato al DNA ripetuto, in special modo ai</span>
+<span id="cb1-614"><a href="#cb1-614" aria-hidden="true" tabindex="-1"></a>trasposoni e al DNA satellite, sottolineandone l'impatto sull'evoluzione</span>
+<span id="cb1-615"><a href="#cb1-615" aria-hidden="true" tabindex="-1"></a>del genoma e le potenziali implicazioni patologiche. Infine,</span>
+<span id="cb1-616"><a href="#cb1-616" aria-hidden="true" tabindex="-1"></a>l'introduzione ai polimorfismi genetici, con enfasi sugli SNPs, ha</span>
+<span id="cb1-617"><a href="#cb1-617" aria-hidden="true" tabindex="-1"></a>illustrato le basi molecolari della variabilità interindividuale e la</span>
+<span id="cb1-618"><a href="#cb1-618" aria-hidden="true" tabindex="-1"></a>loro crescente rilevanza nella medicina personalizzata e nella</span>
+<span id="cb1-619"><a href="#cb1-619" aria-hidden="true" tabindex="-1"></a>farmacogenomica.</span>
+<span id="cb1-620"><a href="#cb1-620" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-621"><a href="#cb1-621" aria-hidden="true" tabindex="-1"></a>**Punti Chiave Rilevanti:**</span>
+<span id="cb1-622"><a href="#cb1-622" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-623"><a href="#cb1-623" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>La componente preponderante del genoma umano è rappresentata da</span>
+<span id="cb1-624"><a href="#cb1-624" aria-hidden="true" tabindex="-1"></a>    sequenze non codificanti, con una frazione cospicua costituita dal</span>
+<span id="cb1-625"><a href="#cb1-625" aria-hidden="true" tabindex="-1"></a>    DNA ripetuto.</span>
+<span id="cb1-626"><a href="#cb1-626" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-627"><a href="#cb1-627" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>La duplicazione genica e i meccanismi di trasposizione hanno agito</span>
+<span id="cb1-628"><a href="#cb1-628" aria-hidden="true" tabindex="-1"></a>    come forze evolutive primarie nel plasmare l'architettura del genoma</span>
+<span id="cb1-629"><a href="#cb1-629" aria-hidden="true" tabindex="-1"></a>    umano.</span>
+<span id="cb1-630"><a href="#cb1-630" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-631"><a href="#cb1-631" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Gli SNPs emergono come la forma più frequente di variazione genetica</span>
+<span id="cb1-632"><a href="#cb1-632" aria-hidden="true" tabindex="-1"></a>    nella specie umana e si configurano come strumenti analitici di</span>
+<span id="cb1-633"><a href="#cb1-633" aria-hidden="true" tabindex="-1"></a>    grande valore per la ricerca genetica e le applicazioni mediche.</span>
+<span id="cb1-634"><a href="#cb1-634" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-635"><a href="#cb1-635" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>La medicina personalizzata sfrutta le informazioni derivanti</span>
+<span id="cb1-636"><a href="#cb1-636" aria-hidden="true" tabindex="-1"></a>    dall'analisi del genoma, inclusi gli SNPs, per ottimizzare le</span>
+<span id="cb1-637"><a href="#cb1-637" aria-hidden="true" tabindex="-1"></a>    strategie terapeutiche e migliorare la gestione prognostica dei</span>
+<span id="cb1-638"><a href="#cb1-638" aria-hidden="true" tabindex="-1"></a>    pazienti.</span>
+<span id="cb1-639"><a href="#cb1-639" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-640"><a href="#cb1-640" aria-hidden="true" tabindex="-1"></a>**Domande per la Prossima Lezione:**</span>
+<span id="cb1-641"><a href="#cb1-641" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-642"><a href="#cb1-642" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>In che modo i meccanismi epigenetici concorrono a modulare la</span>
+<span id="cb1-643"><a href="#cb1-643" aria-hidden="true" tabindex="-1"></a>    regolazione dell'espressione genica e a generare diversità</span>
+<span id="cb1-644"><a href="#cb1-644" aria-hidden="true" tabindex="-1"></a>    fenotipica a livello individuale?</span>
+<span id="cb1-645"><a href="#cb1-645" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-646"><a href="#cb1-646" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Quali sono i meccanismi molecolari che regolano finemente i processi</span>
+<span id="cb1-647"><a href="#cb1-647" aria-hidden="true" tabindex="-1"></a>    di trasposizione e retrotrasposizione degli elementi mobili del</span>
+<span id="cb1-648"><a href="#cb1-648" aria-hidden="true" tabindex="-1"></a>    genoma?</span>
+<span id="cb1-649"><a href="#cb1-649" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-650"><a href="#cb1-650" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Come vengono applicati concretamente gli studi GWAS nella pratica</span>
+<span id="cb1-651"><a href="#cb1-651" aria-hidden="true" tabindex="-1"></a>    clinica e nell'ambito della ricerca farmacologica per lo sviluppo di</span>
+<span id="cb1-652"><a href="#cb1-652" aria-hidden="true" tabindex="-1"></a>    nuove terapie?</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

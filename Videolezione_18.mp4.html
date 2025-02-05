@@ -1,0 +1,1713 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Your Name">
+<meta name="dcterms.date" content="2025-02-05">
+
+<title>Eukaryotic Gene Transcription: Molecular Mechanisms and Specificity Control – Your Site Name</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-6bd9cfa162949bde0a231f530c97869d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Your Site Name</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-list"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_1.mp4.html">
+            Lecture Notes on Molecular Mechanisms of Information Flow
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_10.mp4.html">
+            Lecture Notes on Chromatin Structure and DNA Replication
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_11.mp4.html">
+            Lecture Notes: DNA Replication - Processivity, Mechanism, and Regulation
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_12.mp4.html">
+            Replication Control in Prokaryotes and Eukaryotes
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_13.mp4.html">
+            Telomeres, Replication of Linear Chromosomes, and Nucleic Acid Quantification
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_14.mp4.html">
+            Telomeres, Senescence, and Genomic Instability
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_16.mp4.html">
+            Fundamentals of Epigenetic Regulation
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_17.mp4.html">
+            Regulation of Chromatin and RNA Processing
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_18.mp4.html">
+            Lecture Notes: RNA Degradation, Silencing, and Splicing
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_18bis.mp4.html">
+            Lecture Notes on RNA Splicing Mechanism and Regulation
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_19.mp4.html">
+            RNA Maturation and Protein Synthesis
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_20.mp4.html">
+            Functional Aspects of Protein Synthesis and Regulatory Events
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_21.mp4.html">
+            Lecture Notes on Translation and DNA Repair
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_3.mp4.html">
+            Lecture Notes on Protein-DNA Interactions and DNA Properties
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_4.mp4.html">
+            Lecture Notes on RNA, Ribozymes, and DNA Superstructures
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_5.mp4.html">
+            Topological Parameters of DNA and Genome Complexity
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_6.mp4.html">
+            Architettura del Genoma Umano
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_7.mp4.html">
+            Genomic Architecture and Gene Regulation
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_9.mp4.html">
+            Eukaryotic DNA Replication: Lecture Notes
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Videolezione_16.mp4.html">
+            Quantitative and Qualitative Gene Regulation in Prokaryotes
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Videolezione_18.mp4.html">
+            Eukaryotic Gene Transcription: Molecular Mechanisms and Specificity Control
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Videolezione_19.mp4.html">
+            Mechanisms of Transcription Factor Activation and Families of Transcription Factors
+            </a>
+          </li>
+      </ul>
+    </div>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#pre-initiation-complex-and-general-transcription-factors" id="toc-pre-initiation-complex-and-general-transcription-factors" class="nav-link" data-scroll-target="#pre-initiation-complex-and-general-transcription-factors">Pre-initiation Complex and General Transcription Factors</a>
+  <ul class="collapse">
+  <li><a href="#preinitiation-complex-formation" id="toc-preinitiation-complex-formation" class="nav-link" data-scroll-target="#preinitiation-complex-formation">Preinitiation Complex Formation</a></li>
+  <li><a href="#general-transcription-factors-gtfs" id="toc-general-transcription-factors-gtfs" class="nav-link" data-scroll-target="#general-transcription-factors-gtfs">General Transcription Factors (GTFs)</a></li>
+  <li><a href="#ctd-phosphorylation-and-rna-processing" id="toc-ctd-phosphorylation-and-rna-processing" class="nav-link" data-scroll-target="#ctd-phosphorylation-and-rna-processing">CTD Phosphorylation and RNA Processing</a></li>
+  <li><a href="#transcription-by-rna-polymerases-i-and-iii" id="toc-transcription-by-rna-polymerases-i-and-iii" class="nav-link" data-scroll-target="#transcription-by-rna-polymerases-i-and-iii">Transcription by RNA Polymerases I and III</a></li>
+  </ul></li>
+  <li><a href="#regulation-of-transcription-specificity-in-eukaryotes" id="toc-regulation-of-transcription-specificity-in-eukaryotes" class="nav-link" data-scroll-target="#regulation-of-transcription-specificity-in-eukaryotes">Regulation of Transcription Specificity in Eukaryotes</a>
+  <ul class="collapse">
+  <li><a href="#activated-transcription-and-specific-transcription-factors" id="toc-activated-transcription-and-specific-transcription-factors" class="nav-link" data-scroll-target="#activated-transcription-and-specific-transcription-factors">Activated Transcription and Specific Transcription Factors</a></li>
+  <li><a href="#cis-regulatory-elements-proximal-promoters-and-enhancers" id="toc-cis-regulatory-elements-proximal-promoters-and-enhancers" class="nav-link" data-scroll-target="#cis-regulatory-elements-proximal-promoters-and-enhancers">Cis-Regulatory Elements: Proximal Promoters and Enhancers</a></li>
+  <li><a href="#gene-reporter-assays-for-studying-regulatory-sequences" id="toc-gene-reporter-assays-for-studying-regulatory-sequences" class="nav-link" data-scroll-target="#gene-reporter-assays-for-studying-regulatory-sequences">Gene Reporter Assays for Studying Regulatory Sequences</a></li>
+  <li><a href="#mediator-complex-bridging-activators-and-basal-machinery" id="toc-mediator-complex-bridging-activators-and-basal-machinery" class="nav-link" data-scroll-target="#mediator-complex-bridging-activators-and-basal-machinery">Mediator Complex: Bridging Activators and Basal Machinery</a></li>
+  <li><a href="#transcriptional-activators-structure-function-and-proto-oncogenes" id="toc-transcriptional-activators-structure-function-and-proto-oncogenes" class="nav-link" data-scroll-target="#transcriptional-activators-structure-function-and-proto-oncogenes">Transcriptional Activators: Structure, Function, and Proto-oncogenes</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Eukaryotic Gene Transcription: Molecular Mechanisms and Specificity Control</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Your Name </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 5, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>In this lecture, we are addressing the topic of eukaryotic gene transcription. Last time, we described the general elements and key components in the transcription initiation process. Today, we will delve deeper into the molecular aspects and establish the foundation for understanding the molecular mechanisms underlying the control of gene expression specificity in eukaryotic organisms, particularly multicellular organisms. We previously discussed the characteristics of the core and mentioned the existence of that recognize the core . These factors enable the correct positioning of the polymerase complex for all polymerases. We are primarily focusing on slides related to because it is the most studied and characterized, but the transcriptional logic is similar for and . We discussed the basal transcription complex or , which must form at the core to correctly position polymerase and define the direction of transcription. Some in the basal transcription complex help recognize the template strand and distinguish it from the coding strand. The combination of and forms the basal transcription complex or , a necessary key event. However, it is not sufficient by itself to specifically control gene transcription qualitatively and quantitatively. In other words, this complex is necessary but does not guarantee active gene transcription.</p>
+</section>
+<section id="pre-initiation-complex-and-general-transcription-factors" class="level1">
+<h1>Pre-initiation Complex and General Transcription Factors</h1>
+<section id="preinitiation-complex-formation" class="level2">
+<h2 class="anchored" data-anchor-id="preinitiation-complex-formation">Preinitiation Complex Formation</h2>
+<p>The , necessary to initiate transcription, assembles through a four-step kinetic process:</p>
+<ol type="1">
+<li><p><strong>Preinitiation Complex Assembly:</strong> The initial assembly of the complex. We will detail its components shortly.</p></li>
+<li><p><strong>Transcription Initiation:</strong> This phase is reminiscent of abortive transcription in prokaryotes but differs. Eukaryotic initiation requires <strong>ATP consumption</strong> due to the accessory activity of that denature downstream of the transcription start site.</p></li>
+<li><p><strong>DNA Denaturation and Kinase Activity:</strong> An activity is needed to denature near the transcription start site. <strong>Kinase activity</strong> is also essential, consuming ATP. This kinase activity is exerted by on , specifically on the Carboxyl-Terminal Domain () of .</p></li>
+<li><p><strong>Promoter Clearance and Elongation:</strong> Phosphorylation of the by , particularly , causes the holoenzyme complex to detach from the . This initiates <strong>clearance</strong> and the <strong>elongation phase</strong>. This is similar to the detachment of bacterial polymerase holoenzyme from the sigma subunit. The remaining proteins stay at the core or detach to start another transcription cycle.</p></li>
+</ol>
+</section>
+<section id="general-transcription-factors-gtfs" class="level2">
+<h2 class="anchored" data-anchor-id="general-transcription-factors-gtfs">General Transcription Factors (GTFs)</h2>
+<p>Several are required to initiate transcription. Their number varies across eukaryotes; humans have seven. The enzyme complex has 12 subunits, and the , bridging proximal elements and s to the core , is a multiprotein complex with many subunits. A significant portion of the coding genome is dedicated to proteins regulating transcription, besides . It’s estimated that humans have 3,000 transcription-related proteins, including , specific s, coactivators, and corepressors.</p>
+<div id="fig:PIC_formation_2" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="PreinitiationComplexFormation.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Schematic representation of Preinitiation Complex Formation. (Note: Image placeholder, replace with actual image if available).</figcaption>
+</figure>
+</div>
+<p>Figure <a href="#fig:PIC_formation_2" data-reference-type="ref" data-reference="fig:PIC_formation_2">1</a> shows the kinetic formation of the . An early key event is recognition by Binding Protein (). The associates with -associated factors (), some with transcriptional coactivator activity, like histone acetylation. and form the complex. assembly seems to be the first step in formation. Subsequently, accessory factors and join. helps define the transcription direction, distinguishing the template from the coding strand to orient polymerase processivity.</p>
+<section id="tf2d-and-tata-binding-protein-tbp" class="level3">
+<h3 class="anchored" data-anchor-id="tf2d-and-tata-binding-protein-tbp">TF2D and TATA-Binding Protein (TBP)</h3>
+<p>The complex, comprising and , initiates assembly. recognizes and binds to the , a sequence in many gene s.</p>
+</section>
+<section id="tf2b-and-transcription-direction" class="level3">
+<h3 class="anchored" data-anchor-id="tf2b-and-transcription-direction">TF2B and Transcription Direction</h3>
+<p>, associating after , defines the transcription direction. It discriminates between template and coding strands, orienting polymerase. binding is asymmetric relative to the symmetry center of binding. binding to the bends . binds on one side, interacting with and recognizing the sequence, a GC-rich sequence upstream of the . Binding to the in the major groove and partially to the minor groove downstream of creates asymmetry, defining transcription direction. polymerase processivity is 5’ to 3’, so asymmetry defines the 3’ to 5’ template strand. thus defines template and coding strands through interaction.</p>
+</section>
+<section id="tf2h-helicase-kinase-and-role-in-dna-repair" class="level3">
+<h3 class="anchored" data-anchor-id="tf2h-helicase-kinase-and-role-in-dna-repair">TF2H: Helicase, Kinase, and Role in DNA Repair</h3>
+<p>is a crucial with helicase and kinase activities. Its <strong>helicase activity</strong> denatures the core, essential for transcription initiation, attributed to subunits and . Mutations in and genes cause , a rare genetic disorder with extreme sun sensitivity and high skin cancer risk.</p>
+<p>Besides helicase activity, has <strong>kinase activity</strong>, ATP-dependent, used partly for helicase function and crucially for phosphorylation of . phosphorylation is essential for efficient transcription, transitioning from initiation to elongation. Without it, transcription stalls at initiation. Phosphorylation signals processing steps. For example, 5’ capping enzymes recognize phosphorylated , as do intron splicing complexes.</p>
+</section>
+</section>
+<section id="ctd-phosphorylation-and-rna-processing" class="level2">
+<h2 class="anchored" data-anchor-id="ctd-phosphorylation-and-rna-processing">CTD Phosphorylation and RNA Processing</h2>
+<p>phosphorylation by is critical for denaturation, elongation, and coordinating processing. Phosphorylated is a platform for processing factors like capping, splicing, and termination enzymes.</p>
+<p>The of has repeats of the consensus heptapeptide sequence with the consensus <code>Tyr-Ser-Pro-Thr-Ser-Pro-Ser</code>. Repeat number varies; mammals have 52. Serine residues (Ser2 and Ser5, presumably) are phosphorylated by .</p>
+<p>(Electrophoretic Mobility Shift Assay) demonstrates phosphorylation importance. assesses protein- complex molecular weight or formation changes.</p>
+<div class="tcolorbox">
+<p><strong>Electrophoretic Mobility Shift Assay (EMSA):</strong> EMSA studies protein- interactions using native gel electrophoresis. Labeled with a protein-binding site is incubated with protein or extract. Protein binding retards migration in the gel, indicating interaction.</p>
+<p><strong>Procedure:</strong></p>
+<ol type="1">
+<li><p><strong>Prepare Labeled DNA Probe:</strong> Label fragment with sequence of interest.</p></li>
+<li><p><strong>Incubation:</strong> Incubate labeled with protein sample.</p></li>
+<li><p><strong>Gel Electrophoresis:</strong> Load mixture on non-denaturing polyacrylamide gel and perform electrophoresis.</p></li>
+<li><p><strong>Detection:</strong> Detect labeled . Unbound migrates faster; protein- complexes migrate slower (shifted band).</p></li>
+<li><p><strong>Supershift Assay (Optional):</strong> Add antibody specific to protein of interest to confirm protein identity. Antibody binding causes further mobility shift (supershift).</p></li>
+</ol>
+</div>
+<p>In the lecture’s experiment, a fragment containing a core is used with various (, , , , , ) and , with/without ATP. It tests if ATP is needed for molecular weight change in the multiprotein complex, indicating phosphorylation by . Results show a further mobility shift with and ATP, demonstrating ’s ATP-dependent phosphorylation, altering the complex.</p>
+<p>factors and are also in , a sub-pathway repairing lesions in transcribed genes. Lesions like pyrimidine dimers and 6-4 photoproducts from UV radiation are repaired by . During transcription, , especially and , is crucial in . Inactivating mutations in these genes cause , increasing skin cancer and UV-related pathology risks like psoriasis. Patients must avoid sunlight.</p>
+<div id="fig:PIC_animation_gif_2" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="TranscriptionPreinitiationComplex.gif" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Animation of Transcription Preinitiation Complex Assembly. (Note: GIF placeholder, replace with actual animation if available).</figcaption>
+</figure>
+</div>
+<p>Figure <a href="#fig:PIC_animation_gif_2" data-reference-type="ref" data-reference="fig:PIC_animation_gif_2">2</a> illustrates dynamic assembly, showing , , , , and other factor interactions.</p>
+</section>
+<section id="transcription-by-rna-polymerases-i-and-iii" class="level2">
+<h2 class="anchored" data-anchor-id="transcription-by-rna-polymerases-i-and-iii">Transcription by RNA Polymerases I and III</h2>
+<p>formation at the core isn’t exclusive to genes. and use similar recruitment at their gene s. differ, but transcriptional logic is analogous. is conserved across s of all three polymerases. and use different , like and for , and , , and for . Functional regulatory schemes are similar.</p>
+<ul>
+<li><p><strong>RNA Polymerase I ():</strong> Transcribes ribosomal genes ( in nucleolus. include (Upstream Binding Factor) and (Selectivity Factor 1). contains and , like for . s have a core element and upstream control element (UCE).</p></li>
+<li><p><strong>RNA Polymerase III ():</strong> Transcribes transfer ( genes, 5S rRNA genes, and other small genes. include , , and (for 5S rRNA genes). s can be downstream (internal s) or upstream of the start site.</p></li>
+</ul>
+<p>Despite and sequence differences, formation with is conserved, indicating a common evolutionary origin for eukaryotic transcription initiation machinery.</p>
+</section>
+</section>
+<section id="regulation-of-transcription-specificity-in-eukaryotes" class="level1">
+<h1>Regulation of Transcription Specificity in Eukaryotes</h1>
+<p>Basal transcription complex formation is necessary but insufficient for effective gene transcription, resulting only in basal transcription, like weak s and basal bacterial polymerase transcription. Specific s are needed for quantitative and qualitative transcription control. These and <em>cis</em>-acting sequences like s and proximal s determine gene transcription timing and amount.</p>
+<p>Basal transcription complex association with specific s (transcriptional activators) and the complex forms the <strong>activated transcription complex</strong>, often called the <strong>enhansiosome</strong>, essential for regulated gene expression.</p>
+<div id="fig:activated_complex_2" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="ActivatedTranscriptionComplex.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Schematic representation of Activated Transcription Complex (Enhansiosome).</figcaption>
+</figure>
+</div>
+<p>Figure <a href="#fig:activated_complex_2" data-reference-type="ref" data-reference="fig:activated_complex_2">3</a> illustrates the activated transcription complex. Effective eukaryotic transcription initiation involves:</p>
+<ol type="1">
+<li><p>and polymerase attachment.</p></li>
+<li><p>complex recruitment.</p></li>
+<li><p>Chromatin remodeling complex and histone acetyltransferase association with specific transcriptional activators.</p></li>
+</ol>
+<p>Event order varies. Sometimes, specific transcriptional activators bind first, then basal complex recruitment. Other times, the basal complex is present, and specific activator binding to s and proximal s initiates transcription via interaction.</p>
+<section id="activated-transcription-and-specific-transcription-factors" class="level2">
+<h2 class="anchored" data-anchor-id="activated-transcription-and-specific-transcription-factors">Activated Transcription and Specific Transcription Factors</h2>
+<p>Specific s, or transcriptional activators, bind <em>cis</em>-regulatory elements like proximal s and s to modulate gene transcription. Crucial for tissue-specific and developmental gene expression, they work in concert with basal machinery and for precise gene activity control.</p>
+</section>
+<section id="cis-regulatory-elements-proximal-promoters-and-enhancers" class="level2">
+<h2 class="anchored" data-anchor-id="cis-regulatory-elements-proximal-promoters-and-enhancers">Cis-Regulatory Elements: Proximal Promoters and Enhancers</h2>
+<p><em>Cis</em>-regulatory elements are sequences regulating genes on the same molecule. Proximal s and s are major eukaryotic <em>cis</em>-regulatory elements.</p>
+<section id="distinguishing-features-of-promoters-and-enhancers" class="level3">
+<h3 class="anchored" data-anchor-id="distinguishing-features-of-promoters-and-enhancers">Distinguishing Features of Promoters and Enhancers</h3>
+<p><strong>Proximal s</strong> are located within approximately 200 nucleotides upstream of the transcription start site, recognized by activators, with three key distinctions from s:</p>
+<ul>
+<li><p><strong>Distance-dependent:</strong> Activity depends on distance from start site.</p></li>
+<li><p><strong>Orientation-dependent:</strong> Function is sensitive to orientation relative to start site. Orientation change alters activity.</p></li>
+<li><p><strong>Position-dependent:</strong> Activity depends on position relative to transcription unit. Position shifts drastically affect transcription.</p></li>
+</ul>
+<p><strong>Enhancers</strong>, conversely, are farther, upstream, downstream, or intronic. They are opposite in characteristics:</p>
+<ul>
+<li><p><strong>Distance-independent:</strong> Function effectively far from .</p></li>
+<li><p><strong>Orientation-independent:</strong> Activity largely unaffected by orientation changes.</p></li>
+<li><p><strong>Position-independent:</strong> Function in different positions relative to , with limits.</p></li>
+</ul>
+<p>This difference is due to and action. s, often distant, loop to approach s via the .</p>
+</section>
+<section id="proximal-promoter-elements-cat-box-and-gc-box" class="level3">
+<h3 class="anchored" data-anchor-id="proximal-promoter-elements-cat-box-and-gc-box">Proximal Promoter Elements: CAT box and GC box</h3>
+<p>Proximal s have characteristic motifs for specific activators. Two key elements are and .</p>
+<ul>
+<li><p><strong>CAT box:</strong> motif with consensus, &nbsp;-75 to -80 upstream of start site. Recognized by s like , , and .</p></li>
+<li><p><strong>GC box:</strong> GC-rich, often in proximal s, associated with . Recognized by activator . are regions with high cytosine-guanine dinucleotides, often in s, for gene regulation.</p></li>
+</ul>
+<p>These functional elements were found using mutagenesis and assays.</p>
+<div id="fig:promoter_mutation_2" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="PromoterActivityMutation.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Effect of Mutations in Promoter Regions on Transcriptional Activity.</figcaption>
+</figure>
+</div>
+<p>Figure <a href="#fig:promoter_mutation_2" data-reference-type="ref" data-reference="fig:promoter_mutation_2">4</a> shows such an experiment’s results. The graph shows transcriptional activity versus mutation positions upstream of the start site. Activity drops sharply at , , and positions, indicating their importance.</p>
+</section>
+<section id="enhancers-structure-and-enhansiosome-formation" class="level3">
+<h3 class="anchored" data-anchor-id="enhancers-structure-and-enhansiosome-formation">Enhancers: Structure and Enhansiosome Formation</h3>
+<p>s are positive regulatory elements enhancing transcription and contributing to tissue-specific gene expression. They are characterized by being composed of multiple binding sites for various transcriptional activators.</p>
+<div id="fig:enhancer_structure_2" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="EnhancerStructure.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Structure of an Enhancer with Multiple Transcription Factor Binding Sites.</figcaption>
+</figure>
+</div>
+<p>Figure <a href="#fig:enhancer_structure_2" data-reference-type="ref" data-reference="fig:enhancer_structure_2">5</a> shows a representative , with multiple, often overlapping, binding sites for s like AP-1, AP-2, AP-3, AP-4, and . High regulatory element density is key in s, contrasting with spaced sites in proximal s.</p>
+<p>s form the , activator complexes on the sequence. Activators in the assemble cooperatively, forming a loop to bring the near the . Activators in s include , , and .</p>
+<div id="fig:enhansiosome_2" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="EnhansiosomeFormation.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Enhansiosome Formation and Interaction with Promoter.</figcaption>
+</figure>
+</div>
+<p>Figure <a href="#fig:enhansiosome_2" data-reference-type="ref" data-reference="fig:enhansiosome_2">6</a> depicts the with activators bound to the . They interact, loop , and bring the near the , activating transcription.</p>
+</section>
+</section>
+<section id="gene-reporter-assays-for-studying-regulatory-sequences" class="level2">
+<h2 class="anchored" data-anchor-id="gene-reporter-assays-for-studying-regulatory-sequences">Gene Reporter Assays for Studying Regulatory Sequences</h2>
+<p>assays are powerful for studying regulatory sequences and transcriptional control, quantitatively measuring transcription driven by specific s or s.</p>
+<section id="principle-and-applications-of-reporter-genes" class="level3">
+<h3 class="anchored" data-anchor-id="principle-and-applications-of-reporter-genes">Principle and Applications of Reporter Genes</h3>
+<p>A <strong>reporter gene</strong> has an easily detectable and quantifiable product. Common s:</p>
+<ul>
+<li><p><strong><span class="math inline">\(\beta\)</span>-galactosidase (<em>lacZ</em> gene):</strong> Activity measured using chromogenic substrates like , producing blue color upon cleavage.</p></li>
+<li><p><strong>(<em>luc</em> gene):</strong> Produces bioluminescence, measured with a luminometer.</p></li>
+<li><p><strong>Chloramphenicol Acetyltransferase (CAT):</strong> Activity measured by enzymatic assays.</p></li>
+<li><p><strong>Green Fluorescent Protein (GFP):</strong> Fluorescence measured directly via fluorometer or microscopy.</p></li>
+</ul>
+<p>In assays, the regulatory sequence ( or ) is cloned upstream of the in a plasmid. This is transfected into cells. expression reflects regulatory sequence activity.</p>
+<div id="fig:reporter_assay_2" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="ReporterGeneAssay.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Schematic of a Reporter Gene Assay.</figcaption>
+</figure>
+</div>
+<p>Figure <a href="#fig:reporter_assay_2" data-reference-type="ref" data-reference="fig:reporter_assay_2">7</a> shows a assay design. Regulatory region cloned upstream of , transfected into cells. expression is measured to assess regulatory region activity.</p>
+<p><strong>Deletion Analysis:</strong> Maps regulatory regions using plasmids with progressively shorter regulatory fragments cloned upstream of the . Comparing expression in transfected cells identifies essential regions. Reduced activity upon deletion indicates important regulatory elements.</p>
+<p><strong>Mutagenesis:</strong> For finer mapping, mutagenesis introduces small, defined mutations (insertions or substitutions) sequentially across the regulatory region. Mutation effect on expression is assessed. Regions where mutations reduce activity are critical regulatory elements.</p>
+</section>
+<section id="analyzing-tissue-specific-gene-expression" class="level3">
+<h3 class="anchored" data-anchor-id="analyzing-tissue-specific-gene-expression">Analyzing Tissue-Specific Gene Expression</h3>
+<p>assays also study tissue-specific gene expression. Using regulatory sequences from tissue-specific genes and introducing constructs into different cell types or tissues (transgenic animals or embryo injection) determines regulatory sequence tissue specificity. For example, a responsive to Wnt/<span class="math inline">\(\beta\)</span>-catenin signaling can drive a construct transfected into embryos. Spatial expression (e.g., <span class="math inline">\(\beta\)</span>-galactosidase staining) identifies active tissues, like mesencephalon, vertebral precursors, or notochord in early development.</p>
+<p>assays can probe gene regulation in disease models. In a mouse colon cancer model with <em>APC</em> tumor suppressor mutation, assays study specific activation in tumor vs.&nbsp;normal cells, identifying pathways and regulatory elements in tumorigenesis.</p>
+</section>
+</section>
+<section id="mediator-complex-bridging-activators-and-basal-machinery" class="level2">
+<h2 class="anchored" data-anchor-id="mediator-complex-bridging-activators-and-basal-machinery">Mediator Complex: Bridging Activators and Basal Machinery</h2>
+<p>The complex, a large multiprotein complex, is vital in transcriptional regulation, bridging activators on s and proximal s to the basal transcriptional machinery at the core .</p>
+<p>It consists of numerous proteins, combinatorially assembled, selectively including/excluding proteins gene-specifically. Typically &gt;20 proteins, conserved phylogenetically, it bridges proteins and activators on <em>cis</em> sequences (s and proximal s). It also interacts with chromatin remodelers for chromatin structure regulation, including epigenetic functions.</p>
+<p>According to the recruitment model, eukaryotic activator function is to stimulate polymerase binding to the core . An alternative model suggests activators induce transcriptional complex changes to boost efficiency. Evidence supports both models. However, understanding the exact role of eukaryotic activators may not be crucial for grasping their biological role.</p>
+</section>
+<section id="transcriptional-activators-structure-function-and-proto-oncogenes" class="level2">
+<h2 class="anchored" data-anchor-id="transcriptional-activators-structure-function-and-proto-oncogenes">Transcriptional Activators: Structure, Function, and Proto-oncogenes</h2>
+<p>We now discuss proteins involved in transcriptional regulation, focusing on specific s and briefly on the complex. These proteins, acting in <em>trans</em>, regulate transcription by binding to <em>cis</em>-regulatory elements like proximal s and s.</p>
+<p>The complex, a large assembly of over 20 proteins (in humans and yeast), acts as a bridge between s and the basal transcriptional machinery. It is phylogenetically conserved and allows for combinatorial assembly, with subunit composition varying gene-specifically. While the recruitment model posits that activators enhance polymerase binding to the core , an alternative model suggests they modify the transcriptional complex to improve efficiency. Both models have supporting evidence, and the precise mechanism may not be critical to understanding their biological role.</p>
+<p>Transcriptional activators are key to tissue-specific gene regulation. Their tissue-specific expression or activation allows them to control gene transcription by interacting with ubiquitously present genomic sequences. While major contributors to specificity, epigenetic mechanisms, non-coding s, and processing also play roles. Activators exhibit structural modularity, with functional domains often reused in combination. Notably, many are s. Their combinatorial action on s and proximal s, which have diverse architectures, enables the spatiotemporal control of gene expression in eukaryotes. The order of activator recruitment can be gene-specific, and chromatin structure and histone modifications further modulate their function.</p>
+<section id="general-characteristics-and-tissue-specificity-of-activators" class="level3">
+<h3 class="anchored" data-anchor-id="general-characteristics-and-tissue-specificity-of-activators">General Characteristics and Tissue Specificity of Activators</h3>
+<p>Transcriptional activators mediate cellular responses by controlling gene expression. Examples include p53, Cb, Mic, Fos, Jun, <span class="math inline">\(\beta\)</span>-catenin, and E2F. They respond to diverse cellular signals to regulate gene expression and cellular function. For instance, p53 responds to genotoxic and metabolic stress by regulating genes like (promoting apoptosis) and p21 (inducing cell cycle arrest). Cb mediates signals from G protein-coupled receptors, activating and , and is involved in hormone responses, such as thyroid hormone production upon stimulation. Growth factors like TGF-<span class="math inline">\(\alpha\)</span> and activate Fos through . Thus, activators translate diverse extracellular signals into specific changes in gene expression, achieving cell-type and tissue-type specific responses. We will discuss (inflammation, differentiation) and (embryonic development) in detail later.</p>
+</section>
+<section id="modular-structure-of-transcriptional-activators" class="level3">
+<h3 class="anchored" data-anchor-id="modular-structure-of-transcriptional-activators">Modular Structure of Transcriptional Activators</h3>
+<p>Transcriptional activators are structurally modular, featuring distinct domains for different functions. They typically have:</p>
+<ul>
+<li><p><strong>DNA Binding Domain (DBD):</strong> Recognizes specific sequences. This domain is well-structured, and activators are classified based on their structure.</p></li>
+<li><p><strong>Transcriptional Activation Domain (TAD):</strong> Interacts with the basal transcriptional machinery or the complex to stimulate transcription. The can be unstructured and flexible.</p></li>
+<li><p><strong>Linker Domain:</strong> A flexible domain connecting the and , providing structural independence and flexibility.</p></li>
+</ul>
+<p>A common is the , found in phage lambda repressors, bacterial repressors, and . This motif uses a recognition <span class="math inline">\(\alpha\)</span>-helix that inserts into the major groove to read the sequence. Activator families are classified by their structure, including:</p>
+<ul>
+<li></li>
+<li><p>()</p></li>
+<li></li>
+<li></li>
+</ul>
+<p>These represent major families, with classification primarily based on structural features.</p>
+</section>
+<section id="combinatorial-control-and-gene-regulation" class="level3">
+<h3 class="anchored" data-anchor-id="combinatorial-control-and-gene-regulation">Combinatorial Control and Gene Regulation</h3>
+<p>Transcriptional activators function combinatorially. A limited set of regulatory elements and activators can generate vast regulatory diversity through different combinations. This combinatorial control allows for:</p>
+<ul>
+<li><p><strong>Differential Gene Regulation:</strong> Regulating diverse genes with varied functions.</p></li>
+<li><p><strong>Coordinated Gene Regulation:</strong> Regulating genes with shared functions in a coordinated manner.</p></li>
+</ul>
+<p>Approximately 1800 s are known in humans, with about 400 specific to the &nbsp;200 cell types, regulating an estimated 400,000 regions and 70,000 regions.</p>
+<p>The Phantom 5 project demonstrated that cell types with similar phenotypes utilize s with similar characteristics. This highlights thatcell-type specific gene expression.</p>
+</section>
+<section id="transcriptional-activators-as-proto-oncogenes-and-oncogenes" class="level3">
+<h3 class="anchored" data-anchor-id="transcriptional-activators-as-proto-oncogenes-and-oncogenes">Transcriptional Activators as Proto-oncogenes and Oncogenes</h3>
+<p>Many transcriptional activators are s. s are normal genes controlling cell proliferation and survival. They can be converted into s by mutations or altered expression, leading to uncontrolled cell growth and cancer. This conversion can occur through:</p>
+<ul>
+<li><p><strong>Qualitative Changes:</strong> Mutations that alter the protein’s function, leading to hyperactivation or constitutive activation.</p></li>
+<li><p><strong>Quantitative Changes:</strong> Alterations in expression levels, such as increased transcription due to viral promoter insertion, chromosomal translocation near strong s, or gene amplification.</p></li>
+</ul>
+<p><strong>Examples of Oncogenic Activation:</strong></p>
+<ul>
+<li><p><strong>c-Myc in Burkitt’s Lymphoma:</strong> In , translocation of the <em>MYC</em> from chromosome 8 to chromosome 14 places it under the control of the heavy chain . This results in constitutive overexpression of Myc in B lymphocytes, driving uncontrolled proliferation and development.</p></li>
+<li><p><strong>P53 Tumor Suppressor:</strong> p53 is a critical tumor suppressor, often mutated in human cancers. It is constitutively transcribed and translated but is kept at low levels by MDM2, an ubiquitin ligase that targets p53 for proteasomal degradation. damage and other cellular stresses inhibit MDM2, leading to p53 stabilization and accumulation. p53 then activates target genes involved in cell cycle arrest (p21) and apoptosis () to prevent tumor formation. p53 also regulates MDM2 expression, creating a negative feedback loop.</p></li>
+</ul>
+<p><strong>Clinical Relevance of Transcriptional Activators in Cancer:</strong></p>
+<p>Mutations in p53 are the most frequent genetic alterations in human tumors. Mutations in the of p53 can lead to loss of tumor suppressor function and, in some cases, gain of oncogenic function. These "oncomorphic" mutations can alter p53’s target gene specificity, shifting its role from tumor suppression to promoting tumorigenesis. Other transcriptional activators implicated in cancer include AP-1 (amplification, overexpression in tumors), (mutations in lymphoid tumors, autoimmune diseases), and (developmental disorders, ). These examples underscore the critical role of transcriptional activators in both normal physiology and human disease.</p>
+<p>On Monday, we will explore the molecular mechanisms controlling the activity of these transcriptional activators to achieve cell-type and tissue-specific gene expression.</p>
+</section>
+</section>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<p>In summary, today’s lecture expanded on the fundamental mechanisms of eukaryotic transcription, focusing on the intricate interplay of the pre-initiation complex, general transcription factors, and regulatory <em>cis</em>-elements such as proximal s and s. We explored how the complex bridges transcriptional activators to the basal machinery, enabling precise control over gene expression. We also highlighted the modular structure of transcriptional activators and their combinatorial action in achieving tissue specificity. Finally, we discussed the critical role of transcriptional activators as s and their implications in human diseases, particularly cancer, with examples like <em>MYC</em> in and the multifaceted functions of p53.</p>
+<div class="tcolorbox">
+<p><strong>Key Takeaways:</strong></p>
+<ul>
+<li><p>The <strong>Pre-initiation Complex (PIC)</strong> formation is a multi-step process essential for transcription initiation, involving and Polymerase.</p></li>
+<li><p><strong>TFIIH</strong> plays dual roles in transcription initiation and repair, linking these fundamental cellular processes.</p></li>
+<li><p><strong>Proximal s</strong> and <strong>s</strong> are <em>cis</em>-regulatory elements with distinct properties that dictate the specificity and level of gene transcription.</p></li>
+<li><p><strong>Gene reporter assays</strong> are powerful tools to dissect regulatory sequences and study tissue-specific gene expression.</p></li>
+<li><p>The <strong>Mediator complex</strong> acts as a crucial interface between transcriptional activators and the basal transcription machinery.</p></li>
+<li><p><strong>Transcriptional activators</strong> are modular proteins with distinct domains for binding and transcriptional activation, allowing for combinatorial control of gene expression.</p></li>
+<li><p>Many transcriptional activators are <strong>s</strong>, and their dysregulation is implicated in various human diseases, including cancer.</p></li>
+</ul>
+</div>
+<div class="tcolorbox">
+<p><strong>Further Questions to Consider:</strong></p>
+<ul>
+<li><p>How do chromatin remodeling complexes and histone modifications cooperate with transcriptional activators to regulate gene expression?</p></li>
+<li><p>What are the specific molecular mechanisms by which different transcriptional activator families (, , , ) recognize and bind to ?</p></li>
+<li><p>How do non-coding s contribute to the regulation of transcription specificity in eukaryotes?</p></li>
+<li><p>What are the therapeutic strategies targeting transcriptional misregulation in cancer and other human diseases?</p></li>
+</ul>
+</div>
+<p>These questions will guide our future discussions and explorations into the fascinating world of eukaryotic gene regulation.</p>
+<p>Thank you for your attention. Have a good weekend, and see you on Monday.</p>
+
+
+<!-- -->
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Eukaryotic Gene Transcription: Molecular Mechanisms and Specificity Control"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Your Name"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2025-02-05"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true  # Table of Contents</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">    toc-depth: 2</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">    theme: cosmo  # Or "journal" for Distill-like minimalism</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu"># Introduction</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>In this lecture, we are addressing the topic of eukaryotic gene</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>transcription. Last time, we described the general elements and key</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>components in the transcription initiation process. Today, we will delve</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>deeper into the molecular aspects and establish the foundation for</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>understanding the molecular mechanisms underlying the control of gene</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>expression specificity in eukaryotic organisms, particularly</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>multicellular organisms. We previously discussed the characteristics of</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>the core and mentioned the existence of that recognize the core . These</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>factors enable the correct positioning of the polymerase complex for all</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>polymerases. We are primarily focusing on slides related to because it</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>is the most studied and characterized, but the transcriptional logic is</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>similar for and . We discussed the basal transcription complex or ,</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>which must form at the core to correctly position polymerase and define</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>the direction of transcription. Some in the basal transcription complex</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>help recognize the template strand and distinguish it from the coding</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>strand. The combination of and forms the basal transcription complex or</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>, a necessary key event. However, it is not sufficient by itself to</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>specifically control gene transcription qualitatively and</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>quantitatively. In other words, this complex is necessary but does not</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>guarantee active gene transcription.</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="fu"># Pre-initiation Complex and General Transcription Factors</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="fu">## Preinitiation Complex Formation</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>The , necessary to initiate transcription, assembles through a four-step</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>kinetic process:</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>**Preinitiation Complex Assembly:** The initial assembly of the</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    complex. We will detail its components shortly.</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>**Transcription Initiation:** This phase is reminiscent of abortive</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>    transcription in prokaryotes but differs. Eukaryotic initiation</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>    requires **ATP consumption** due to the accessory activity of that</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>    denature downstream of the transcription start site.</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>**DNA Denaturation and Kinase Activity:** An activity is needed to</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>    denature near the transcription start site. **Kinase activity** is</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>    also essential, consuming ATP. This kinase activity is exerted by on</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>    , specifically on the Carboxyl-Terminal Domain () of .</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="ss">4.  </span>**Promoter Clearance and Elongation:** Phosphorylation of the by ,</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>    particularly , causes the holoenzyme complex to detach from the .</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>    This initiates **clearance** and the **elongation phase**. This is</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>    similar to the detachment of bacterial polymerase holoenzyme from</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>    the sigma subunit. The remaining proteins stay at the core or detach</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>    to start another transcription cycle.</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="fu">## General Transcription Factors (GTFs)</span></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>Several are required to initiate transcription. Their number varies</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>across eukaryotes; humans have seven. The enzyme complex has 12</span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>subunits, and the , bridging proximal elements and s to the core , is a</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>multiprotein complex with many subunits. A significant portion of the</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>coding genome is dedicated to proteins regulating transcription, besides</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>. It's estimated that humans have 3,000 transcription-related proteins,</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>including , specific s, coactivators, and corepressors.</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>![Schematic representation of Preinitiation Complex Formation. (Note:</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>Image placeholder, replace with actual image if</span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>available).](PreinitiationComplexFormation.png){#fig:PIC_formation_2</span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>width="70%"}</span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>Figure <span class="co">[</span><span class="ot">1</span><span class="co">](#fig:PIC_formation_2)</span>{reference-type="ref"</span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>reference="fig:PIC_formation_2"} shows the kinetic formation of the . An</span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>early key event is recognition by Binding Protein (). The associates</span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>with -associated factors (), some with transcriptional coactivator</span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>activity, like histone acetylation. and form the complex. assembly seems</span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>to be the first step in formation. Subsequently, accessory factors and</span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>join. helps define the transcription direction, distinguishing the</span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>template from the coding strand to orient polymerase processivity.</span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="fu">### TF2D and TATA-Binding Protein (TBP)</span></span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>The complex, comprising and , initiates assembly. recognizes and binds</span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>to the , a sequence in many gene s.</span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a><span class="fu">### TF2B and Transcription Direction</span></span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>, associating after , defines the transcription direction. It</span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>discriminates between template and coding strands, orienting polymerase.</span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>binding is asymmetric relative to the symmetry center of binding.</span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>binding to the bends . binds on one side, interacting with and</span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>recognizing the sequence, a GC-rich sequence upstream of the . Binding</span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>to the in the major groove and partially to the minor groove downstream</span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>of creates asymmetry, defining transcription direction. polymerase</span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>processivity is 5' to 3', so asymmetry defines the 3' to 5' template</span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>strand. thus defines template and coding strands through interaction.</span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a><span class="fu">### TF2H: Helicase, Kinase, and Role in DNA Repair</span></span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>is a crucial with helicase and kinase activities. Its **helicase</span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>activity** denatures the core, essential for transcription initiation,</span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>attributed to subunits and . Mutations in and genes cause , a rare</span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a>genetic disorder with extreme sun sensitivity and high skin cancer risk.</span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>Besides helicase activity, has **kinase activity**, ATP-dependent, used</span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>partly for helicase function and crucially for phosphorylation of .</span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>phosphorylation is essential for efficient transcription, transitioning</span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>from initiation to elongation. Without it, transcription stalls at</span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>initiation. Phosphorylation signals processing steps. For example, 5'</span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>capping enzymes recognize phosphorylated , as do intron splicing</span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>complexes.</span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a><span class="fu">## CTD Phosphorylation and RNA Processing</span></span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>phosphorylation by is critical for denaturation, elongation, and</span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>coordinating processing. Phosphorylated is a platform for processing</span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a>factors like capping, splicing, and termination enzymes.</span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a>The of has repeats of the consensus heptapeptide sequence with the</span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>consensus <span class="in">`Tyr-Ser-Pro-Thr-Ser-Pro-Ser`</span>. Repeat number varies; mammals</span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>have 52. Serine residues (Ser2 and Ser5, presumably) are phosphorylated</span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>by .</span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>(Electrophoretic Mobility Shift Assay) demonstrates phosphorylation</span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a>importance. assesses protein- complex molecular weight or formation</span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a>changes.</span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>::: tcolorbox</span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a>**Electrophoretic Mobility Shift Assay (EMSA):** EMSA studies protein-</span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>interactions using native gel electrophoresis. Labeled with a</span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>protein-binding site is incubated with protein or extract. Protein</span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>binding retards migration in the gel, indicating interaction.</span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>**Procedure:**</span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>**Prepare Labeled DNA Probe:** Label fragment with sequence of</span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>    interest.</span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>**Incubation:** Incubate labeled with protein sample.</span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>**Gel Electrophoresis:** Load mixture on non-denaturing</span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a>    polyacrylamide gel and perform electrophoresis.</span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a><span class="ss">4.  </span>**Detection:** Detect labeled . Unbound migrates faster; protein-</span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a>    complexes migrate slower (shifted band).</span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a><span class="ss">5.  </span>**Supershift Assay (Optional):** Add antibody specific to protein of</span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>    interest to confirm protein identity. Antibody binding causes</span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a>    further mobility shift (supershift).</span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a>In the lecture's experiment, a fragment containing a core is used with</span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a>various (, , , , , ) and , with/without ATP. It tests if ATP is needed</span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a>for molecular weight change in the multiprotein complex, indicating</span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a>phosphorylation by . Results show a further mobility shift with and ATP,</span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a>demonstrating 's ATP-dependent phosphorylation, altering the complex.</span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>factors and are also in , a sub-pathway repairing lesions in transcribed</span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a>genes. Lesions like pyrimidine dimers and 6-4 photoproducts from UV</span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a>radiation are repaired by . During transcription, , especially and , is</span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a>crucial in . Inactivating mutations in these genes cause , increasing</span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a>skin cancer and UV-related pathology risks like psoriasis. Patients must</span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>avoid sunlight.</span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a>![Animation of Transcription Preinitiation Complex Assembly. (Note: GIF</span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a>placeholder, replace with actual animation if</span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a>available).](TranscriptionPreinitiationComplex.gif){#fig:PIC_animation_gif_2</span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a>width="70%"}</span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>Figure <span class="co">[</span><span class="ot">2</span><span class="co">](#fig:PIC_animation_gif_2)</span>{reference-type="ref"</span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a>reference="fig:PIC_animation_gif_2"} illustrates dynamic assembly,</span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a>showing , , , , and other factor interactions.</span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a><span class="fu">## Transcription by RNA Polymerases I and III</span></span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a>formation at the core isn't exclusive to genes. and use similar</span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>recruitment at their gene s. differ, but transcriptional logic is</span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>analogous. is conserved across s of all three polymerases. and use</span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a>different , like and for , and , , and for . Functional regulatory</span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a>schemes are similar.</span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**RNA Polymerase I ():** Transcribes ribosomal genes ( in nucleolus.</span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>    include (Upstream Binding Factor) and (Selectivity Factor 1).</span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a>    contains and , like for . s have a core element and upstream control</span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a>    element (UCE).</span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**RNA Polymerase III ():** Transcribes transfer ( genes, 5S rRNA</span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>    genes, and other small genes. include , , and (for 5S rRNA genes). s</span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>    can be downstream (internal s) or upstream of the start site.</span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a>Despite and sequence differences, formation with is conserved,</span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a>indicating a common evolutionary origin for eukaryotic transcription</span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a>initiation machinery.</span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="fu"># Regulation of Transcription Specificity in Eukaryotes</span></span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a>Basal transcription complex formation is necessary but insufficient for</span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>effective gene transcription, resulting only in basal transcription,</span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a>like weak s and basal bacterial polymerase transcription. Specific s are</span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>needed for quantitative and qualitative transcription control. These and</span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a>*cis*-acting sequences like s and proximal s determine gene</span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a>transcription timing and amount.</span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a>Basal transcription complex association with specific s (transcriptional</span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a>activators) and the complex forms the **activated transcription</span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a>complex**, often called the **enhansiosome**, essential for regulated</span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a>gene expression.</span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a>![Schematic representation of Activated Transcription Complex</span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a>(Enhansiosome).](ActivatedTranscriptionComplex.png){#fig:activated_complex_2</span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>width="70%"}</span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a>Figure <span class="co">[</span><span class="ot">3</span><span class="co">](#fig:activated_complex_2)</span>{reference-type="ref"</span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>reference="fig:activated_complex_2"} illustrates the activated</span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a>transcription complex. Effective eukaryotic transcription initiation</span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a>involves:</span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>and polymerase attachment.</span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>complex recruitment.</span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>Chromatin remodeling complex and histone acetyltransferase</span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a>    association with specific transcriptional activators.</span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>Event order varies. Sometimes, specific transcriptional activators bind</span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a>first, then basal complex recruitment. Other times, the basal complex is</span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a>present, and specific activator binding to s and proximal s initiates</span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a>transcription via interaction.</span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a><span class="fu">## Activated Transcription and Specific Transcription Factors</span></span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>Specific s, or transcriptional activators, bind *cis*-regulatory</span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>elements like proximal s and s to modulate gene transcription. Crucial</span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a>for tissue-specific and developmental gene expression, they work in</span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a>concert with basal machinery and for precise gene activity control.</span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a><span class="fu">## Cis-Regulatory Elements: Proximal Promoters and Enhancers</span></span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a>*Cis*-regulatory elements are sequences regulating genes on the same</span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a>molecule. Proximal s and s are major eukaryotic *cis*-regulatory</span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a>elements.</span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a><span class="fu">### Distinguishing Features of Promoters and Enhancers</span></span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a>**Proximal s** are located within approximately 200 nucleotides upstream</span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>of the transcription start site, recognized by activators, with three</span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a>key distinctions from s:</span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Distance-dependent:** Activity depends on distance from start</span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a>    site.</span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Orientation-dependent:** Function is sensitive to orientation</span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a>    relative to start site. Orientation change alters activity.</span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Position-dependent:** Activity depends on position relative to</span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a>    transcription unit. Position shifts drastically affect</span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a>    transcription.</span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a>**Enhancers**, conversely, are farther, upstream, downstream, or</span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a>intronic. They are opposite in characteristics:</span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Distance-independent:** Function effectively far from .</span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Orientation-independent:** Activity largely unaffected by</span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a>    orientation changes.</span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Position-independent:** Function in different positions relative</span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a>    to , with limits.</span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a>This difference is due to and action. s, often distant, loop to approach</span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a>s via the .</span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a><span class="fu">### Proximal Promoter Elements: CAT box and GC box</span></span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a>Proximal s have characteristic motifs for specific activators. Two key</span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a>elements are and .</span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**CAT box:** motif with consensus, &nbsp;-75 to -80 upstream of start</span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a>    site. Recognized by s like , , and .</span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**GC box:** GC-rich, often in proximal s, associated with .</span>
+<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a>    Recognized by activator . are regions with high cytosine-guanine</span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a>    dinucleotides, often in s, for gene regulation.</span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a>These functional elements were found using mutagenesis and assays.</span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a>![Effect of Mutations in Promoter Regions on Transcriptional</span>
+<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a>Activity.](PromoterActivityMutation.png){#fig:promoter_mutation_2</span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a>width="70%"}</span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a>Figure <span class="co">[</span><span class="ot">4</span><span class="co">](#fig:promoter_mutation_2)</span>{reference-type="ref"</span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a>reference="fig:promoter_mutation_2"} shows such an experiment's results.</span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a>The graph shows transcriptional activity versus mutation positions</span>
+<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a>upstream of the start site. Activity drops sharply at , , and positions,</span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a>indicating their importance.</span>
+<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a><span class="fu">### Enhancers: Structure and Enhansiosome Formation</span></span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a>s are positive regulatory elements enhancing transcription and</span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a>contributing to tissue-specific gene expression. They are characterized</span>
+<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a>by being composed of multiple binding sites for various transcriptional</span>
+<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a>activators.</span>
+<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a>![Structure of an Enhancer with Multiple Transcription Factor Binding</span>
+<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a>Sites.](EnhancerStructure.png){#fig:enhancer_structure_2 width="70%"}</span>
+<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a>Figure <span class="co">[</span><span class="ot">5</span><span class="co">](#fig:enhancer_structure_2)</span>{reference-type="ref"</span>
+<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a>reference="fig:enhancer_structure_2"} shows a representative , with</span>
+<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a>multiple, often overlapping, binding sites for s like AP-1, AP-2, AP-3,</span>
+<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a>AP-4, and . High regulatory element density is key in s, contrasting</span>
+<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a>with spaced sites in proximal s.</span>
+<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a>s form the , activator complexes on the sequence. Activators in the</span>
+<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a>assemble cooperatively, forming a loop to bring the near the .</span>
+<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a>Activators in s include , , and .</span>
+<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a>![Enhansiosome Formation and Interaction with</span>
+<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a>Promoter.](EnhansiosomeFormation.png){#fig:enhansiosome_2 width="70%"}</span>
+<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a>Figure <span class="co">[</span><span class="ot">6</span><span class="co">](#fig:enhansiosome_2)</span>{reference-type="ref"</span>
+<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a>reference="fig:enhansiosome_2"} depicts the with activators bound to the</span>
+<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a>. They interact, loop , and bring the near the , activating</span>
+<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a>transcription.</span>
+<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a><span class="fu">## Gene Reporter Assays for Studying Regulatory Sequences</span></span>
+<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a>assays are powerful for studying regulatory sequences and</span>
+<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a>transcriptional control, quantitatively measuring transcription driven</span>
+<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a>by specific s or s.</span>
+<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a><span class="fu">### Principle and Applications of Reporter Genes</span></span>
+<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a>A **reporter gene** has an easily detectable and quantifiable product.</span>
+<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a>Common s:</span>
+<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**$\beta$-galactosidase (*lacZ* gene):** Activity measured using</span>
+<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a>    chromogenic substrates like , producing blue color upon cleavage.</span>
+<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**(*luc* gene):** Produces bioluminescence, measured with a</span>
+<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a>    luminometer.</span>
+<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Chloramphenicol Acetyltransferase (CAT):** Activity measured by</span>
+<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a>    enzymatic assays.</span>
+<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Green Fluorescent Protein (GFP):** Fluorescence measured directly</span>
+<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a>    via fluorometer or microscopy.</span>
+<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a>In assays, the regulatory sequence ( or ) is cloned upstream of the in a</span>
+<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a>plasmid. This is transfected into cells. expression reflects regulatory</span>
+<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a>sequence activity.</span>
+<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a>![Schematic of a Reporter Gene</span>
+<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a>Assay.](ReporterGeneAssay.png){#fig:reporter_assay_2 width="70%"}</span>
+<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a>Figure <span class="co">[</span><span class="ot">7</span><span class="co">](#fig:reporter_assay_2)</span>{reference-type="ref"</span>
+<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a>reference="fig:reporter_assay_2"} shows a assay design. Regulatory</span>
+<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a>region cloned upstream of , transfected into cells. expression is</span>
+<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a>measured to assess regulatory region activity.</span>
+<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a>**Deletion Analysis:** Maps regulatory regions using plasmids with</span>
+<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a>progressively shorter regulatory fragments cloned upstream of the .</span>
+<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a>Comparing expression in transfected cells identifies essential regions.</span>
+<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a>Reduced activity upon deletion indicates important regulatory elements.</span>
+<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a>**Mutagenesis:** For finer mapping, mutagenesis introduces small,</span>
+<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a>defined mutations (insertions or substitutions) sequentially across the</span>
+<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a>regulatory region. Mutation effect on expression is assessed. Regions</span>
+<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a>where mutations reduce activity are critical regulatory elements.</span>
+<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a><span class="fu">### Analyzing Tissue-Specific Gene Expression</span></span>
+<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a>assays also study tissue-specific gene expression. Using regulatory</span>
+<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a>sequences from tissue-specific genes and introducing constructs into</span>
+<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a>different cell types or tissues (transgenic animals or embryo injection)</span>
+<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a>determines regulatory sequence tissue specificity. For example, a</span>
+<span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a>responsive to Wnt/$\beta$-catenin signaling can drive a construct</span>
+<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a>transfected into embryos. Spatial expression (e.g.,</span>
+<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a>$\beta$-galactosidase staining) identifies active tissues, like</span>
+<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a>mesencephalon, vertebral precursors, or notochord in early development.</span>
+<span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a>assays can probe gene regulation in disease models. In a mouse colon</span>
+<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a>cancer model with *APC* tumor suppressor mutation, assays study specific</span>
+<span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a>activation in tumor vs. normal cells, identifying pathways and</span>
+<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a>regulatory elements in tumorigenesis.</span>
+<span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a><span class="fu">## Mediator Complex: Bridging Activators and Basal Machinery</span></span>
+<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a>The complex, a large multiprotein complex, is vital in transcriptional</span>
+<span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a>regulation, bridging activators on s and proximal s to the basal</span>
+<span id="cb1-396"><a href="#cb1-396" aria-hidden="true" tabindex="-1"></a>transcriptional machinery at the core .</span>
+<span id="cb1-397"><a href="#cb1-397" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-398"><a href="#cb1-398" aria-hidden="true" tabindex="-1"></a>It consists of numerous proteins, combinatorially assembled, selectively</span>
+<span id="cb1-399"><a href="#cb1-399" aria-hidden="true" tabindex="-1"></a>including/excluding proteins gene-specifically. Typically <span class="sc">\&gt;</span>20 proteins,</span>
+<span id="cb1-400"><a href="#cb1-400" aria-hidden="true" tabindex="-1"></a>conserved phylogenetically, it bridges proteins and activators on *cis*</span>
+<span id="cb1-401"><a href="#cb1-401" aria-hidden="true" tabindex="-1"></a>sequences (s and proximal s). It also interacts with chromatin</span>
+<span id="cb1-402"><a href="#cb1-402" aria-hidden="true" tabindex="-1"></a>remodelers for chromatin structure regulation, including epigenetic</span>
+<span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a>functions.</span>
+<span id="cb1-404"><a href="#cb1-404" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a>According to the recruitment model, eukaryotic activator function is to</span>
+<span id="cb1-406"><a href="#cb1-406" aria-hidden="true" tabindex="-1"></a>stimulate polymerase binding to the core . An alternative model suggests</span>
+<span id="cb1-407"><a href="#cb1-407" aria-hidden="true" tabindex="-1"></a>activators induce transcriptional complex changes to boost efficiency.</span>
+<span id="cb1-408"><a href="#cb1-408" aria-hidden="true" tabindex="-1"></a>Evidence supports both models. However, understanding the exact role of</span>
+<span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a>eukaryotic activators may not be crucial for grasping their biological</span>
+<span id="cb1-410"><a href="#cb1-410" aria-hidden="true" tabindex="-1"></a>role.</span>
+<span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-412"><a href="#cb1-412" aria-hidden="true" tabindex="-1"></a><span class="fu">## Transcriptional Activators: Structure, Function, and Proto-oncogenes</span></span>
+<span id="cb1-413"><a href="#cb1-413" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-414"><a href="#cb1-414" aria-hidden="true" tabindex="-1"></a>We now discuss proteins involved in transcriptional regulation, focusing</span>
+<span id="cb1-415"><a href="#cb1-415" aria-hidden="true" tabindex="-1"></a>on specific s and briefly on the complex. These proteins, acting in</span>
+<span id="cb1-416"><a href="#cb1-416" aria-hidden="true" tabindex="-1"></a>*trans*, regulate transcription by binding to *cis*-regulatory elements</span>
+<span id="cb1-417"><a href="#cb1-417" aria-hidden="true" tabindex="-1"></a>like proximal s and s.</span>
+<span id="cb1-418"><a href="#cb1-418" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-419"><a href="#cb1-419" aria-hidden="true" tabindex="-1"></a>The complex, a large assembly of over 20 proteins (in humans and yeast),</span>
+<span id="cb1-420"><a href="#cb1-420" aria-hidden="true" tabindex="-1"></a>acts as a bridge between s and the basal transcriptional machinery. It</span>
+<span id="cb1-421"><a href="#cb1-421" aria-hidden="true" tabindex="-1"></a>is phylogenetically conserved and allows for combinatorial assembly,</span>
+<span id="cb1-422"><a href="#cb1-422" aria-hidden="true" tabindex="-1"></a>with subunit composition varying gene-specifically. While the</span>
+<span id="cb1-423"><a href="#cb1-423" aria-hidden="true" tabindex="-1"></a>recruitment model posits that activators enhance polymerase binding to</span>
+<span id="cb1-424"><a href="#cb1-424" aria-hidden="true" tabindex="-1"></a>the core , an alternative model suggests they modify the transcriptional</span>
+<span id="cb1-425"><a href="#cb1-425" aria-hidden="true" tabindex="-1"></a>complex to improve efficiency. Both models have supporting evidence, and</span>
+<span id="cb1-426"><a href="#cb1-426" aria-hidden="true" tabindex="-1"></a>the precise mechanism may not be critical to understanding their</span>
+<span id="cb1-427"><a href="#cb1-427" aria-hidden="true" tabindex="-1"></a>biological role.</span>
+<span id="cb1-428"><a href="#cb1-428" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-429"><a href="#cb1-429" aria-hidden="true" tabindex="-1"></a>Transcriptional activators are key to tissue-specific gene regulation.</span>
+<span id="cb1-430"><a href="#cb1-430" aria-hidden="true" tabindex="-1"></a>Their tissue-specific expression or activation allows them to control</span>
+<span id="cb1-431"><a href="#cb1-431" aria-hidden="true" tabindex="-1"></a>gene transcription by interacting with ubiquitously present genomic</span>
+<span id="cb1-432"><a href="#cb1-432" aria-hidden="true" tabindex="-1"></a>sequences. While major contributors to specificity, epigenetic</span>
+<span id="cb1-433"><a href="#cb1-433" aria-hidden="true" tabindex="-1"></a>mechanisms, non-coding s, and processing also play roles. Activators</span>
+<span id="cb1-434"><a href="#cb1-434" aria-hidden="true" tabindex="-1"></a>exhibit structural modularity, with functional domains often reused in</span>
+<span id="cb1-435"><a href="#cb1-435" aria-hidden="true" tabindex="-1"></a>combination. Notably, many are s. Their combinatorial action on s and</span>
+<span id="cb1-436"><a href="#cb1-436" aria-hidden="true" tabindex="-1"></a>proximal s, which have diverse architectures, enables the spatiotemporal</span>
+<span id="cb1-437"><a href="#cb1-437" aria-hidden="true" tabindex="-1"></a>control of gene expression in eukaryotes. The order of activator</span>
+<span id="cb1-438"><a href="#cb1-438" aria-hidden="true" tabindex="-1"></a>recruitment can be gene-specific, and chromatin structure and histone</span>
+<span id="cb1-439"><a href="#cb1-439" aria-hidden="true" tabindex="-1"></a>modifications further modulate their function.</span>
+<span id="cb1-440"><a href="#cb1-440" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-441"><a href="#cb1-441" aria-hidden="true" tabindex="-1"></a><span class="fu">### General Characteristics and Tissue Specificity of Activators</span></span>
+<span id="cb1-442"><a href="#cb1-442" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-443"><a href="#cb1-443" aria-hidden="true" tabindex="-1"></a>Transcriptional activators mediate cellular responses by controlling</span>
+<span id="cb1-444"><a href="#cb1-444" aria-hidden="true" tabindex="-1"></a>gene expression. Examples include p53, Cb, Mic, Fos, Jun,</span>
+<span id="cb1-445"><a href="#cb1-445" aria-hidden="true" tabindex="-1"></a>$\beta$-catenin, and E2F. They respond to diverse cellular signals to</span>
+<span id="cb1-446"><a href="#cb1-446" aria-hidden="true" tabindex="-1"></a>regulate gene expression and cellular function. For instance, p53</span>
+<span id="cb1-447"><a href="#cb1-447" aria-hidden="true" tabindex="-1"></a>responds to genotoxic and metabolic stress by regulating genes like</span>
+<span id="cb1-448"><a href="#cb1-448" aria-hidden="true" tabindex="-1"></a>(promoting apoptosis) and p21 (inducing cell cycle arrest). Cb mediates</span>
+<span id="cb1-449"><a href="#cb1-449" aria-hidden="true" tabindex="-1"></a>signals from G protein-coupled receptors, activating and , and is</span>
+<span id="cb1-450"><a href="#cb1-450" aria-hidden="true" tabindex="-1"></a>involved in hormone responses, such as thyroid hormone production upon</span>
+<span id="cb1-451"><a href="#cb1-451" aria-hidden="true" tabindex="-1"></a>stimulation. Growth factors like TGF-$\alpha$ and activate Fos through .</span>
+<span id="cb1-452"><a href="#cb1-452" aria-hidden="true" tabindex="-1"></a>Thus, activators translate diverse extracellular signals into specific</span>
+<span id="cb1-453"><a href="#cb1-453" aria-hidden="true" tabindex="-1"></a>changes in gene expression, achieving cell-type and tissue-type specific</span>
+<span id="cb1-454"><a href="#cb1-454" aria-hidden="true" tabindex="-1"></a>responses. We will discuss (inflammation, differentiation) and</span>
+<span id="cb1-455"><a href="#cb1-455" aria-hidden="true" tabindex="-1"></a>(embryonic development) in detail later.</span>
+<span id="cb1-456"><a href="#cb1-456" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-457"><a href="#cb1-457" aria-hidden="true" tabindex="-1"></a><span class="fu">### Modular Structure of Transcriptional Activators</span></span>
+<span id="cb1-458"><a href="#cb1-458" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-459"><a href="#cb1-459" aria-hidden="true" tabindex="-1"></a>Transcriptional activators are structurally modular, featuring distinct</span>
+<span id="cb1-460"><a href="#cb1-460" aria-hidden="true" tabindex="-1"></a>domains for different functions. They typically have:</span>
+<span id="cb1-461"><a href="#cb1-461" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-462"><a href="#cb1-462" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**DNA Binding Domain (DBD):** Recognizes specific sequences. This</span>
+<span id="cb1-463"><a href="#cb1-463" aria-hidden="true" tabindex="-1"></a>    domain is well-structured, and activators are classified based on</span>
+<span id="cb1-464"><a href="#cb1-464" aria-hidden="true" tabindex="-1"></a>    their structure.</span>
+<span id="cb1-465"><a href="#cb1-465" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-466"><a href="#cb1-466" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Transcriptional Activation Domain (TAD):** Interacts with the</span>
+<span id="cb1-467"><a href="#cb1-467" aria-hidden="true" tabindex="-1"></a>    basal transcriptional machinery or the complex to stimulate</span>
+<span id="cb1-468"><a href="#cb1-468" aria-hidden="true" tabindex="-1"></a>    transcription. The can be unstructured and flexible.</span>
+<span id="cb1-469"><a href="#cb1-469" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-470"><a href="#cb1-470" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Linker Domain:** A flexible domain connecting the and , providing</span>
+<span id="cb1-471"><a href="#cb1-471" aria-hidden="true" tabindex="-1"></a>    structural independence and flexibility.</span>
+<span id="cb1-472"><a href="#cb1-472" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-473"><a href="#cb1-473" aria-hidden="true" tabindex="-1"></a>A common is the , found in phage lambda repressors, bacterial</span>
+<span id="cb1-474"><a href="#cb1-474" aria-hidden="true" tabindex="-1"></a>repressors, and . This motif uses a recognition $\alpha$-helix that</span>
+<span id="cb1-475"><a href="#cb1-475" aria-hidden="true" tabindex="-1"></a>inserts into the major groove to read the sequence. Activator families</span>
+<span id="cb1-476"><a href="#cb1-476" aria-hidden="true" tabindex="-1"></a>are classified by their structure, including:</span>
+<span id="cb1-477"><a href="#cb1-477" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-478"><a href="#cb1-478" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span></span>
+<span id="cb1-479"><a href="#cb1-479" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-480"><a href="#cb1-480" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>()</span>
+<span id="cb1-481"><a href="#cb1-481" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-482"><a href="#cb1-482" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span></span>
+<span id="cb1-483"><a href="#cb1-483" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-484"><a href="#cb1-484" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span></span>
+<span id="cb1-485"><a href="#cb1-485" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-486"><a href="#cb1-486" aria-hidden="true" tabindex="-1"></a>These represent major families, with classification primarily based on</span>
+<span id="cb1-487"><a href="#cb1-487" aria-hidden="true" tabindex="-1"></a>structural features.</span>
+<span id="cb1-488"><a href="#cb1-488" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-489"><a href="#cb1-489" aria-hidden="true" tabindex="-1"></a><span class="fu">### Combinatorial Control and Gene Regulation</span></span>
+<span id="cb1-490"><a href="#cb1-490" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-491"><a href="#cb1-491" aria-hidden="true" tabindex="-1"></a>Transcriptional activators function combinatorially. A limited set of</span>
+<span id="cb1-492"><a href="#cb1-492" aria-hidden="true" tabindex="-1"></a>regulatory elements and activators can generate vast regulatory</span>
+<span id="cb1-493"><a href="#cb1-493" aria-hidden="true" tabindex="-1"></a>diversity through different combinations. This combinatorial control</span>
+<span id="cb1-494"><a href="#cb1-494" aria-hidden="true" tabindex="-1"></a>allows for:</span>
+<span id="cb1-495"><a href="#cb1-495" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-496"><a href="#cb1-496" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Differential Gene Regulation:** Regulating diverse genes with</span>
+<span id="cb1-497"><a href="#cb1-497" aria-hidden="true" tabindex="-1"></a>    varied functions.</span>
+<span id="cb1-498"><a href="#cb1-498" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-499"><a href="#cb1-499" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Coordinated Gene Regulation:** Regulating genes with shared</span>
+<span id="cb1-500"><a href="#cb1-500" aria-hidden="true" tabindex="-1"></a>    functions in a coordinated manner.</span>
+<span id="cb1-501"><a href="#cb1-501" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-502"><a href="#cb1-502" aria-hidden="true" tabindex="-1"></a>Approximately 1800 s are known in humans, with about 400 specific to the</span>
+<span id="cb1-503"><a href="#cb1-503" aria-hidden="true" tabindex="-1"></a>&nbsp;200 cell types, regulating an estimated 400,000 regions and 70,000</span>
+<span id="cb1-504"><a href="#cb1-504" aria-hidden="true" tabindex="-1"></a>regions.</span>
+<span id="cb1-505"><a href="#cb1-505" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-506"><a href="#cb1-506" aria-hidden="true" tabindex="-1"></a>The Phantom 5 project demonstrated that cell types with similar</span>
+<span id="cb1-507"><a href="#cb1-507" aria-hidden="true" tabindex="-1"></a>phenotypes utilize s with similar characteristics. This highlights</span>
+<span id="cb1-508"><a href="#cb1-508" aria-hidden="true" tabindex="-1"></a>thatcell-type specific gene expression.</span>
+<span id="cb1-509"><a href="#cb1-509" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-510"><a href="#cb1-510" aria-hidden="true" tabindex="-1"></a><span class="fu">### Transcriptional Activators as Proto-oncogenes and Oncogenes</span></span>
+<span id="cb1-511"><a href="#cb1-511" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-512"><a href="#cb1-512" aria-hidden="true" tabindex="-1"></a>Many transcriptional activators are s. s are normal genes controlling</span>
+<span id="cb1-513"><a href="#cb1-513" aria-hidden="true" tabindex="-1"></a>cell proliferation and survival. They can be converted into s by</span>
+<span id="cb1-514"><a href="#cb1-514" aria-hidden="true" tabindex="-1"></a>mutations or altered expression, leading to uncontrolled cell growth and</span>
+<span id="cb1-515"><a href="#cb1-515" aria-hidden="true" tabindex="-1"></a>cancer. This conversion can occur through:</span>
+<span id="cb1-516"><a href="#cb1-516" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-517"><a href="#cb1-517" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Qualitative Changes:** Mutations that alter the protein's</span>
+<span id="cb1-518"><a href="#cb1-518" aria-hidden="true" tabindex="-1"></a>    function, leading to hyperactivation or constitutive activation.</span>
+<span id="cb1-519"><a href="#cb1-519" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-520"><a href="#cb1-520" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Quantitative Changes:** Alterations in expression levels, such as</span>
+<span id="cb1-521"><a href="#cb1-521" aria-hidden="true" tabindex="-1"></a>    increased transcription due to viral promoter insertion, chromosomal</span>
+<span id="cb1-522"><a href="#cb1-522" aria-hidden="true" tabindex="-1"></a>    translocation near strong s, or gene amplification.</span>
+<span id="cb1-523"><a href="#cb1-523" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-524"><a href="#cb1-524" aria-hidden="true" tabindex="-1"></a>**Examples of Oncogenic Activation:**</span>
+<span id="cb1-525"><a href="#cb1-525" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-526"><a href="#cb1-526" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**c-Myc in Burkitt's Lymphoma:** In , translocation of the *MYC*</span>
+<span id="cb1-527"><a href="#cb1-527" aria-hidden="true" tabindex="-1"></a>    from chromosome 8 to chromosome 14 places it under the control of</span>
+<span id="cb1-528"><a href="#cb1-528" aria-hidden="true" tabindex="-1"></a>    the heavy chain . This results in constitutive overexpression of Myc</span>
+<span id="cb1-529"><a href="#cb1-529" aria-hidden="true" tabindex="-1"></a>    in B lymphocytes, driving uncontrolled proliferation and</span>
+<span id="cb1-530"><a href="#cb1-530" aria-hidden="true" tabindex="-1"></a>    development.</span>
+<span id="cb1-531"><a href="#cb1-531" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-532"><a href="#cb1-532" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**P53 Tumor Suppressor:** p53 is a critical tumor suppressor, often</span>
+<span id="cb1-533"><a href="#cb1-533" aria-hidden="true" tabindex="-1"></a>    mutated in human cancers. It is constitutively transcribed and</span>
+<span id="cb1-534"><a href="#cb1-534" aria-hidden="true" tabindex="-1"></a>    translated but is kept at low levels by MDM2, an ubiquitin ligase</span>
+<span id="cb1-535"><a href="#cb1-535" aria-hidden="true" tabindex="-1"></a>    that targets p53 for proteasomal degradation. damage and other</span>
+<span id="cb1-536"><a href="#cb1-536" aria-hidden="true" tabindex="-1"></a>    cellular stresses inhibit MDM2, leading to p53 stabilization and</span>
+<span id="cb1-537"><a href="#cb1-537" aria-hidden="true" tabindex="-1"></a>    accumulation. p53 then activates target genes involved in cell cycle</span>
+<span id="cb1-538"><a href="#cb1-538" aria-hidden="true" tabindex="-1"></a>    arrest (p21) and apoptosis () to prevent tumor formation. p53 also</span>
+<span id="cb1-539"><a href="#cb1-539" aria-hidden="true" tabindex="-1"></a>    regulates MDM2 expression, creating a negative feedback loop.</span>
+<span id="cb1-540"><a href="#cb1-540" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-541"><a href="#cb1-541" aria-hidden="true" tabindex="-1"></a>**Clinical Relevance of Transcriptional Activators in Cancer:**</span>
+<span id="cb1-542"><a href="#cb1-542" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-543"><a href="#cb1-543" aria-hidden="true" tabindex="-1"></a>Mutations in p53 are the most frequent genetic alterations in human</span>
+<span id="cb1-544"><a href="#cb1-544" aria-hidden="true" tabindex="-1"></a>tumors. Mutations in the of p53 can lead to loss of tumor suppressor</span>
+<span id="cb1-545"><a href="#cb1-545" aria-hidden="true" tabindex="-1"></a>function and, in some cases, gain of oncogenic function. These</span>
+<span id="cb1-546"><a href="#cb1-546" aria-hidden="true" tabindex="-1"></a>\"oncomorphic\" mutations can alter p53's target gene specificity,</span>
+<span id="cb1-547"><a href="#cb1-547" aria-hidden="true" tabindex="-1"></a>shifting its role from tumor suppression to promoting tumorigenesis.</span>
+<span id="cb1-548"><a href="#cb1-548" aria-hidden="true" tabindex="-1"></a>Other transcriptional activators implicated in cancer include AP-1</span>
+<span id="cb1-549"><a href="#cb1-549" aria-hidden="true" tabindex="-1"></a>(amplification, overexpression in tumors), (mutations in lymphoid</span>
+<span id="cb1-550"><a href="#cb1-550" aria-hidden="true" tabindex="-1"></a>tumors, autoimmune diseases), and (developmental disorders, ). These</span>
+<span id="cb1-551"><a href="#cb1-551" aria-hidden="true" tabindex="-1"></a>examples underscore the critical role of transcriptional activators in</span>
+<span id="cb1-552"><a href="#cb1-552" aria-hidden="true" tabindex="-1"></a>both normal physiology and human disease.</span>
+<span id="cb1-553"><a href="#cb1-553" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-554"><a href="#cb1-554" aria-hidden="true" tabindex="-1"></a>On Monday, we will explore the molecular mechanisms controlling the</span>
+<span id="cb1-555"><a href="#cb1-555" aria-hidden="true" tabindex="-1"></a>activity of these transcriptional activators to achieve cell-type and</span>
+<span id="cb1-556"><a href="#cb1-556" aria-hidden="true" tabindex="-1"></a>tissue-specific gene expression.</span>
+<span id="cb1-557"><a href="#cb1-557" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-558"><a href="#cb1-558" aria-hidden="true" tabindex="-1"></a><span class="fu"># Conclusion</span></span>
+<span id="cb1-559"><a href="#cb1-559" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-560"><a href="#cb1-560" aria-hidden="true" tabindex="-1"></a>In summary, today's lecture expanded on the fundamental mechanisms of</span>
+<span id="cb1-561"><a href="#cb1-561" aria-hidden="true" tabindex="-1"></a>eukaryotic transcription, focusing on the intricate interplay of the</span>
+<span id="cb1-562"><a href="#cb1-562" aria-hidden="true" tabindex="-1"></a>pre-initiation complex, general transcription factors, and regulatory</span>
+<span id="cb1-563"><a href="#cb1-563" aria-hidden="true" tabindex="-1"></a>*cis*-elements such as proximal s and s. We explored how the complex</span>
+<span id="cb1-564"><a href="#cb1-564" aria-hidden="true" tabindex="-1"></a>bridges transcriptional activators to the basal machinery, enabling</span>
+<span id="cb1-565"><a href="#cb1-565" aria-hidden="true" tabindex="-1"></a>precise control over gene expression. We also highlighted the modular</span>
+<span id="cb1-566"><a href="#cb1-566" aria-hidden="true" tabindex="-1"></a>structure of transcriptional activators and their combinatorial action</span>
+<span id="cb1-567"><a href="#cb1-567" aria-hidden="true" tabindex="-1"></a>in achieving tissue specificity. Finally, we discussed the critical role</span>
+<span id="cb1-568"><a href="#cb1-568" aria-hidden="true" tabindex="-1"></a>of transcriptional activators as s and their implications in human</span>
+<span id="cb1-569"><a href="#cb1-569" aria-hidden="true" tabindex="-1"></a>diseases, particularly cancer, with examples like *MYC* in and the</span>
+<span id="cb1-570"><a href="#cb1-570" aria-hidden="true" tabindex="-1"></a>multifaceted functions of p53.</span>
+<span id="cb1-571"><a href="#cb1-571" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-572"><a href="#cb1-572" aria-hidden="true" tabindex="-1"></a>::: tcolorbox</span>
+<span id="cb1-573"><a href="#cb1-573" aria-hidden="true" tabindex="-1"></a>**Key Takeaways:**</span>
+<span id="cb1-574"><a href="#cb1-574" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-575"><a href="#cb1-575" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>The **Pre-initiation Complex (PIC)** formation is a multi-step</span>
+<span id="cb1-576"><a href="#cb1-576" aria-hidden="true" tabindex="-1"></a>    process essential for transcription initiation, involving and</span>
+<span id="cb1-577"><a href="#cb1-577" aria-hidden="true" tabindex="-1"></a>    Polymerase.</span>
+<span id="cb1-578"><a href="#cb1-578" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-579"><a href="#cb1-579" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**TFIIH** plays dual roles in transcription initiation and repair,</span>
+<span id="cb1-580"><a href="#cb1-580" aria-hidden="true" tabindex="-1"></a>    linking these fundamental cellular processes.</span>
+<span id="cb1-581"><a href="#cb1-581" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-582"><a href="#cb1-582" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Proximal s** and **s** are *cis*-regulatory elements with distinct</span>
+<span id="cb1-583"><a href="#cb1-583" aria-hidden="true" tabindex="-1"></a>    properties that dictate the specificity and level of gene</span>
+<span id="cb1-584"><a href="#cb1-584" aria-hidden="true" tabindex="-1"></a>    transcription.</span>
+<span id="cb1-585"><a href="#cb1-585" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-586"><a href="#cb1-586" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Gene reporter assays** are powerful tools to dissect regulatory</span>
+<span id="cb1-587"><a href="#cb1-587" aria-hidden="true" tabindex="-1"></a>    sequences and study tissue-specific gene expression.</span>
+<span id="cb1-588"><a href="#cb1-588" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-589"><a href="#cb1-589" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>The **Mediator complex** acts as a crucial interface between</span>
+<span id="cb1-590"><a href="#cb1-590" aria-hidden="true" tabindex="-1"></a>    transcriptional activators and the basal transcription machinery.</span>
+<span id="cb1-591"><a href="#cb1-591" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-592"><a href="#cb1-592" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Transcriptional activators** are modular proteins with distinct</span>
+<span id="cb1-593"><a href="#cb1-593" aria-hidden="true" tabindex="-1"></a>    domains for binding and transcriptional activation, allowing for</span>
+<span id="cb1-594"><a href="#cb1-594" aria-hidden="true" tabindex="-1"></a>    combinatorial control of gene expression.</span>
+<span id="cb1-595"><a href="#cb1-595" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-596"><a href="#cb1-596" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Many transcriptional activators are **s**, and their dysregulation</span>
+<span id="cb1-597"><a href="#cb1-597" aria-hidden="true" tabindex="-1"></a>    is implicated in various human diseases, including cancer.</span>
+<span id="cb1-598"><a href="#cb1-598" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-599"><a href="#cb1-599" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-600"><a href="#cb1-600" aria-hidden="true" tabindex="-1"></a>::: tcolorbox</span>
+<span id="cb1-601"><a href="#cb1-601" aria-hidden="true" tabindex="-1"></a>**Further Questions to Consider:**</span>
+<span id="cb1-602"><a href="#cb1-602" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-603"><a href="#cb1-603" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>How do chromatin remodeling complexes and histone modifications</span>
+<span id="cb1-604"><a href="#cb1-604" aria-hidden="true" tabindex="-1"></a>    cooperate with transcriptional activators to regulate gene</span>
+<span id="cb1-605"><a href="#cb1-605" aria-hidden="true" tabindex="-1"></a>    expression?</span>
+<span id="cb1-606"><a href="#cb1-606" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-607"><a href="#cb1-607" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>What are the specific molecular mechanisms by which different</span>
+<span id="cb1-608"><a href="#cb1-608" aria-hidden="true" tabindex="-1"></a>    transcriptional activator families (, , , ) recognize and bind to ?</span>
+<span id="cb1-609"><a href="#cb1-609" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-610"><a href="#cb1-610" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>How do non-coding s contribute to the regulation of transcription</span>
+<span id="cb1-611"><a href="#cb1-611" aria-hidden="true" tabindex="-1"></a>    specificity in eukaryotes?</span>
+<span id="cb1-612"><a href="#cb1-612" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-613"><a href="#cb1-613" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>What are the therapeutic strategies targeting transcriptional</span>
+<span id="cb1-614"><a href="#cb1-614" aria-hidden="true" tabindex="-1"></a>    misregulation in cancer and other human diseases?</span>
+<span id="cb1-615"><a href="#cb1-615" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-616"><a href="#cb1-616" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-617"><a href="#cb1-617" aria-hidden="true" tabindex="-1"></a>These questions will guide our future discussions and explorations into</span>
+<span id="cb1-618"><a href="#cb1-618" aria-hidden="true" tabindex="-1"></a>the fascinating world of eukaryotic gene regulation.</span>
+<span id="cb1-619"><a href="#cb1-619" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-620"><a href="#cb1-620" aria-hidden="true" tabindex="-1"></a>Thank you for your attention. Have a good weekend, and see you on</span>
+<span id="cb1-621"><a href="#cb1-621" aria-hidden="true" tabindex="-1"></a>Monday.</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

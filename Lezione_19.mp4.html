@@ -1,0 +1,1917 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Your Name">
+<meta name="dcterms.date" content="2025-02-05">
+
+<title>RNA Maturation and Protein Synthesis – Your Site Name</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-6bd9cfa162949bde0a231f530c97869d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Your Site Name</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-list"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_1.mp4.html">
+            Lecture Notes on Molecular Mechanisms of Information Flow
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_10.mp4.html">
+            Lecture Notes on Chromatin Structure and DNA Replication
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_11.mp4.html">
+            Lecture Notes: DNA Replication - Processivity, Mechanism, and Regulation
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_12.mp4.html">
+            Replication Control in Prokaryotes and Eukaryotes
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_13.mp4.html">
+            Telomeres, Replication of Linear Chromosomes, and Nucleic Acid Quantification
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_14.mp4.html">
+            Telomeres, Senescence, and Genomic Instability
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_16.mp4.html">
+            Fundamentals of Epigenetic Regulation
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_17.mp4.html">
+            Regulation of Chromatin and RNA Processing
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_18.mp4.html">
+            Lecture Notes: RNA Degradation, Silencing, and Splicing
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_18bis.mp4.html">
+            Lecture Notes on RNA Splicing Mechanism and Regulation
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_19.mp4.html">
+            RNA Maturation and Protein Synthesis
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_20.mp4.html">
+            Functional Aspects of Protein Synthesis and Regulatory Events
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_21.mp4.html">
+            Lecture Notes on Translation and DNA Repair
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_3.mp4.html">
+            Lecture Notes on Protein-DNA Interactions and DNA Properties
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_4.mp4.html">
+            Lecture Notes on RNA, Ribozymes, and DNA Superstructures
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_5.mp4.html">
+            Topological Parameters of DNA and Genome Complexity
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_6.mp4.html">
+            Architettura del Genoma Umano
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_7.mp4.html">
+            Genomic Architecture and Gene Regulation
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_9.mp4.html">
+            Eukaryotic DNA Replication: Lecture Notes
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Videolezione_16.mp4.html">
+            Quantitative and Qualitative Gene Regulation in Prokaryotes
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Videolezione_18.mp4.html">
+            Eukaryotic Gene Transcription: Molecular Mechanisms and Specificity Control
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Videolezione_19.mp4.html">
+            Mechanisms of Transcription Factor Activation and Families of Transcription Factors
+            </a>
+          </li>
+      </ul>
+    </div>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#trans-splicing" id="toc-trans-splicing" class="nav-link" data-scroll-target="#trans-splicing">Trans-splicing</a>
+  <ul class="collapse">
+  <li><a href="#mechanism-of-trans-splicing" id="toc-mechanism-of-trans-splicing" class="nav-link" data-scroll-target="#mechanism-of-trans-splicing">Mechanism of Trans-splicing</a></li>
+  <li><a href="#trans-splicing-in-trypanosoma" id="toc-trans-splicing-in-trypanosoma" class="nav-link" data-scroll-target="#trans-splicing-in-trypanosoma">Trans-splicing in <em>Trypanosoma</em></a></li>
+  <li><a href="#phylogenetic-distribution-of-trans-splicing" id="toc-phylogenetic-distribution-of-trans-splicing" class="nav-link" data-scroll-target="#phylogenetic-distribution-of-trans-splicing">Phylogenetic Distribution of Trans-splicing</a></li>
+  <li><a href="#occurrence-of-trans-splicing-in-humans" id="toc-occurrence-of-trans-splicing-in-humans" class="nav-link" data-scroll-target="#occurrence-of-trans-splicing-in-humans">Occurrence of Trans-splicing in Humans</a></li>
+  </ul></li>
+  <li><a href="#rna-editing" id="toc-rna-editing" class="nav-link" data-scroll-target="#rna-editing">RNA Editing</a>
+  <ul class="collapse">
+  <li><a href="#mechanisms-of-rna-editing" id="toc-mechanisms-of-rna-editing" class="nav-link" data-scroll-target="#mechanisms-of-rna-editing">Mechanisms of RNA Editing</a></li>
+  <li><a href="#enzymes-in-rna-editing" id="toc-enzymes-in-rna-editing" class="nav-link" data-scroll-target="#enzymes-in-rna-editing">Enzymes in RNA Editing</a></li>
+  <li><a href="#rna-editing-in-ribosomal-rna-rrna-maturation" id="toc-rna-editing-in-ribosomal-rna-rrna-maturation" class="nav-link" data-scroll-target="#rna-editing-in-ribosomal-rna-rrna-maturation">RNA Editing in Ribosomal RNA (rRNA) Maturation</a></li>
+  <li><a href="#rna-editing-in-trypanosomes-uridine-insertiondeletion" id="toc-rna-editing-in-trypanosomes-uridine-insertiondeletion" class="nav-link" data-scroll-target="#rna-editing-in-trypanosomes-uridine-insertiondeletion">RNA Editing in Trypanosomes: Uridine Insertion/Deletion</a></li>
+  <li><a href="#rna-editing-in-eukaryotic-cells" id="toc-rna-editing-in-eukaryotic-cells" class="nav-link" data-scroll-target="#rna-editing-in-eukaryotic-cells">RNA Editing in Eukaryotic Cells</a></li>
+  <li><a href="#rna-editing-in-ribosomal-rna-rrna-maturation-1" id="toc-rna-editing-in-ribosomal-rna-rrna-maturation-1" class="nav-link" data-scroll-target="#rna-editing-in-ribosomal-rna-rrna-maturation-1">RNA Editing in Ribosomal RNA (rRNA) Maturation</a></li>
+  </ul></li>
+  <li><a href="#protein-synthesis" id="toc-protein-synthesis" class="nav-link" data-scroll-target="#protein-synthesis">Protein Synthesis</a>
+  <ul class="collapse">
+  <li><a href="#overview-of-protein-synthesis" id="toc-overview-of-protein-synthesis" class="nav-link" data-scroll-target="#overview-of-protein-synthesis">Overview of Protein Synthesis</a></li>
+  <li><a href="#key-components-of-protein-synthesis" id="toc-key-components-of-protein-synthesis" class="nav-link" data-scroll-target="#key-components-of-protein-synthesis">Key Components of Protein Synthesis</a></li>
+  <li><a href="#ribosome-structure-and-function" id="toc-ribosome-structure-and-function" class="nav-link" data-scroll-target="#ribosome-structure-and-function">Ribosome Structure and Function</a></li>
+  <li><a href="#transfer-rna-trna-structure-and-aminoacylation" id="toc-transfer-rna-trna-structure-and-aminoacylation" class="nav-link" data-scroll-target="#transfer-rna-trna-structure-and-aminoacylation">Transfer RNA (tRNA): Structure and Aminoacylation</a></li>
+  <li><a href="#genetic-code-decoding-mrna-instructions" id="toc-genetic-code-decoding-mrna-instructions" class="nav-link" data-scroll-target="#genetic-code-decoding-mrna-instructions">Genetic Code: Decoding mRNA Instructions</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">RNA Maturation and Protein Synthesis</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Your Name </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 5, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>In this lecture, we will complete our discussion on RNA&nbsp;maturation, continuing from our previous extensive discussion on splicing. We will explore two key mechanisms of RNA&nbsp;maturation: <strong>trans-splicing</strong> and <strong>RNA&nbsp;editing</strong>. Trans-splicing, a unique type of splicing found in certain organisms like trypanosomes, involves intermolecular reactions, contrasting with the typical cis-splicing. RNA&nbsp;editing encompasses enzymatic processes that modify the nucleotide sequence of RNA&nbsp;post-transcriptionally.</p>
+<p>Following the discussion on RNA&nbsp;maturation, we will transition to the topic of <strong>protein synthesis</strong>. We will begin by introducing the fundamental components and characteristics of the genetic code, and then delve into the functional aspects of translation, examining the factors involved and highlighting the differences between prokaryotic and eukaryotic systems. Understanding these processes is crucial, especially considering that the selective regulation or inhibition of translation is a key target for antibiotic therapies.</p>
+</section>
+<section id="trans-splicing" class="level1">
+<h1>Trans-splicing</h1>
+<p>Trans-splicing is a unique type of RNA&nbsp;splicing observed in certain organisms, particularly in protozoa such as <em>Trypanosoma</em>. <em>Trypanosoma</em> species are pathogenic agents responsible for diseases like sleeping sickness, which is transmitted by the tsetse fly. These diseases are characterized by severe symptoms including fever, inflammation, polyarthritis, and anemia, often leading to fatality.</p>
+<p>Distinct from conventional <em>cis</em>-splicing, which operates intramolecularly to rejoin exons from a single precursor mRNA&nbsp;molecule, <strong>trans-splicing</strong> is an <strong>intermolecular</strong> process. It modifies heterogeneous nuclear RNA&nbsp;(hnRNA) by splicing exons from <strong>different</strong> RNA&nbsp;molecules. This results in the formation of <strong>chimeric</strong> RNA&nbsp;molecules, which can potentially encode chimeric proteins or function as chimeric mature mRNA&nbsp;with specific roles.</p>
+<section id="mechanism-of-trans-splicing" class="level2">
+<h2 class="anchored" data-anchor-id="mechanism-of-trans-splicing">Mechanism of Trans-splicing</h2>
+<p>The fundamental mechanism of trans-splicing involves the joining of exons from distinct precursor RNA&nbsp;molecules. Consider, for instance, two separate hnRNA&nbsp;molecules. The first molecule contains exons 1 and 2, while the second contains exons 3 and 4. Within their intronic regions, there are complementary sequences that allow these two RNA&nbsp;molecules to anneal and become physically associated.</p>
+<div id="fig:trans_splicing" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="trans_splicing_diagram.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Conceptual Diagram of Trans-splicing. Two different hnRNA molecules align via complementary intronic sequences. Splice donor and acceptor sites from different precursors are utilized to generate chimeric mature RNA molecules, exemplified by the joining of exon 1 to exon 4 and exon 3 to exon 2.</figcaption>
+</figure>
+</div>
+<p>As illustrated in Figure <a href="#fig:trans_splicing" data-reference-type="ref" data-reference="fig:trans_splicing">1</a>, the trans-splicing process utilizes the splice donor site from one intron and the splice acceptor site from another intron, located on different precursor RNA&nbsp;molecules. This intermolecular splicing event leads to the creation of chimeric mature RNA&nbsp;molecules. For example, exon 1 from the first precursor can be spliced to exon 4 from the second precursor, and conversely, exon 3 can be spliced to exon 2, resulting in novel RNA&nbsp;combinations not directly encoded as such in the genome.</p>
+</section>
+<section id="trans-splicing-in-trypanosoma" class="level2">
+<h2 class="anchored" data-anchor-id="trans-splicing-in-trypanosoma">Trans-splicing in <em>Trypanosoma</em></h2>
+<p>In <em>Trypanosoma</em>, trans-splicing is notably associated with the <strong>spliced leader RNA</strong> (SL RNA), a small non-coding RNA&nbsp;of approximately 35 nucleotides. The SL RNA&nbsp;donates a short exon during trans-splicing reactions. This donated exon is typically non-coding but plays a crucial role in enhancing the efficiency of translation for the recipient mRNA&nbsp;molecules.</p>
+<section id="function-of-spliced-leader-rna" class="level3">
+<h3 class="anchored" data-anchor-id="function-of-spliced-leader-rna">Function of Spliced Leader RNA</h3>
+<p>The spliced leader RNA&nbsp;(SL RNA) in <em>Trypanosoma</em> provides a 5’ untranslated region (UTR) exon to protein-coding transcripts through trans-splicing. This addition of a 5’ UTR&nbsp;from the SL RNA&nbsp;is essential for regulating gene expression, primarily by increasing translational efficiency of the mature mRNA.</p>
+</section>
+<section id="regulation-of-gene-expression-and-processing-of-polycistronic-transcripts" class="level3">
+<h3 class="anchored" data-anchor-id="regulation-of-gene-expression-and-processing-of-polycistronic-transcripts">Regulation of Gene Expression and Processing of Polycistronic Transcripts</h3>
+<p>Trans-splicing in <em>Trypanosoma</em> functions as a regulatory mechanism to control protein synthesis by modifying the 5’ UTR&nbsp;of mRNA&nbsp;molecules. This process can be applied to exons from various genes, acting as a versatile regulatory strategy. Furthermore, it is employed to process polycistronic transcripts, which are common in <em>Trypanosoma</em>. By adding a standardized 5’ UTR&nbsp;from the SL RNA&nbsp;to each coding exon within a polycistronic transcript, trans-splicing facilitates efficient translation of individual open reading frames.</p>
+<p>During trans-splicing in <em>Trypanosoma</em>, a characteristic <strong>Y-shaped intron intermediate</strong> is formed, in contrast to the lariat structure observed in <em>cis</em>-splicing in eukaryotes. This Y-shaped intron is a hallmark of the trans-splicing mechanism in these organisms.</p>
+</section>
+</section>
+<section id="phylogenetic-distribution-of-trans-splicing" class="level2">
+<h2 class="anchored" data-anchor-id="phylogenetic-distribution-of-trans-splicing">Phylogenetic Distribution of Trans-splicing</h2>
+<p>Trans-splicing is prevalent among protozoa and has been studied extensively in a phylogenetic context. It is commonly found in unicellular organisms capable of independent existence, many of which are parasitic to humans. Across the phylogenetic spectrum, the extent of trans-splicing varies, with some organisms utilizing it extensively while others do not employ it at all.</p>
+</section>
+<section id="occurrence-of-trans-splicing-in-humans" class="level2">
+<h2 class="anchored" data-anchor-id="occurrence-of-trans-splicing-in-humans">Occurrence of Trans-splicing in Humans</h2>
+<p>In vertebrates, trans-splicing is considered to be largely absent, potentially lost during evolution as more efficient regulatory mechanisms evolved. However, there is emerging evidence suggesting potential trans-splicing events in humans, which could lead to the generation of chimeric proteins.</p>
+<section id="potential-for-chimeric-protein-generation" class="level3">
+<h3 class="anchored" data-anchor-id="potential-for-chimeric-protein-generation">Potential for Chimeric Protein Generation</h3>
+<p>While less frequent and less understood compared to trypanosomes, trans-splicing in humans is hypothesized as a mechanism for generating chimeric proteins. Additionally, other transcriptional errors, such as RNA&nbsp;polymerase slippage, can also result in chimeric RNA&nbsp;transcripts, subsequently leading to chimeric proteins after <em>cis</em>-splicing of these aberrant precursors. These mechanisms involve the RNA&nbsp;polymerase switching templates during transcription, thus producing an RNA&nbsp;transcript derived from multiple genomic loci.</p>
+</section>
+<section id="examples-of-human-genes-potentially-involved-in-trans-splicing" class="level3">
+<h3 class="anchored" data-anchor-id="examples-of-human-genes-potentially-involved-in-trans-splicing">Examples of Human Genes Potentially Involved in Trans-splicing</h3>
+<p>Examples of human genes that may undergo trans-splicing include:</p>
+<ul>
+<li><p><strong>Simig/Simib Proto-oncogene</strong>: This proto-oncogene is suggested to be involved in trans-splicing, potentially activating its oncogenic function.</p></li>
+<li><p><strong>Cyclin D1 Gene</strong>: A key regulator of cell cycle progression and cell growth.</p></li>
+<li><p><strong>Cytochrome P450 Isoform Gene</strong>: Specifically, an isoform of cytochrome P450, an enzyme family crucial for metabolic processes in the liver.</p></li>
+</ul>
+<p>The pathological significance of trans-splicing and other mechanisms generating chimeric proteins in humans is still under investigation and appears to be relatively rare. Nevertheless, it remains a subject of interest in molecular biology, particularly in the context of gene regulation and disease.</p>
+</section>
+</section>
+</section>
+<section id="rna-editing" class="level1">
+<h1>RNA Editing</h1>
+<div class="tcolorbox">
+<p><strong>RNA&nbsp;editing</strong> refers to post-transcriptional enzymatic modifications of RNA&nbsp;nucleotide sequences. This process can alter the coding sequence of mRNA&nbsp;and modify non-coding RNA, including ribosomal RNA&nbsp;(rRNA). RNA&nbsp;editing is crucial for the maturation and function of various RNA&nbsp;types, particularly rRNA.</p>
+</div>
+<p>Initially discovered in trypanosomes, especially in mitochondrial RNA, RNA&nbsp;editing mechanisms are now recognized in a wide range of organisms, including humans. Key enzymes involved in these processes include adenosine deaminases and cytidine deaminases.</p>
+<section id="mechanisms-of-rna-editing" class="level2">
+<h2 class="anchored" data-anchor-id="mechanisms-of-rna-editing">Mechanisms of RNA Editing</h2>
+<p>RNA&nbsp;editing encompasses several enzymatic mechanisms that modify RNA&nbsp;sequences after transcription:</p>
+<ul>
+<li><p><strong>Base Deamination</strong>: This involves the hydrolytic removal of an amino group from a base. Examples include:</p>
+<ul>
+<li><p><strong>Adenosine to Inosine (-to-) conversion</strong>: Catalyzed by adenosine deaminases.</p></li>
+<li><p><strong>Cytidine to Uridine (-to-) conversion</strong>: Catalyzed by cytidine deaminases.</p></li>
+</ul></li>
+<li><p><strong>Uridine Insertion/Deletion</strong>: Predominantly observed in trypanosome mitochondrial RNA&nbsp;editing, this mechanism involves the addition or removal of uridine residues.</p></li>
+</ul>
+<p>These modifications can alter the genetic information encoded in RNA&nbsp;and affect RNA&nbsp;structure and function, especially in non-coding RNA.</p>
+</section>
+<section id="enzymes-in-rna-editing" class="level2">
+<h2 class="anchored" data-anchor-id="enzymes-in-rna-editing">Enzymes in RNA Editing</h2>
+<p>Several enzyme families mediate RNA&nbsp;editing:</p>
+<section id="adenosine-deaminases-acting-on-rna-adars" class="level3">
+<h3 class="anchored" data-anchor-id="adenosine-deaminases-acting-on-rna-adars">Adenosine Deaminases Acting on RNA (ADARs)</h3>
+<p><strong>ADARs</strong> are a family of enzymes that catalyze the deamination of adenosine () to inosine () in double-stranded RNA&nbsp;(dsRNA). The reaction is:</p>
+<p><span class="math display">\[\mathrm{A}\xrightarrow{\text{ADAR}} \mathrm{I}\]</span></p>
+<p>Inosine is structurally similar to guanosine and is recognized as guanosine during translation. -to-&nbsp;editing can modify codon identity, splice sites, and RNA&nbsp;secondary structure, influencing gene expression and RNA&nbsp;function.</p>
+</section>
+<section id="cytidine-deaminases" class="level3">
+<h3 class="anchored" data-anchor-id="cytidine-deaminases">Cytidine Deaminases</h3>
+<p><strong>Cytidine deaminases</strong> catalyze the deamination of cytidine () to uridine () in RNA&nbsp;and single-stranded DNA&nbsp;(ssDNA). The reaction is:</p>
+<p><span class="math display">\[\mathrm{C}\xrightarrow{\text{Cytidine Deaminase}} \mathrm{U}\]</span></p>
+<p>The <strong>APOBEC (Apolipoprotein B mRNA Editing Enzyme, Catalytic polypeptide-like)</strong> family is a prominent group of cytidine deaminases. APOBEC-1, for example, is responsible for editing mRNA&nbsp;encoding apolipoprotein B.</p>
+</section>
+</section>
+<section id="rna-editing-in-ribosomal-rna-rrna-maturation" class="level2">
+<h2 class="anchored" data-anchor-id="rna-editing-in-ribosomal-rna-rrna-maturation">RNA Editing in Ribosomal RNA (rRNA) Maturation</h2>
+<p>RNA&nbsp;editing is integral to rRNA&nbsp;maturation. Key modifications include methylation and pseudouridylation, both guided by small nucleolar RNA(snoRNA). These modifications are essential for ribosome assembly, stability, and function.</p>
+</section>
+<section id="rna-editing-in-trypanosomes-uridine-insertiondeletion" class="level2">
+<h2 class="anchored" data-anchor-id="rna-editing-in-trypanosomes-uridine-insertiondeletion">RNA Editing in Trypanosomes: Uridine Insertion/Deletion</h2>
+<p>The discovery of RNA&nbsp;editing was significantly advanced by studies in <em>Trypanosoma</em>, particularly concerning mitochondrial RNA. Paradoxical observations in these organisms suggested a novel RNA&nbsp;processing mechanism.</p>
+<section id="paradoxical-observations" class="level3">
+<h3 class="anchored" data-anchor-id="paradoxical-observations">Paradoxical Observations</h3>
+<p>Several anomalies in <em>Trypanosoma</em> mitochondrial genes indicated post-transcriptional RNA&nbsp;modification:</p>
+<ul>
+<li><p><strong>Frame Shifts</strong>: Inconsistent reading frames in conserved proteins across trypanosome species, suggesting disrupted open reading frames (ORFs).</p></li>
+<li><p><strong>Absence of Start Codons</strong>: Many mitochondrial genes lacked typical AUG start codons required for translation initiation.</p></li>
+<li><p><strong>Missing Genes</strong>: Expected genes for conserved mitochondrial proteins were not found in the mitochondrial DNA&nbsp;sequences.</p></li>
+<li><p><strong>Non-encoded Nucleotides</strong>: mRNA&nbsp;sequences contained nucleotides not encoded in the corresponding DNA&nbsp;template.</p></li>
+</ul>
+<p>These anomalies led to the discovery of <strong>uridine insertion and deletion</strong> as a form of RNA&nbsp;editing in trypanosomes.</p>
+</section>
+<section id="uridine-editing-mechanism" class="level3">
+<h3 class="anchored" data-anchor-id="uridine-editing-mechanism">Uridine Editing Mechanism</h3>
+<p>In <em>Trypanosoma</em> mitochondria, RNA&nbsp;editing primarily involves the insertion or deletion of uridine () residues in mRNA&nbsp;sequences. This process is directed by <strong>guide RNA(gRNA)</strong> and executed by a protein complex called the <strong>editosome</strong>.</p>
+</section>
+<section id="guide-rnas-grnas-and-the-editosome-complex" class="level3">
+<h3 class="anchored" data-anchor-id="guide-rnas-grnas-and-the-editosome-complex">Guide RNAs (gRNAs) and the Editosome Complex</h3>
+<p><strong>Guide RNA(gRNA)</strong> are small, non-coding RNAtranscribed from mitochondrial DNA&nbsp;minicircles. They serve as templates for editing pre-edited mRNA. Each gRNA&nbsp;contains:</p>
+<ul>
+<li><p><strong>Anchor Region</strong>: A sequence complementary to the pre-edited mRNA&nbsp;that guides gRNA&nbsp;binding near the editing site.</p></li>
+<li><p><strong>Guide Region</strong>: A region that is partially complementary to the pre-edited RNA&nbsp;but contains additional sequence information that dictates the uridine insertion or deletion.</p></li>
+</ul>
+<p>The <strong>editosome</strong> is a multi-protein complex with enzymatic activities including endoribonucleases, exoribonucleases, &nbsp;terminal transferase (TUTase), and RNA&nbsp;ligases. The editing process is directional and proceeds generally from 3’ to 5’ along the mRNA:</p>
+<ol type="1">
+<li><p><strong>Hybridization</strong>: A gRNA&nbsp;hybridizes to the pre-edited mRNA&nbsp;via its anchor region.</p></li>
+<li><p><strong>Editing Catalysis</strong>: The editosome, guided by the gRNA&nbsp;sequence, inserts or deletes &nbsp;residues in the pre-edited mRNA&nbsp;to match the guide region’s information.</p></li>
+<li><p><strong>Directional Progression</strong>: Editing proceeds in a 3’ to 5’ direction. After an editing event, the gRNA&nbsp;may dissociate, and another gRNA&nbsp;can bind to direct further editing upstream (5’).</p></li>
+</ol>
+<p>This process converts pre-edited mRNA&nbsp;into mature, post-edited mRNA&nbsp;with corrected reading frames, initiation codons, and complete coding sequences, enabling the synthesis of functional mitochondrial proteins.</p>
+</section>
+</section>
+<section id="rna-editing-in-eukaryotic-cells" class="level2">
+<h2 class="anchored" data-anchor-id="rna-editing-in-eukaryotic-cells">RNA Editing in Eukaryotic Cells</h2>
+<p>In eukaryotes, including humans, extensive uridine insertion/deletion editing as seen in trypanosomes is not observed. Instead, single nucleotide editing mechanisms, primarily -to-&nbsp;and -to-&nbsp;conversions, are prevalent.</p>
+<section id="adenosine-to-inosine-a-to-i-conversion" class="level3">
+<h3 class="anchored" data-anchor-id="adenosine-to-inosine-a-to-i-conversion">Adenosine-to-Inosine (A-to-I) Conversion</h3>
+<p>-to-&nbsp;editing, catalyzed by ADAR enzymes, is common in various RNA&nbsp;types:</p>
+<ul>
+<li><p><strong>Transfer RNA (tRNA)</strong>: Inosine is found in the anticodon loop of some tRNA, enhancing wobble base pairing and expanding codon recognition.</p></li>
+<li><p><strong>Regulatory Regions</strong>: More frequently, -to-&nbsp;editing occurs in non-coding regulatory regions of RNA, such as introns and UTR. This can influence splicing efficiency, RNA&nbsp;stability, and translational regulation.</p></li>
+</ul>
+</section>
+<section id="cytidine-to-uridine-c-to-u-conversion" class="level3">
+<h3 class="anchored" data-anchor-id="cytidine-to-uridine-c-to-u-conversion">Cytidine-to-Uridine (C-to-U) Conversion</h3>
+<p>-to-&nbsp;editing, mediated by cytidine deaminases like APOBEC enzymes, is exemplified by the editing of apolipoprotein B (<em>APOB</em>) mRNA.</p>
+</section>
+<section id="neurological-significance-of-adar-editing" class="level3">
+<h3 class="anchored" data-anchor-id="neurological-significance-of-adar-editing">Neurological Significance of ADAR Editing</h3>
+<p>ADAR enzymes are particularly active in neural tissues. Aberrant -to-&nbsp;editing by ADARs is implicated in neurological disorders. Substrates of ADARs often include proteins involved in neuronal signaling, such as ion channels and receptors. Dysfunctional editing can disrupt neuronal function and contribute to neurological pathologies.</p>
+</section>
+<section id="tissue-specific-apobec-1-editing-and-apolipoprotein-b-isoforms" class="level3">
+<h3 class="anchored" data-anchor-id="tissue-specific-apobec-1-editing-and-apolipoprotein-b-isoforms">Tissue-Specific APOBEC-1 Editing and Apolipoprotein B Isoforms</h3>
+<p>APOBEC-1 mediates tissue-specific -to-&nbsp;editing of <em>APOB</em> mRNA, resulting in two main isoforms of apolipoprotein B:</p>
+<ul>
+<li><p><strong>APOB100 (Liver)</strong>: Produced in the liver, this is the full-length 100 kDa protein, essential for the assembly and secretion of VLDL and LDL. The codon at amino acid position 48 is &nbsp;(CAA), encoding glutamine.</p></li>
+<li><p><strong>APOB48 (Intestine)</strong>: Produced in the intestine, this is a truncated 48 kDa protein. In intestinal cells, APOBEC-1 converts the &nbsp;in the CAA codon at position 48 to , changing the codon to &nbsp;(UAA), a stop codon. This premature stop codon leads to the synthesis of a shorter protein.</p></li>
+</ul>
+<p>This tissue-specific editing is regulated by the <strong>APOBEC-1 complementation factor (ACF)</strong>, which recruits APOBEC-1 to the target codon in <em>APOB</em> mRNA.</p>
+<p>Beyond apolipoprotein B editing, APOBEC enzymes have broader roles in cellular processes, and mutations in APOBEC genes are linked to certain cancers, affecting protein synthesis and cellular homeostasis.</p>
+</section>
+</section>
+<section id="rna-editing-in-ribosomal-rna-rrna-maturation-1" class="level2">
+<h2 class="anchored" data-anchor-id="rna-editing-in-ribosomal-rna-rrna-maturation-1">RNA Editing in Ribosomal RNA (rRNA) Maturation</h2>
+<p>RNA&nbsp;editing is crucial for rRNA&nbsp;maturation, involving modifications like methylation and pseudouridylation, both guided by snoRNA.</p>
+<section id="ribose-methylation" class="level3">
+<h3 class="anchored" data-anchor-id="ribose-methylation">Ribose Methylation</h3>
+<p>Methylation of the 2’-OH group of ribose sugars in rRNA&nbsp;is catalyzed by methylase enzymes, including fibrillarin. This process is guided by snoRNAcontaining conserved <strong>box C/D</strong> motifs. These snoRNAbase-pair with specific regions of rRNA&nbsp;to direct methylation to precise sites. Methylation enhances rRNA&nbsp;stability and contributes to proper ribosome function.</p>
+</section>
+<section id="pseudouridylation" class="level3">
+<h3 class="anchored" data-anchor-id="pseudouridylation">Pseudouridylation</h3>
+<p>Pseudouridylation, the isomerization of uridine to pseudouridine (<span class="math inline">\(\Psi\)</span>), is catalyzed by pseudouridine synthases, such as dyskerin. This modification is guided by snoRNAcontaining <strong>box H/ACA</strong> motifs. Similar to methylation, snoRNAguide the enzyme to specific uridine residues in rRNA&nbsp;for modification. Pseudouridylation is important for rRNA&nbsp;folding, ribosome structure, and function.</p>
+</section>
+<section id="function-of-snornas-as-guides" class="level3">
+<h3 class="anchored" data-anchor-id="function-of-snornas-as-guides">Function of snoRNAs as Guides</h3>
+<p>Small nucleolar RNA(snoRNA) are essential guide molecules for site-specific rRNA&nbsp;modifications:</p>
+<ul>
+<li><p><strong>Target Anchoring</strong>: snoRNAhybridize to target rRNA&nbsp;regions through sequence complementarity.</p></li>
+<li><p><strong>Enzyme Recruitment</strong>: snoRNAcontain conserved box motifs (C/D for methylation, H/ACA for pseudouridylation) that are recognized by associated enzymatic complexes (e.g., fibrillarin complex for methylation, dyskerin complex for pseudouridylation), ensuring precise modification at the targeted rRNA&nbsp;sites.</p></li>
+</ul>
+</section>
+<section id="telomerase-rna-terc-editing" class="level3">
+<h3 class="anchored" data-anchor-id="telomerase-rna-terc-editing">Telomerase RNA (TERC) Editing</h3>
+<p>Telomerase RNA&nbsp;(<em>TERC</em>), a component of the telomerase ribonucleoprotein complex, also undergoes pseudouridylation by dyskerin. This modification is critical for telomerase stability, function, and telomere maintenance. Genetic defects in dyskerin or <em>TERC</em> that impair pseudouridylation are associated with progeroid syndromes, characterized by premature aging phenotypes due to accelerated telomere shortening and reduced cellular replicative capacity.</p>
+</section>
+</section>
+</section>
+<section id="protein-synthesis" class="level1">
+<h1>Protein Synthesis</h1>
+<p>Having discussed RNA&nbsp;maturation processes, including splicing and editing, we now transition to <strong>protein synthesis</strong>, also known as <strong>translation</strong>. This fundamental process decodes the genetic information encoded in mRNA&nbsp;to synthesize proteins.</p>
+<div class="tcolorbox">
+<p><strong>Protein synthesis</strong> is the cellular process of creating proteins from amino acids, based on the genetic instructions carried by messenger RNA&nbsp;(mRNA). This multi-step process involves ribosomes, transfer RNA&nbsp;(tRNA), mRNA, and various protein factors. Translation occurs in the cytoplasm, where ribosomes sequentially add amino acids to a growing polypeptide chain, guided by the codon sequence of the mRNA.</p>
+</div>
+<section id="overview-of-protein-synthesis" class="level2">
+<h2 class="anchored" data-anchor-id="overview-of-protein-synthesis">Overview of Protein Synthesis</h2>
+<p>Protein synthesis is the cellular process of creating proteins from amino acids, based on the genetic instructions carried by messenger RNA&nbsp;(mRNA). This multi-step process involves ribosomes, transfer RNA&nbsp;(tRNA), mRNA, and various protein factors. Translation occurs in the cytoplasm, where ribosomes sequentially add amino acids to a growing polypeptide chain, guided by the codon sequence of the mRNA.</p>
+</section>
+<section id="key-components-of-protein-synthesis" class="level2">
+<h2 class="anchored" data-anchor-id="key-components-of-protein-synthesis">Key Components of Protein Synthesis</h2>
+<p>Protein synthesis relies on several essential components:</p>
+<section id="ribosomes-the-protein-synthesis-machinery" class="level3">
+<h3 class="anchored" data-anchor-id="ribosomes-the-protein-synthesis-machinery">Ribosomes: The Protein Synthesis Machinery</h3>
+<p><strong>Ribosomes</strong> are complex macromolecular machines that serve as the site of protein synthesis. Composed of ribosomal RNA&nbsp;(rRNA) and ribosomal proteins, ribosomes are universally found in all living cells and are highly conserved across species, reflecting their fundamental role in life.</p>
+</section>
+<section id="messenger-rna-mrna-the-genetic-blueprint" class="level3">
+<h3 class="anchored" data-anchor-id="messenger-rna-mrna-the-genetic-blueprint">Messenger RNA (mRNA): The Genetic Blueprint</h3>
+<p><strong>Messenger RNA&nbsp;(mRNA)</strong> molecules carry the genetic code transcribed from DNA. The sequence of codons in an mRNA&nbsp;molecule dictates the precise amino acid sequence of the protein to be synthesized. Each codon, a triplet of nucleotides, specifies a particular amino acid or a translational signal.</p>
+</section>
+<section id="transfer-rna-trna-adaptors-linking-codons-and-amino-acids" class="level3">
+<h3 class="anchored" data-anchor-id="transfer-rna-trna-adaptors-linking-codons-and-amino-acids">Transfer RNA (tRNA): Adaptors Linking Codons and Amino Acids</h3>
+<p><strong>Transfer RNA&nbsp;(tRNA)</strong> molecules act as adaptor molecules, physically linking the codons in mRNA&nbsp;to their corresponding amino acids. Each tRNA&nbsp;is specifically charged with a particular amino acid by aminoacyl-tRNA&nbsp;synthetases. Furthermore, each tRNA&nbsp;contains an anticodon, a sequence of three nucleotides that can base-pair with a complementary codon in mRNA, ensuring the correct amino acid is incorporated into the polypeptide chain.</p>
+</section>
+</section>
+<section id="ribosome-structure-and-function" class="level2">
+<h2 class="anchored" data-anchor-id="ribosome-structure-and-function">Ribosome Structure and Function</h2>
+<p>Ribosomes are composed of two distinct subunits: a large subunit and a small subunit, which associate to perform protein synthesis.</p>
+<section id="prokaryotic-and-eukaryotic-ribosome-composition" class="level3">
+<h3 class="anchored" data-anchor-id="prokaryotic-and-eukaryotic-ribosome-composition">Prokaryotic and Eukaryotic Ribosome Composition</h3>
+<p>Ribosomes differ slightly in prokaryotes and eukaryotes:</p>
+<ul>
+<li><p><strong>Prokaryotic Ribosomes</strong>: Known as 70S ribosomes, they consist of a 50S large subunit and a 30S small subunit. The ‘S’ value refers to Svedberg units, a measure of sedimentation rate, and is not additive.</p></li>
+<li><p><strong>Eukaryotic Ribosomes</strong>: Known as 80S ribosomes, they are composed of a 60S large subunit and a 40S small subunit.</p></li>
+</ul>
+</section>
+<section id="ribosomal-rna-rrna-components-in-subunits" class="level3">
+<h3 class="anchored" data-anchor-id="ribosomal-rna-rrna-components-in-subunits">Ribosomal RNA (rRNA) Components in Subunits</h3>
+<p>The subunits are further characterized by their rRNA&nbsp;content:</p>
+<ul>
+<li><p><strong>Prokaryotic Ribosomes</strong>:</p>
+<ul>
+<li><p><strong>Large Subunit (50S)</strong>: Contains a 23S rRNA&nbsp;and a 5S rRNA&nbsp;molecule, along with multiple ribosomal proteins.</p></li>
+<li><p><strong>Small Subunit (30S)</strong>: Contains a 16S rRNA&nbsp;molecule and associated ribosomal proteins.</p></li>
+</ul></li>
+<li><p><strong>Eukaryotic Ribosomes</strong>:</p>
+<ul>
+<li><p><strong>Large Subunit (60S)</strong>: Contains 28S rRNA, 5.8S rRNA, and 5S rRNA&nbsp;molecules, in addition to ribosomal proteins.</p></li>
+<li><p><strong>Small Subunit (40S)</strong>: Contains an 18S rRNA&nbsp;molecule and ribosomal proteins.</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="rrna-as-the-catalytic-core" class="level3">
+<h3 class="anchored" data-anchor-id="rrna-as-the-catalytic-core">rRNA as the Catalytic Core</h3>
+<p>Ribosomes are ribozymes, meaning that their catalytic activity is primarily carried out by rRNA, not the protein components. Specifically, the large subunit rRNA&nbsp;catalyzes the formation of peptide bonds between amino acids. The precise three-dimensional arrangement of rRNA&nbsp;within the ribosome creates an optimal environment for positioning substrates and facilitating efficient catalysis.</p>
+</section>
+<section id="key-ribosomal-trna-binding-sites-a-p-and-e-sites" class="level3">
+<h3 class="anchored" data-anchor-id="key-ribosomal-trna-binding-sites-a-p-and-e-sites">Key Ribosomal tRNA-Binding Sites: A, P, and E Sites</h3>
+<p>Ribosomes possess three principal binding sites for tRNA&nbsp;molecules, crucial for the sequential steps of protein synthesis:</p>
+<ul>
+<li><p><strong>A Site (Aminoacyl-tRNAsite)</strong>: This site is the entry point for each new aminoacyl-tRNA, which carries the next amino acid to be added to the growing polypeptide chain.</p></li>
+<li><p><strong>P Site (Peptidyl-tRNAsite)</strong>: This site holds the peptidyl-tRNA, which carries the nascent polypeptide chain. Peptide bond formation occurs when the amino acid in the A site is linked to the polypeptide in the P site.</p></li>
+<li><p><strong>E Site (Exit site)</strong>: This is the exit pathway for deacylated tRNAafter they have transferred their amino acid to the growing polypeptide chain and are ready to be released from the ribosome.</p></li>
+</ul>
+</section>
+<section id="peptidyl-transferase-center" class="level3">
+<h3 class="anchored" data-anchor-id="peptidyl-transferase-center">Peptidyl Transferase Center</h3>
+<p>The <strong>peptidyl transferase center</strong> is located within the large ribosomal subunit and is the specific site where peptide bond formation is catalyzed. The 23S rRNA&nbsp;in prokaryotes and the 28S rRNA&nbsp;in eukaryotes are responsible for this ribozyme activity.</p>
+</section>
+<section id="decoding-center" class="level3">
+<h3 class="anchored" data-anchor-id="decoding-center">Decoding Center</h3>
+<p>The <strong>decoding center</strong> resides in the small ribosomal subunit. Its function is to monitor the interaction between the codon on the mRNA&nbsp;and the anticodon on the incoming aminoacyl-tRNAin the A site. This ensures that the correct amino acid is selected based on the mRNA&nbsp;sequence, maintaining the fidelity of translation.</p>
+</section>
+</section>
+<section id="transfer-rna-trna-structure-and-aminoacylation" class="level2">
+<h2 class="anchored" data-anchor-id="transfer-rna-trna-structure-and-aminoacylation">Transfer RNA (tRNA): Structure and Aminoacylation</h2>
+<section id="trna-as-an-adaptor-molecule-in-translation" class="level3">
+<h3 class="anchored" data-anchor-id="trna-as-an-adaptor-molecule-in-translation">tRNA as an Adaptor Molecule in Translation</h3>
+<p><strong>Transfer RNA&nbsp;(tRNA)</strong> functions as a critical adaptor molecule in protein synthesis, effectively bridging the information encoded in mRNA&nbsp;codons with the amino acid sequence of proteins. Its dual role includes:</p>
+<ol type="1">
+<li><p><strong>Amino Acid Delivery</strong>: Each tRNA&nbsp;molecule is specifically bound to an amino acid, forming an aminoacyl-tRNA, a process catalyzed by aminoacyl-tRNA&nbsp;synthetases.</p></li>
+<li><p><strong>Codon Recognition</strong>: tRNA&nbsp;contains an anticodon loop with a specific three-nucleotide sequence that can recognize and base-pair with a complementary codon on the mRNA, ensuring accurate amino acid incorporation into the polypeptide chain.</p></li>
+</ol>
+</section>
+<section id="canonical-cloverleaf-structure-of-trna" class="level3">
+<h3 class="anchored" data-anchor-id="canonical-cloverleaf-structure-of-trna">Canonical Cloverleaf Structure of tRNA</h3>
+<p>tRNA&nbsp;molecules exhibit a characteristic secondary structure known as the cloverleaf model, which is stabilized by intramolecular base pairing. Key structural elements of tRNA&nbsp;include:</p>
+<ul>
+<li><p><strong>Acceptor Stem</strong>: Located at the 3’ end of the tRNA, it terminates with the sequence CCA. The 3’-hydroxyl group of the terminal adenosine is the site of amino acid attachment.</p></li>
+<li><p><strong>D-Loop</strong>: Contains dihydrouridine residues, contributing to tRNA&nbsp;folding and recognition by aminoacyl-tRNA&nbsp;synthetases.</p></li>
+<li><p><strong>Anticodon Loop</strong>: Situated opposite the acceptor stem, this loop contains the anticodon sequence that is complementary to mRNA&nbsp;codons.</p></li>
+<li><p><strong>Variable Loop</strong>: Located between the anticodon loop and T<span class="math inline">\(\Psi\)</span>C-loop, it varies in length and sequence among different tRNA&nbsp;species.</p></li>
+<li><p><strong>T<span class="math inline">\(\Psi\)</span>C-Loop (Pseudouridine Loop)</strong>: Contains the modified nucleosides pseudouridine (<span class="math inline">\(\Psi\)</span>) and ribothymidine (T), involved in tRNA&nbsp;folding and ribosome binding.</p></li>
+</ul>
+<p>The three-dimensional structure of tRNA&nbsp;folds into an L-shape, which is essential for its function during translation.</p>
+</section>
+<section id="aminoacyl-trna-synthetases-ensuring-fidelity-of-aminoacylation" class="level3">
+<h3 class="anchored" data-anchor-id="aminoacyl-trna-synthetases-ensuring-fidelity-of-aminoacylation">Aminoacyl-tRNA Synthetases: Ensuring Fidelity of Aminoacylation</h3>
+<p><strong>Aminoacyl-tRNA&nbsp;synthetases (aaRS)</strong> are a family of enzymes responsible for the accurate charging of tRNA&nbsp;molecules with their corresponding amino acids. Each aaRS is highly specific for one amino acid and its cognate tRNA, ensuring that the correct amino acid is linked to the correct tRNA. This process is critical for maintaining the fidelity of translation. The set of recognition elements on tRNAthat are used by aaRSs for accurate aminoacylation is often referred to as the <strong>second genetic code</strong>. These recognition elements can include regions within the acceptor stem, anticodon loop, D-loop, and variable loop of the tRNA.</p>
+</section>
+</section>
+<section id="genetic-code-decoding-mrna-instructions" class="level2">
+<h2 class="anchored" data-anchor-id="genetic-code-decoding-mrna-instructions">Genetic Code: Decoding mRNA Instructions</h2>
+<div class="tcolorbox">
+<p>The <strong>genetic code</strong> is the set of rules by which the nucleotide sequence of DNA&nbsp;and RNA&nbsp;is translated into the amino acid sequence of proteins. It is a triplet code, where each codon consists of three nucleotides.</p>
+</div>
+<section id="degeneracy-and-redundancy-of-the-genetic-code" class="level3">
+<h3 class="anchored" data-anchor-id="degeneracy-and-redundancy-of-the-genetic-code">Degeneracy and Redundancy of the Genetic Code</h3>
+<div class="tcolorbox">
+<p>The genetic code is described as <strong>degenerate</strong> or redundant because most of the 20 standard amino acids are encoded by more than one codon. Although there are 64 possible codons (4 bases taken three at a time: <span class="math inline">\(4^3 = 64\)</span>), only 20 standard amino acids are commonly used in protein synthesis. This redundancy primarily arises at the third position of the codon, where variations often do not change the specified amino acid.</p>
+</div>
+</section>
+<section id="codon-usage-bias-non-uniform-codon-frequencies" class="level3">
+<h3 class="anchored" data-anchor-id="codon-usage-bias-non-uniform-codon-frequencies">Codon Usage Bias: Non-Uniform Codon Frequencies</h3>
+<div class="tcolorbox">
+<p><strong>Codon usage bias</strong> refers to the observation that synonymous codons (codons that specify the same amino acid) are not used equally frequently in different organisms or even in different genes within the same organism. This bias can be influenced by various factors, including the availability of specific tRNA&nbsp;molecules, the base composition of the genome (GC content), and the optimization of translational efficiency.</p>
+</div>
+</section>
+<section id="wobble-hypothesis-flexible-base-pairing-at-the-third-codon-position" class="level3">
+<h3 class="anchored" data-anchor-id="wobble-hypothesis-flexible-base-pairing-at-the-third-codon-position">Wobble Hypothesis: Flexible Base Pairing at the Third Codon Position</h3>
+<div class="tcolorbox">
+<p>The <strong>wobble hypothesis</strong> explains how a limited number of tRNA&nbsp;species can recognize multiple codons for the same amino acid. Wobble occurs at the third codon position (which corresponds to the 5’ base of the anticodon). It allows for non-standard base pairing between the third codon base and the first anticodon base. For example, guanine () in the anticodon can pair with uracil () or cytosine () in the codon, in addition to its standard pairing with cytosine.</p>
+</div>
+<p><strong>Inosine ()</strong>, a modified nucleoside, is frequently found in the anticodon of tRNA, particularly at the wobble position (5’ position of the anticodon). Inosine exhibits versatile base-pairing properties, capable of pairing with , , and , but not with . For instance, a single tRNA&nbsp;for isoleucine containing inosine in its anticodon can recognize codons , , and , all of which code for isoleucine, but it will not recognize , which is a codon for methionine.</p>
+</section>
+<section id="universality-and-exceptions-to-the-genetic-code" class="level3">
+<h3 class="anchored" data-anchor-id="universality-and-exceptions-to-the-genetic-code">Universality and Exceptions to the Genetic Code</h3>
+<div class="tcolorbox">
+<p>The genetic code is considered nearly <strong>universal</strong>, as it is used by almost all known living organisms, from bacteria to humans. This universality underscores the common evolutionary origin of life. However, there are some exceptions and variations to the standard genetic code, particularly in mitochondria, chloroplasts, and certain specialized organisms. These variations often involve the reassignment of stop codons or codons for less common or specialized amino acids.</p>
+</div>
+<section id="selenocysteine-the-21st-amino-acid" class="level4">
+<h4 class="anchored" data-anchor-id="selenocysteine-the-21st-amino-acid">Selenocysteine: The 21st Amino Acid</h4>
+<div class="tcolorbox">
+<p><strong>Selenocysteine</strong> is recognized as the 21st proteinogenic amino acid, incorporated into selenoproteins. It is analogous to cysteine but contains selenium instead of sulfur. Uniquely, selenocysteine is encoded by the stop codon UGA in both prokaryotes (<em>E. coli</em>) and eukaryotes (including humans). The recoding of UGA from a stop codon to a selenocysteine codon requires specific contextual signals in the mRNA&nbsp;and specialized cellular machinery.</p>
+</div>
+<p>The mechanism for selenocysteine incorporation involves:</p>
+<ul>
+<li><p><strong>UGA Codon Context and SECIS Element</strong>: A specific mRNA&nbsp;secondary structure, known as the SECIS (selenocysteine insertion sequence) element, is located in the 3’ untranslated region (3’ UTR) in eukaryotes and immediately downstream of the UGA codon in prokaryotes. This element is crucial for recoding UGA.</p></li>
+<li><p><strong>Specialized tRNA<sup>Sec</sup></strong> : A unique tRNA&nbsp;species, designated tRNA<sup>Sec</sup>, is specifically charged with selenocysteine.</p></li>
+<li><p><strong>Specialized Elongation Factors</strong>: A specialized elongation factor is required to deliver selenocysteinyl-tRNA<sup>Sec</sup> to the ribosome at the UGA codon. In bacteria, this is SelB, and in eukaryotes, it is eEFSec (eukaryotic elongation factor for selenocysteine).</p></li>
+</ul>
+<p>Selenocysteine is essential for the function of selenoproteins, many of which play critical roles in antioxidant defense and redox homeostasis. Examples include glutathione peroxidases and formate dehydrogenases, which are involved in scavenging reactive oxygen species and protecting cells from oxidative damage. The incorporation of selenocysteine highlights a remarkable example of how the genetic code can be adapted and expanded to incorporate specialized amino acids for specific biological functions.</p>
+</section>
+</section>
+</section>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<p>In this lecture, we have explored advanced topics in RNA&nbsp;maturation and initiated our discussion on protein synthesis. We detailed the mechanisms of trans-splicing, particularly in trypanosomes, and its implications for gene regulation and the generation of chimeric RNA&nbsp;and proteins. We then delved into RNA&nbsp;editing, covering its diverse mechanisms, enzymatic machinery, and roles in rRNA&nbsp;maturation and in both trypanosomes and eukaryotes, including its relevance to neurological disorders and apolipoprotein isoforms.</p>
+<p>Transitioning to protein synthesis, we introduced the key players—ribosomes, mRNA, and tRNA—and examined the structural aspects of ribosomes and tRNA&nbsp;molecules. We also discussed the fundamental properties of the genetic code, including its degeneracy, codon usage bias, and the wobble hypothesis, explaining how these features contribute to the efficiency and robustness of translation. Finally, we touched upon the universality and variations of the genetic code, highlighting the unique case of selenocysteine incorporation.</p>
+<p>Key takeaways from this lecture include:</p>
+<ul>
+<li><p>Trans-splicing is a unique RNA&nbsp;processing mechanism in certain organisms, leading to chimeric RNA&nbsp;molecules and regulatory functions.</p></li>
+<li><p>RNA&nbsp;editing is a post-transcriptional modification process that alters RNA&nbsp;sequences, crucial for rRNA&nbsp;maturation and gene expression regulation.</p></li>
+<li><p>Ribosomes are ribozymes, with rRNA&nbsp;playing a central catalytic role in protein synthesis.</p></li>
+<li><p>The genetic code is degenerate and nearly universal, with variations that reflect evolutionary adaptations and specific functional needs.</p></li>
+<li><p>Selenocysteine incorporation exemplifies a non-canonical use of a stop codon for encoding a crucial amino acid in specific proteins.</p></li>
+</ul>
+<p>In our next lecture, we will continue our exploration of protein synthesis, focusing on the detailed steps of translation, the factors involved in initiation, elongation, and termination, and the regulatory mechanisms that govern this essential cellular process. We will also discuss the differences in translation between prokaryotes and eukaryotes and the implications for antibiotic therapies targeting bacterial protein synthesis.</p>
+
+
+<!-- -->
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "RNA Maturation and Protein Synthesis"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Your Name"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2025-02-05"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true  # Table of Contents</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">    toc-depth: 2</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">    theme: cosmo  # Or "journal" for Distill-like minimalism</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu"># Introduction</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>In this lecture, we will complete our discussion on RNA&nbsp;maturation,</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>continuing from our previous extensive discussion on splicing. We will</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>explore two key mechanisms of RNA&nbsp;maturation: **trans-splicing** and</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>**RNA&nbsp;editing**. Trans-splicing, a unique type of splicing found in</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>certain organisms like trypanosomes, involves intermolecular reactions,</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>contrasting with the typical cis-splicing. RNA&nbsp;editing encompasses</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>enzymatic processes that modify the nucleotide sequence of</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>RNA&nbsp;post-transcriptionally.</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>Following the discussion on RNA&nbsp;maturation, we will transition to the</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>topic of **protein synthesis**. We will begin by introducing the</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>fundamental components and characteristics of the genetic code, and then</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>delve into the functional aspects of translation, examining the factors</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>involved and highlighting the differences between prokaryotic and</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>eukaryotic systems. Understanding these processes is crucial, especially</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>considering that the selective regulation or inhibition of translation</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>is a key target for antibiotic therapies.</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="fu"># Trans-splicing</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>Trans-splicing is a unique type of RNA&nbsp;splicing observed in certain</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>organisms, particularly in protozoa such as *Trypanosoma*. *Trypanosoma*</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>species are pathogenic agents responsible for diseases like sleeping</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>sickness, which is transmitted by the tsetse fly. These diseases are</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>characterized by severe symptoms including fever, inflammation,</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>polyarthritis, and anemia, often leading to fatality.</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>Distinct from conventional *cis*-splicing, which operates</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>intramolecularly to rejoin exons from a single precursor mRNA&nbsp;molecule,</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>**trans-splicing** is an **intermolecular** process. It modifies</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>heterogeneous nuclear RNA&nbsp;(hnRNA) by splicing exons from **different**</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>RNA&nbsp;molecules. This results in the formation of **chimeric**</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>RNA&nbsp;molecules, which can potentially encode chimeric proteins or</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>function as chimeric mature mRNA&nbsp;with specific roles.</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="fu">## Mechanism of Trans-splicing</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>The fundamental mechanism of trans-splicing involves the joining of</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>exons from distinct precursor RNA&nbsp;molecules. Consider, for instance, two</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>separate hnRNA&nbsp;molecules. The first molecule contains exons 1 and 2,</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>while the second contains exons 3 and 4. Within their intronic regions,</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>there are complementary sequences that allow these two RNA&nbsp;molecules to</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>anneal and become physically associated.</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>![Conceptual Diagram of Trans-splicing. Two different hnRNA molecules</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>align via complementary intronic sequences. Splice donor and acceptor</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>sites from different precursors are utilized to generate chimeric mature</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>RNA molecules, exemplified by the joining of exon 1 to exon 4 and exon 3</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>to exon 2.](trans_splicing_diagram.png){#fig:trans_splicing width="70%"}</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>As illustrated in Figure <span class="co">[</span><span class="ot">1</span><span class="co">](#fig:trans_splicing)</span>{reference-type="ref"</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>reference="fig:trans_splicing"}, the trans-splicing process utilizes the</span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>splice donor site from one intron and the splice acceptor site from</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>another intron, located on different precursor RNA&nbsp;molecules. This</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>intermolecular splicing event leads to the creation of chimeric mature</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>RNA&nbsp;molecules. For example, exon 1 from the first precursor can be</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>spliced to exon 4 from the second precursor, and conversely, exon 3 can</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>be spliced to exon 2, resulting in novel RNA&nbsp;combinations not directly</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>encoded as such in the genome.</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="fu">## Trans-splicing in *Trypanosoma*</span></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>In *Trypanosoma*, trans-splicing is notably associated with the</span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>**spliced leader RNA** (SL RNA), a small non-coding RNA&nbsp;of approximately</span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>35 nucleotides. The SL RNA&nbsp;donates a short exon during trans-splicing</span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>reactions. This donated exon is typically non-coding but plays a crucial</span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>role in enhancing the efficiency of translation for the recipient</span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>mRNA&nbsp;molecules.</span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="fu">### Function of Spliced Leader RNA</span></span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>The spliced leader RNA&nbsp;(SL RNA) in *Trypanosoma* provides a 5'</span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>untranslated region (UTR) exon to protein-coding transcripts through</span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>trans-splicing. This addition of a 5' UTR&nbsp;from the SL RNA&nbsp;is essential</span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>for regulating gene expression, primarily by increasing translational</span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>efficiency of the mature mRNA.</span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a><span class="fu">### Regulation of Gene Expression and Processing of Polycistronic Transcripts</span></span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>Trans-splicing in *Trypanosoma* functions as a regulatory mechanism to</span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>control protein synthesis by modifying the 5' UTR&nbsp;of mRNA&nbsp;molecules.</span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>This process can be applied to exons from various genes, acting as a</span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>versatile regulatory strategy. Furthermore, it is employed to process</span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>polycistronic transcripts, which are common in *Trypanosoma*. By adding</span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>a standardized 5' UTR&nbsp;from the SL RNA&nbsp;to each coding exon within a</span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>polycistronic transcript, trans-splicing facilitates efficient</span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>translation of individual open reading frames.</span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>During trans-splicing in *Trypanosoma*, a characteristic **Y-shaped</span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>intron intermediate** is formed, in contrast to the lariat structure</span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a>observed in *cis*-splicing in eukaryotes. This Y-shaped intron is a</span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>hallmark of the trans-splicing mechanism in these organisms.</span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a><span class="fu">## Phylogenetic Distribution of Trans-splicing</span></span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>Trans-splicing is prevalent among protozoa and has been studied</span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>extensively in a phylogenetic context. It is commonly found in</span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>unicellular organisms capable of independent existence, many of which</span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>are parasitic to humans. Across the phylogenetic spectrum, the extent of</span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>trans-splicing varies, with some organisms utilizing it extensively</span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>while others do not employ it at all.</span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a><span class="fu">## Occurrence of Trans-splicing in Humans</span></span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a>In vertebrates, trans-splicing is considered to be largely absent,</span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a>potentially lost during evolution as more efficient regulatory</span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>mechanisms evolved. However, there is emerging evidence suggesting</span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>potential trans-splicing events in humans, which could lead to the</span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a>generation of chimeric proteins.</span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a><span class="fu">### Potential for Chimeric Protein Generation</span></span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>While less frequent and less understood compared to trypanosomes,</span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>trans-splicing in humans is hypothesized as a mechanism for generating</span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a>chimeric proteins. Additionally, other transcriptional errors, such as</span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>RNA&nbsp;polymerase slippage, can also result in chimeric RNA&nbsp;transcripts,</span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a>subsequently leading to chimeric proteins after *cis*-splicing of these</span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a>aberrant precursors. These mechanisms involve the RNA&nbsp;polymerase</span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a>switching templates during transcription, thus producing an</span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>RNA&nbsp;transcript derived from multiple genomic loci.</span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a><span class="fu">### Examples of Human Genes Potentially Involved in Trans-splicing</span></span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>Examples of human genes that may undergo trans-splicing include:</span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Simig/Simib Proto-oncogene**: This proto-oncogene is suggested to</span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a>    be involved in trans-splicing, potentially activating its oncogenic</span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>    function.</span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Cyclin D1 Gene**: A key regulator of cell cycle progression and</span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a>    cell growth.</span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Cytochrome P450 Isoform Gene**: Specifically, an isoform of</span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a>    cytochrome P450, an enzyme family crucial for metabolic processes in</span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a>    the liver.</span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a>The pathological significance of trans-splicing and other mechanisms</span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>generating chimeric proteins in humans is still under investigation and</span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>appears to be relatively rare. Nevertheless, it remains a subject of</span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>interest in molecular biology, particularly in the context of gene</span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a>regulation and disease.</span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a><span class="fu"># RNA Editing</span></span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a>::: tcolorbox</span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a>**RNA&nbsp;editing** refers to post-transcriptional enzymatic modifications</span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a>of RNA&nbsp;nucleotide sequences. This process can alter the coding sequence</span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a>of mRNA&nbsp;and modify non-coding RNA, including ribosomal RNA&nbsp;(rRNA).</span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a>RNA&nbsp;editing is crucial for the maturation and function of various</span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>RNA&nbsp;types, particularly rRNA.</span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a>Initially discovered in trypanosomes, especially in mitochondrial RNA,</span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a>RNA&nbsp;editing mechanisms are now recognized in a wide range of organisms,</span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>including humans. Key enzymes involved in these processes include</span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a>adenosine deaminases and cytidine deaminases.</span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a><span class="fu">## Mechanisms of RNA Editing</span></span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a>RNA&nbsp;editing encompasses several enzymatic mechanisms that modify</span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a>RNA&nbsp;sequences after transcription:</span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Base Deamination**: This involves the hydrolytic removal of an</span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a>    amino group from a base. Examples include:</span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>**Adenosine to Inosine (-to-) conversion**: Catalyzed by</span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a>        adenosine deaminases.</span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>**Cytidine to Uridine (-to-) conversion**: Catalyzed by cytidine</span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>        deaminases.</span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Uridine Insertion/Deletion**: Predominantly observed in</span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>    trypanosome mitochondrial RNA&nbsp;editing, this mechanism involves the</span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a>    addition or removal of uridine residues.</span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a>These modifications can alter the genetic information encoded in RNA&nbsp;and</span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a>affect RNA&nbsp;structure and function, especially in non-coding RNA.</span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a><span class="fu">## Enzymes in RNA Editing</span></span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>Several enzyme families mediate RNA&nbsp;editing:</span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a><span class="fu">### Adenosine Deaminases Acting on RNA (ADARs)</span></span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a>**ADARs** are a family of enzymes that catalyze the deamination of</span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a>adenosine () to inosine () in double-stranded RNA&nbsp;(dsRNA). The reaction</span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a>is:</span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a>$$\mathrm{A}\xrightarrow{\text{ADAR}} \mathrm{I}$$</span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a>Inosine is structurally similar to guanosine and is recognized as</span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>guanosine during translation. -to-&nbsp;editing can modify codon identity,</span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a>splice sites, and RNA&nbsp;secondary structure, influencing gene expression</span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a>and RNA&nbsp;function.</span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a><span class="fu">### Cytidine Deaminases</span></span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a>**Cytidine deaminases** catalyze the deamination of cytidine () to</span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a>uridine () in RNA&nbsp;and single-stranded DNA&nbsp;(ssDNA). The reaction is:</span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a>$$\mathrm{C}\xrightarrow{\text{Cytidine Deaminase}} \mathrm{U}$$</span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>The **APOBEC (Apolipoprotein B mRNA Editing Enzyme, Catalytic</span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a>polypeptide-like)** family is a prominent group of cytidine deaminases.</span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a>APOBEC-1, for example, is responsible for editing mRNA&nbsp;encoding</span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>apolipoprotein B.</span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a><span class="fu">## RNA Editing in Ribosomal RNA (rRNA) Maturation</span></span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>RNA&nbsp;editing is integral to rRNA&nbsp;maturation. Key modifications include</span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a>methylation and pseudouridylation, both guided by small nucleolar</span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a>RNA(snoRNA). These modifications are essential for ribosome assembly,</span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a>stability, and function.</span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a><span class="fu">## RNA Editing in Trypanosomes: Uridine Insertion/Deletion</span></span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>The discovery of RNA&nbsp;editing was significantly advanced by studies in</span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a>*Trypanosoma*, particularly concerning mitochondrial RNA. Paradoxical</span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a>observations in these organisms suggested a novel RNA&nbsp;processing</span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a>mechanism.</span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a><span class="fu">### Paradoxical Observations</span></span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>Several anomalies in *Trypanosoma* mitochondrial genes indicated</span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>post-transcriptional RNA&nbsp;modification:</span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Frame Shifts**: Inconsistent reading frames in conserved proteins</span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a>    across trypanosome species, suggesting disrupted open reading frames</span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a>    (ORFs).</span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Absence of Start Codons**: Many mitochondrial genes lacked typical</span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a>    AUG start codons required for translation initiation.</span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Missing Genes**: Expected genes for conserved mitochondrial</span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a>    proteins were not found in the mitochondrial DNA&nbsp;sequences.</span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Non-encoded Nucleotides**: mRNA&nbsp;sequences contained nucleotides</span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>    not encoded in the corresponding DNA&nbsp;template.</span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a>These anomalies led to the discovery of **uridine insertion and</span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a>deletion** as a form of RNA&nbsp;editing in trypanosomes.</span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a><span class="fu">### Uridine Editing Mechanism</span></span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a>In *Trypanosoma* mitochondria, RNA&nbsp;editing primarily involves the</span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a>insertion or deletion of uridine () residues in mRNA&nbsp;sequences. This</span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a>process is directed by **guide RNA(gRNA)** and executed by a protein</span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a>complex called the **editosome**.</span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a><span class="fu">### Guide RNAs (gRNAs) and the Editosome Complex</span></span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a>**Guide RNA(gRNA)** are small, non-coding RNAtranscribed from</span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a>mitochondrial DNA&nbsp;minicircles. They serve as templates for editing</span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a>pre-edited mRNA. Each gRNA&nbsp;contains:</span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Anchor Region**: A sequence complementary to the pre-edited</span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a>    mRNA&nbsp;that guides gRNA&nbsp;binding near the editing site.</span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Guide Region**: A region that is partially complementary to the</span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a>    pre-edited RNA&nbsp;but contains additional sequence information that</span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a>    dictates the uridine insertion or deletion.</span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a>The **editosome** is a multi-protein complex with enzymatic activities</span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a>including endoribonucleases, exoribonucleases, &nbsp;terminal transferase</span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a>(TUTase), and RNA&nbsp;ligases. The editing process is directional and</span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a>proceeds generally from 3' to 5' along the mRNA:</span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>**Hybridization**: A gRNA&nbsp;hybridizes to the pre-edited mRNA&nbsp;via its</span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a>    anchor region.</span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>**Editing Catalysis**: The editosome, guided by the gRNA&nbsp;sequence,</span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a>    inserts or deletes &nbsp;residues in the pre-edited mRNA&nbsp;to match the</span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a>    guide region's information.</span>
+<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>**Directional Progression**: Editing proceeds in a 3' to 5'</span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a>    direction. After an editing event, the gRNA&nbsp;may dissociate, and</span>
+<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a>    another gRNA&nbsp;can bind to direct further editing upstream (5').</span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a>This process converts pre-edited mRNA&nbsp;into mature, post-edited mRNA&nbsp;with</span>
+<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a>corrected reading frames, initiation codons, and complete coding</span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a>sequences, enabling the synthesis of functional mitochondrial proteins.</span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a><span class="fu">## RNA Editing in Eukaryotic Cells</span></span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a>In eukaryotes, including humans, extensive uridine insertion/deletion</span>
+<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a>editing as seen in trypanosomes is not observed. Instead, single</span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a>nucleotide editing mechanisms, primarily -to-&nbsp;and -to-&nbsp;conversions, are</span>
+<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a>prevalent.</span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a><span class="fu">### Adenosine-to-Inosine (A-to-I) Conversion</span></span>
+<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a>-to-&nbsp;editing, catalyzed by ADAR enzymes, is common in various RNA&nbsp;types:</span>
+<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Transfer RNA (tRNA)**: Inosine is found in the anticodon loop of</span>
+<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a>    some tRNA, enhancing wobble base pairing and expanding codon</span>
+<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a>    recognition.</span>
+<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Regulatory Regions**: More frequently, -to-&nbsp;editing occurs in</span>
+<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a>    non-coding regulatory regions of RNA, such as introns and UTR. This</span>
+<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a>    can influence splicing efficiency, RNA&nbsp;stability, and translational</span>
+<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a>    regulation.</span>
+<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a><span class="fu">### Cytidine-to-Uridine (C-to-U) Conversion</span></span>
+<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a>-to-&nbsp;editing, mediated by cytidine deaminases like APOBEC enzymes, is</span>
+<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a>exemplified by the editing of apolipoprotein B (*APOB*) mRNA.</span>
+<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a><span class="fu">### Neurological Significance of ADAR Editing</span></span>
+<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a>ADAR enzymes are particularly active in neural tissues. Aberrant</span>
+<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>-to-&nbsp;editing by ADARs is implicated in neurological disorders.</span>
+<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a>Substrates of ADARs often include proteins involved in neuronal</span>
+<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a>signaling, such as ion channels and receptors. Dysfunctional editing can</span>
+<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a>disrupt neuronal function and contribute to neurological pathologies.</span>
+<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a><span class="fu">### Tissue-Specific APOBEC-1 Editing and Apolipoprotein B Isoforms</span></span>
+<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a>APOBEC-1 mediates tissue-specific -to-&nbsp;editing of *APOB* mRNA, resulting</span>
+<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a>in two main isoforms of apolipoprotein B:</span>
+<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**APOB100 (Liver)**: Produced in the liver, this is the full-length</span>
+<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a>    100 kDa protein, essential for the assembly and secretion of VLDL</span>
+<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a>    and LDL. The codon at amino acid position 48 is &nbsp;(CAA), encoding</span>
+<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a>    glutamine.</span>
+<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**APOB48 (Intestine)**: Produced in the intestine, this is a</span>
+<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a>    truncated 48 kDa protein. In intestinal cells, APOBEC-1 converts the</span>
+<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a>    &nbsp;in the CAA codon at position 48 to , changing the codon to &nbsp;(UAA),</span>
+<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a>    a stop codon. This premature stop codon leads to the synthesis of a</span>
+<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a>    shorter protein.</span>
+<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a>This tissue-specific editing is regulated by the **APOBEC-1</span>
+<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a>complementation factor (ACF)**, which recruits APOBEC-1 to the target</span>
+<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a>codon in *APOB* mRNA.</span>
+<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a>Beyond apolipoprotein B editing, APOBEC enzymes have broader roles in</span>
+<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a>cellular processes, and mutations in APOBEC genes are linked to certain</span>
+<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a>cancers, affecting protein synthesis and cellular homeostasis.</span>
+<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a><span class="fu">## RNA Editing in Ribosomal RNA (rRNA) Maturation</span></span>
+<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a>RNA&nbsp;editing is crucial for rRNA&nbsp;maturation, involving modifications like</span>
+<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a>methylation and pseudouridylation, both guided by snoRNA.</span>
+<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a><span class="fu">### Ribose Methylation</span></span>
+<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a>Methylation of the 2'-OH group of ribose sugars in rRNA&nbsp;is catalyzed by</span>
+<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a>methylase enzymes, including fibrillarin. This process is guided by</span>
+<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a>snoRNAcontaining conserved **box C/D** motifs. These snoRNAbase-pair</span>
+<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a>with specific regions of rRNA&nbsp;to direct methylation to precise sites.</span>
+<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a>Methylation enhances rRNA&nbsp;stability and contributes to proper ribosome</span>
+<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a>function.</span>
+<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a><span class="fu">### Pseudouridylation</span></span>
+<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a>Pseudouridylation, the isomerization of uridine to pseudouridine</span>
+<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a>($\Psi$), is catalyzed by pseudouridine synthases, such as dyskerin.</span>
+<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a>This modification is guided by snoRNAcontaining **box H/ACA** motifs.</span>
+<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a>Similar to methylation, snoRNAguide the enzyme to specific uridine</span>
+<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a>residues in rRNA&nbsp;for modification. Pseudouridylation is important for</span>
+<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a>rRNA&nbsp;folding, ribosome structure, and function.</span>
+<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a><span class="fu">### Function of snoRNAs as Guides</span></span>
+<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a>Small nucleolar RNA(snoRNA) are essential guide molecules for</span>
+<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a>site-specific rRNA&nbsp;modifications:</span>
+<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Target Anchoring**: snoRNAhybridize to target rRNA&nbsp;regions through</span>
+<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a>    sequence complementarity.</span>
+<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Enzyme Recruitment**: snoRNAcontain conserved box motifs (C/D for</span>
+<span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a>    methylation, H/ACA for pseudouridylation) that are recognized by</span>
+<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a>    associated enzymatic complexes (e.g., fibrillarin complex for</span>
+<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a>    methylation, dyskerin complex for pseudouridylation), ensuring</span>
+<span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a>    precise modification at the targeted rRNA&nbsp;sites.</span>
+<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a><span class="fu">### Telomerase RNA (TERC) Editing</span></span>
+<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a>Telomerase RNA&nbsp;(*TERC*), a component of the telomerase ribonucleoprotein</span>
+<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a>complex, also undergoes pseudouridylation by dyskerin. This modification</span>
+<span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a>is critical for telomerase stability, function, and telomere</span>
+<span id="cb1-396"><a href="#cb1-396" aria-hidden="true" tabindex="-1"></a>maintenance. Genetic defects in dyskerin or *TERC* that impair</span>
+<span id="cb1-397"><a href="#cb1-397" aria-hidden="true" tabindex="-1"></a>pseudouridylation are associated with progeroid syndromes, characterized</span>
+<span id="cb1-398"><a href="#cb1-398" aria-hidden="true" tabindex="-1"></a>by premature aging phenotypes due to accelerated telomere shortening and</span>
+<span id="cb1-399"><a href="#cb1-399" aria-hidden="true" tabindex="-1"></a>reduced cellular replicative capacity.</span>
+<span id="cb1-400"><a href="#cb1-400" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-401"><a href="#cb1-401" aria-hidden="true" tabindex="-1"></a><span class="fu"># Protein Synthesis</span></span>
+<span id="cb1-402"><a href="#cb1-402" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a>Having discussed RNA&nbsp;maturation processes, including splicing and</span>
+<span id="cb1-404"><a href="#cb1-404" aria-hidden="true" tabindex="-1"></a>editing, we now transition to **protein synthesis**, also known as</span>
+<span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a>**translation**. This fundamental process decodes the genetic</span>
+<span id="cb1-406"><a href="#cb1-406" aria-hidden="true" tabindex="-1"></a>information encoded in mRNA&nbsp;to synthesize proteins.</span>
+<span id="cb1-407"><a href="#cb1-407" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-408"><a href="#cb1-408" aria-hidden="true" tabindex="-1"></a>::: tcolorbox</span>
+<span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a>**Protein synthesis** is the cellular process of creating proteins from</span>
+<span id="cb1-410"><a href="#cb1-410" aria-hidden="true" tabindex="-1"></a>amino acids, based on the genetic instructions carried by messenger</span>
+<span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a>RNA&nbsp;(mRNA). This multi-step process involves ribosomes, transfer</span>
+<span id="cb1-412"><a href="#cb1-412" aria-hidden="true" tabindex="-1"></a>RNA&nbsp;(tRNA), mRNA, and various protein factors. Translation occurs in the</span>
+<span id="cb1-413"><a href="#cb1-413" aria-hidden="true" tabindex="-1"></a>cytoplasm, where ribosomes sequentially add amino acids to a growing</span>
+<span id="cb1-414"><a href="#cb1-414" aria-hidden="true" tabindex="-1"></a>polypeptide chain, guided by the codon sequence of the mRNA.</span>
+<span id="cb1-415"><a href="#cb1-415" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-416"><a href="#cb1-416" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-417"><a href="#cb1-417" aria-hidden="true" tabindex="-1"></a><span class="fu">## Overview of Protein Synthesis</span></span>
+<span id="cb1-418"><a href="#cb1-418" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-419"><a href="#cb1-419" aria-hidden="true" tabindex="-1"></a>Protein synthesis is the cellular process of creating proteins from</span>
+<span id="cb1-420"><a href="#cb1-420" aria-hidden="true" tabindex="-1"></a>amino acids, based on the genetic instructions carried by messenger</span>
+<span id="cb1-421"><a href="#cb1-421" aria-hidden="true" tabindex="-1"></a>RNA&nbsp;(mRNA). This multi-step process involves ribosomes, transfer</span>
+<span id="cb1-422"><a href="#cb1-422" aria-hidden="true" tabindex="-1"></a>RNA&nbsp;(tRNA), mRNA, and various protein factors. Translation occurs in the</span>
+<span id="cb1-423"><a href="#cb1-423" aria-hidden="true" tabindex="-1"></a>cytoplasm, where ribosomes sequentially add amino acids to a growing</span>
+<span id="cb1-424"><a href="#cb1-424" aria-hidden="true" tabindex="-1"></a>polypeptide chain, guided by the codon sequence of the mRNA.</span>
+<span id="cb1-425"><a href="#cb1-425" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-426"><a href="#cb1-426" aria-hidden="true" tabindex="-1"></a><span class="fu">## Key Components of Protein Synthesis</span></span>
+<span id="cb1-427"><a href="#cb1-427" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-428"><a href="#cb1-428" aria-hidden="true" tabindex="-1"></a>Protein synthesis relies on several essential components:</span>
+<span id="cb1-429"><a href="#cb1-429" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-430"><a href="#cb1-430" aria-hidden="true" tabindex="-1"></a><span class="fu">### Ribosomes: The Protein Synthesis Machinery</span></span>
+<span id="cb1-431"><a href="#cb1-431" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-432"><a href="#cb1-432" aria-hidden="true" tabindex="-1"></a>**Ribosomes** are complex macromolecular machines that serve as the site</span>
+<span id="cb1-433"><a href="#cb1-433" aria-hidden="true" tabindex="-1"></a>of protein synthesis. Composed of ribosomal RNA&nbsp;(rRNA) and ribosomal</span>
+<span id="cb1-434"><a href="#cb1-434" aria-hidden="true" tabindex="-1"></a>proteins, ribosomes are universally found in all living cells and are</span>
+<span id="cb1-435"><a href="#cb1-435" aria-hidden="true" tabindex="-1"></a>highly conserved across species, reflecting their fundamental role in</span>
+<span id="cb1-436"><a href="#cb1-436" aria-hidden="true" tabindex="-1"></a>life.</span>
+<span id="cb1-437"><a href="#cb1-437" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-438"><a href="#cb1-438" aria-hidden="true" tabindex="-1"></a><span class="fu">### Messenger RNA (mRNA): The Genetic Blueprint</span></span>
+<span id="cb1-439"><a href="#cb1-439" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-440"><a href="#cb1-440" aria-hidden="true" tabindex="-1"></a>**Messenger RNA&nbsp;(mRNA)** molecules carry the genetic code transcribed</span>
+<span id="cb1-441"><a href="#cb1-441" aria-hidden="true" tabindex="-1"></a>from DNA. The sequence of codons in an mRNA&nbsp;molecule dictates the</span>
+<span id="cb1-442"><a href="#cb1-442" aria-hidden="true" tabindex="-1"></a>precise amino acid sequence of the protein to be synthesized. Each</span>
+<span id="cb1-443"><a href="#cb1-443" aria-hidden="true" tabindex="-1"></a>codon, a triplet of nucleotides, specifies a particular amino acid or a</span>
+<span id="cb1-444"><a href="#cb1-444" aria-hidden="true" tabindex="-1"></a>translational signal.</span>
+<span id="cb1-445"><a href="#cb1-445" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-446"><a href="#cb1-446" aria-hidden="true" tabindex="-1"></a><span class="fu">### Transfer RNA (tRNA): Adaptors Linking Codons and Amino Acids</span></span>
+<span id="cb1-447"><a href="#cb1-447" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-448"><a href="#cb1-448" aria-hidden="true" tabindex="-1"></a>**Transfer RNA&nbsp;(tRNA)** molecules act as adaptor molecules, physically</span>
+<span id="cb1-449"><a href="#cb1-449" aria-hidden="true" tabindex="-1"></a>linking the codons in mRNA&nbsp;to their corresponding amino acids. Each</span>
+<span id="cb1-450"><a href="#cb1-450" aria-hidden="true" tabindex="-1"></a>tRNA&nbsp;is specifically charged with a particular amino acid by</span>
+<span id="cb1-451"><a href="#cb1-451" aria-hidden="true" tabindex="-1"></a>aminoacyl-tRNA&nbsp;synthetases. Furthermore, each tRNA&nbsp;contains an</span>
+<span id="cb1-452"><a href="#cb1-452" aria-hidden="true" tabindex="-1"></a>anticodon, a sequence of three nucleotides that can base-pair with a</span>
+<span id="cb1-453"><a href="#cb1-453" aria-hidden="true" tabindex="-1"></a>complementary codon in mRNA, ensuring the correct amino acid is</span>
+<span id="cb1-454"><a href="#cb1-454" aria-hidden="true" tabindex="-1"></a>incorporated into the polypeptide chain.</span>
+<span id="cb1-455"><a href="#cb1-455" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-456"><a href="#cb1-456" aria-hidden="true" tabindex="-1"></a><span class="fu">## Ribosome Structure and Function</span></span>
+<span id="cb1-457"><a href="#cb1-457" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-458"><a href="#cb1-458" aria-hidden="true" tabindex="-1"></a>Ribosomes are composed of two distinct subunits: a large subunit and a</span>
+<span id="cb1-459"><a href="#cb1-459" aria-hidden="true" tabindex="-1"></a>small subunit, which associate to perform protein synthesis.</span>
+<span id="cb1-460"><a href="#cb1-460" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-461"><a href="#cb1-461" aria-hidden="true" tabindex="-1"></a><span class="fu">### Prokaryotic and Eukaryotic Ribosome Composition</span></span>
+<span id="cb1-462"><a href="#cb1-462" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-463"><a href="#cb1-463" aria-hidden="true" tabindex="-1"></a>Ribosomes differ slightly in prokaryotes and eukaryotes:</span>
+<span id="cb1-464"><a href="#cb1-464" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-465"><a href="#cb1-465" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Prokaryotic Ribosomes**: Known as 70S ribosomes, they consist of a</span>
+<span id="cb1-466"><a href="#cb1-466" aria-hidden="true" tabindex="-1"></a>    50S large subunit and a 30S small subunit. The 'S' value refers to</span>
+<span id="cb1-467"><a href="#cb1-467" aria-hidden="true" tabindex="-1"></a>    Svedberg units, a measure of sedimentation rate, and is not</span>
+<span id="cb1-468"><a href="#cb1-468" aria-hidden="true" tabindex="-1"></a>    additive.</span>
+<span id="cb1-469"><a href="#cb1-469" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-470"><a href="#cb1-470" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Eukaryotic Ribosomes**: Known as 80S ribosomes, they are composed</span>
+<span id="cb1-471"><a href="#cb1-471" aria-hidden="true" tabindex="-1"></a>    of a 60S large subunit and a 40S small subunit.</span>
+<span id="cb1-472"><a href="#cb1-472" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-473"><a href="#cb1-473" aria-hidden="true" tabindex="-1"></a><span class="fu">### Ribosomal RNA (rRNA) Components in Subunits</span></span>
+<span id="cb1-474"><a href="#cb1-474" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-475"><a href="#cb1-475" aria-hidden="true" tabindex="-1"></a>The subunits are further characterized by their rRNA&nbsp;content:</span>
+<span id="cb1-476"><a href="#cb1-476" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-477"><a href="#cb1-477" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Prokaryotic Ribosomes**:</span>
+<span id="cb1-478"><a href="#cb1-478" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-479"><a href="#cb1-479" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>**Large Subunit (50S)**: Contains a 23S rRNA&nbsp;and a 5S</span>
+<span id="cb1-480"><a href="#cb1-480" aria-hidden="true" tabindex="-1"></a>        rRNA&nbsp;molecule, along with multiple ribosomal proteins.</span>
+<span id="cb1-481"><a href="#cb1-481" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-482"><a href="#cb1-482" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>**Small Subunit (30S)**: Contains a 16S rRNA&nbsp;molecule and</span>
+<span id="cb1-483"><a href="#cb1-483" aria-hidden="true" tabindex="-1"></a>        associated ribosomal proteins.</span>
+<span id="cb1-484"><a href="#cb1-484" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-485"><a href="#cb1-485" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Eukaryotic Ribosomes**:</span>
+<span id="cb1-486"><a href="#cb1-486" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-487"><a href="#cb1-487" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>**Large Subunit (60S)**: Contains 28S rRNA, 5.8S rRNA, and 5S</span>
+<span id="cb1-488"><a href="#cb1-488" aria-hidden="true" tabindex="-1"></a>        rRNA&nbsp;molecules, in addition to ribosomal proteins.</span>
+<span id="cb1-489"><a href="#cb1-489" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-490"><a href="#cb1-490" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>**Small Subunit (40S)**: Contains an 18S rRNA&nbsp;molecule and</span>
+<span id="cb1-491"><a href="#cb1-491" aria-hidden="true" tabindex="-1"></a>        ribosomal proteins.</span>
+<span id="cb1-492"><a href="#cb1-492" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-493"><a href="#cb1-493" aria-hidden="true" tabindex="-1"></a><span class="fu">### rRNA as the Catalytic Core</span></span>
+<span id="cb1-494"><a href="#cb1-494" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-495"><a href="#cb1-495" aria-hidden="true" tabindex="-1"></a>Ribosomes are ribozymes, meaning that their catalytic activity is</span>
+<span id="cb1-496"><a href="#cb1-496" aria-hidden="true" tabindex="-1"></a>primarily carried out by rRNA, not the protein components. Specifically,</span>
+<span id="cb1-497"><a href="#cb1-497" aria-hidden="true" tabindex="-1"></a>the large subunit rRNA&nbsp;catalyzes the formation of peptide bonds between</span>
+<span id="cb1-498"><a href="#cb1-498" aria-hidden="true" tabindex="-1"></a>amino acids. The precise three-dimensional arrangement of rRNA&nbsp;within</span>
+<span id="cb1-499"><a href="#cb1-499" aria-hidden="true" tabindex="-1"></a>the ribosome creates an optimal environment for positioning substrates</span>
+<span id="cb1-500"><a href="#cb1-500" aria-hidden="true" tabindex="-1"></a>and facilitating efficient catalysis.</span>
+<span id="cb1-501"><a href="#cb1-501" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-502"><a href="#cb1-502" aria-hidden="true" tabindex="-1"></a><span class="fu">### Key Ribosomal tRNA-Binding Sites: A, P, and E Sites</span></span>
+<span id="cb1-503"><a href="#cb1-503" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-504"><a href="#cb1-504" aria-hidden="true" tabindex="-1"></a>Ribosomes possess three principal binding sites for tRNA&nbsp;molecules,</span>
+<span id="cb1-505"><a href="#cb1-505" aria-hidden="true" tabindex="-1"></a>crucial for the sequential steps of protein synthesis:</span>
+<span id="cb1-506"><a href="#cb1-506" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-507"><a href="#cb1-507" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**A Site (Aminoacyl-tRNAsite)**: This site is the entry point for</span>
+<span id="cb1-508"><a href="#cb1-508" aria-hidden="true" tabindex="-1"></a>    each new aminoacyl-tRNA, which carries the next amino acid to be</span>
+<span id="cb1-509"><a href="#cb1-509" aria-hidden="true" tabindex="-1"></a>    added to the growing polypeptide chain.</span>
+<span id="cb1-510"><a href="#cb1-510" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-511"><a href="#cb1-511" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**P Site (Peptidyl-tRNAsite)**: This site holds the peptidyl-tRNA,</span>
+<span id="cb1-512"><a href="#cb1-512" aria-hidden="true" tabindex="-1"></a>    which carries the nascent polypeptide chain. Peptide bond formation</span>
+<span id="cb1-513"><a href="#cb1-513" aria-hidden="true" tabindex="-1"></a>    occurs when the amino acid in the A site is linked to the</span>
+<span id="cb1-514"><a href="#cb1-514" aria-hidden="true" tabindex="-1"></a>    polypeptide in the P site.</span>
+<span id="cb1-515"><a href="#cb1-515" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-516"><a href="#cb1-516" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**E Site (Exit site)**: This is the exit pathway for deacylated</span>
+<span id="cb1-517"><a href="#cb1-517" aria-hidden="true" tabindex="-1"></a>    tRNAafter they have transferred their amino acid to the growing</span>
+<span id="cb1-518"><a href="#cb1-518" aria-hidden="true" tabindex="-1"></a>    polypeptide chain and are ready to be released from the ribosome.</span>
+<span id="cb1-519"><a href="#cb1-519" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-520"><a href="#cb1-520" aria-hidden="true" tabindex="-1"></a><span class="fu">### Peptidyl Transferase Center</span></span>
+<span id="cb1-521"><a href="#cb1-521" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-522"><a href="#cb1-522" aria-hidden="true" tabindex="-1"></a>The **peptidyl transferase center** is located within the large</span>
+<span id="cb1-523"><a href="#cb1-523" aria-hidden="true" tabindex="-1"></a>ribosomal subunit and is the specific site where peptide bond formation</span>
+<span id="cb1-524"><a href="#cb1-524" aria-hidden="true" tabindex="-1"></a>is catalyzed. The 23S rRNA&nbsp;in prokaryotes and the 28S rRNA&nbsp;in eukaryotes</span>
+<span id="cb1-525"><a href="#cb1-525" aria-hidden="true" tabindex="-1"></a>are responsible for this ribozyme activity.</span>
+<span id="cb1-526"><a href="#cb1-526" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-527"><a href="#cb1-527" aria-hidden="true" tabindex="-1"></a><span class="fu">### Decoding Center</span></span>
+<span id="cb1-528"><a href="#cb1-528" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-529"><a href="#cb1-529" aria-hidden="true" tabindex="-1"></a>The **decoding center** resides in the small ribosomal subunit. Its</span>
+<span id="cb1-530"><a href="#cb1-530" aria-hidden="true" tabindex="-1"></a>function is to monitor the interaction between the codon on the mRNA&nbsp;and</span>
+<span id="cb1-531"><a href="#cb1-531" aria-hidden="true" tabindex="-1"></a>the anticodon on the incoming aminoacyl-tRNAin the A site. This ensures</span>
+<span id="cb1-532"><a href="#cb1-532" aria-hidden="true" tabindex="-1"></a>that the correct amino acid is selected based on the mRNA&nbsp;sequence,</span>
+<span id="cb1-533"><a href="#cb1-533" aria-hidden="true" tabindex="-1"></a>maintaining the fidelity of translation.</span>
+<span id="cb1-534"><a href="#cb1-534" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-535"><a href="#cb1-535" aria-hidden="true" tabindex="-1"></a><span class="fu">## Transfer RNA (tRNA): Structure and Aminoacylation</span></span>
+<span id="cb1-536"><a href="#cb1-536" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-537"><a href="#cb1-537" aria-hidden="true" tabindex="-1"></a><span class="fu">### tRNA as an Adaptor Molecule in Translation</span></span>
+<span id="cb1-538"><a href="#cb1-538" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-539"><a href="#cb1-539" aria-hidden="true" tabindex="-1"></a>**Transfer RNA&nbsp;(tRNA)** functions as a critical adaptor molecule in</span>
+<span id="cb1-540"><a href="#cb1-540" aria-hidden="true" tabindex="-1"></a>protein synthesis, effectively bridging the information encoded in</span>
+<span id="cb1-541"><a href="#cb1-541" aria-hidden="true" tabindex="-1"></a>mRNA&nbsp;codons with the amino acid sequence of proteins. Its dual role</span>
+<span id="cb1-542"><a href="#cb1-542" aria-hidden="true" tabindex="-1"></a>includes:</span>
+<span id="cb1-543"><a href="#cb1-543" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-544"><a href="#cb1-544" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>**Amino Acid Delivery**: Each tRNA&nbsp;molecule is specifically bound to</span>
+<span id="cb1-545"><a href="#cb1-545" aria-hidden="true" tabindex="-1"></a>    an amino acid, forming an aminoacyl-tRNA, a process catalyzed by</span>
+<span id="cb1-546"><a href="#cb1-546" aria-hidden="true" tabindex="-1"></a>    aminoacyl-tRNA&nbsp;synthetases.</span>
+<span id="cb1-547"><a href="#cb1-547" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-548"><a href="#cb1-548" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>**Codon Recognition**: tRNA&nbsp;contains an anticodon loop with a</span>
+<span id="cb1-549"><a href="#cb1-549" aria-hidden="true" tabindex="-1"></a>    specific three-nucleotide sequence that can recognize and base-pair</span>
+<span id="cb1-550"><a href="#cb1-550" aria-hidden="true" tabindex="-1"></a>    with a complementary codon on the mRNA, ensuring accurate amino acid</span>
+<span id="cb1-551"><a href="#cb1-551" aria-hidden="true" tabindex="-1"></a>    incorporation into the polypeptide chain.</span>
+<span id="cb1-552"><a href="#cb1-552" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-553"><a href="#cb1-553" aria-hidden="true" tabindex="-1"></a><span class="fu">### Canonical Cloverleaf Structure of tRNA</span></span>
+<span id="cb1-554"><a href="#cb1-554" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-555"><a href="#cb1-555" aria-hidden="true" tabindex="-1"></a>tRNA&nbsp;molecules exhibit a characteristic secondary structure known as the</span>
+<span id="cb1-556"><a href="#cb1-556" aria-hidden="true" tabindex="-1"></a>cloverleaf model, which is stabilized by intramolecular base pairing.</span>
+<span id="cb1-557"><a href="#cb1-557" aria-hidden="true" tabindex="-1"></a>Key structural elements of tRNA&nbsp;include:</span>
+<span id="cb1-558"><a href="#cb1-558" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-559"><a href="#cb1-559" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Acceptor Stem**: Located at the 3' end of the tRNA, it terminates</span>
+<span id="cb1-560"><a href="#cb1-560" aria-hidden="true" tabindex="-1"></a>    with the sequence CCA. The 3'-hydroxyl group of the terminal</span>
+<span id="cb1-561"><a href="#cb1-561" aria-hidden="true" tabindex="-1"></a>    adenosine is the site of amino acid attachment.</span>
+<span id="cb1-562"><a href="#cb1-562" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-563"><a href="#cb1-563" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**D-Loop**: Contains dihydrouridine residues, contributing to</span>
+<span id="cb1-564"><a href="#cb1-564" aria-hidden="true" tabindex="-1"></a>    tRNA&nbsp;folding and recognition by aminoacyl-tRNA&nbsp;synthetases.</span>
+<span id="cb1-565"><a href="#cb1-565" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-566"><a href="#cb1-566" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Anticodon Loop**: Situated opposite the acceptor stem, this loop</span>
+<span id="cb1-567"><a href="#cb1-567" aria-hidden="true" tabindex="-1"></a>    contains the anticodon sequence that is complementary to</span>
+<span id="cb1-568"><a href="#cb1-568" aria-hidden="true" tabindex="-1"></a>    mRNA&nbsp;codons.</span>
+<span id="cb1-569"><a href="#cb1-569" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-570"><a href="#cb1-570" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Variable Loop**: Located between the anticodon loop and</span>
+<span id="cb1-571"><a href="#cb1-571" aria-hidden="true" tabindex="-1"></a>    T$\Psi$C-loop, it varies in length and sequence among different</span>
+<span id="cb1-572"><a href="#cb1-572" aria-hidden="true" tabindex="-1"></a>    tRNA&nbsp;species.</span>
+<span id="cb1-573"><a href="#cb1-573" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-574"><a href="#cb1-574" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**T$\Psi$C-Loop (Pseudouridine Loop)**: Contains the modified</span>
+<span id="cb1-575"><a href="#cb1-575" aria-hidden="true" tabindex="-1"></a>    nucleosides pseudouridine ($\Psi$) and ribothymidine (T), involved</span>
+<span id="cb1-576"><a href="#cb1-576" aria-hidden="true" tabindex="-1"></a>    in tRNA&nbsp;folding and ribosome binding.</span>
+<span id="cb1-577"><a href="#cb1-577" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-578"><a href="#cb1-578" aria-hidden="true" tabindex="-1"></a>The three-dimensional structure of tRNA&nbsp;folds into an L-shape, which is</span>
+<span id="cb1-579"><a href="#cb1-579" aria-hidden="true" tabindex="-1"></a>essential for its function during translation.</span>
+<span id="cb1-580"><a href="#cb1-580" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-581"><a href="#cb1-581" aria-hidden="true" tabindex="-1"></a><span class="fu">### Aminoacyl-tRNA Synthetases: Ensuring Fidelity of Aminoacylation</span></span>
+<span id="cb1-582"><a href="#cb1-582" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-583"><a href="#cb1-583" aria-hidden="true" tabindex="-1"></a>**Aminoacyl-tRNA&nbsp;synthetases (aaRS)** are a family of enzymes</span>
+<span id="cb1-584"><a href="#cb1-584" aria-hidden="true" tabindex="-1"></a>responsible for the accurate charging of tRNA&nbsp;molecules with their</span>
+<span id="cb1-585"><a href="#cb1-585" aria-hidden="true" tabindex="-1"></a>corresponding amino acids. Each aaRS is highly specific for one amino</span>
+<span id="cb1-586"><a href="#cb1-586" aria-hidden="true" tabindex="-1"></a>acid and its cognate tRNA, ensuring that the correct amino acid is</span>
+<span id="cb1-587"><a href="#cb1-587" aria-hidden="true" tabindex="-1"></a>linked to the correct tRNA. This process is critical for maintaining the</span>
+<span id="cb1-588"><a href="#cb1-588" aria-hidden="true" tabindex="-1"></a>fidelity of translation. The set of recognition elements on tRNAthat are</span>
+<span id="cb1-589"><a href="#cb1-589" aria-hidden="true" tabindex="-1"></a>used by aaRSs for accurate aminoacylation is often referred to as the</span>
+<span id="cb1-590"><a href="#cb1-590" aria-hidden="true" tabindex="-1"></a>**second genetic code**. These recognition elements can include regions</span>
+<span id="cb1-591"><a href="#cb1-591" aria-hidden="true" tabindex="-1"></a>within the acceptor stem, anticodon loop, D-loop, and variable loop of</span>
+<span id="cb1-592"><a href="#cb1-592" aria-hidden="true" tabindex="-1"></a>the tRNA.</span>
+<span id="cb1-593"><a href="#cb1-593" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-594"><a href="#cb1-594" aria-hidden="true" tabindex="-1"></a><span class="fu">## Genetic Code: Decoding mRNA Instructions</span></span>
+<span id="cb1-595"><a href="#cb1-595" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-596"><a href="#cb1-596" aria-hidden="true" tabindex="-1"></a>::: tcolorbox</span>
+<span id="cb1-597"><a href="#cb1-597" aria-hidden="true" tabindex="-1"></a>The **genetic code** is the set of rules by which the nucleotide</span>
+<span id="cb1-598"><a href="#cb1-598" aria-hidden="true" tabindex="-1"></a>sequence of DNA&nbsp;and RNA&nbsp;is translated into the amino acid sequence of</span>
+<span id="cb1-599"><a href="#cb1-599" aria-hidden="true" tabindex="-1"></a>proteins. It is a triplet code, where each codon consists of three</span>
+<span id="cb1-600"><a href="#cb1-600" aria-hidden="true" tabindex="-1"></a>nucleotides.</span>
+<span id="cb1-601"><a href="#cb1-601" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-602"><a href="#cb1-602" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-603"><a href="#cb1-603" aria-hidden="true" tabindex="-1"></a><span class="fu">### Degeneracy and Redundancy of the Genetic Code</span></span>
+<span id="cb1-604"><a href="#cb1-604" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-605"><a href="#cb1-605" aria-hidden="true" tabindex="-1"></a>::: tcolorbox</span>
+<span id="cb1-606"><a href="#cb1-606" aria-hidden="true" tabindex="-1"></a>The genetic code is described as **degenerate** or redundant because</span>
+<span id="cb1-607"><a href="#cb1-607" aria-hidden="true" tabindex="-1"></a>most of the 20 standard amino acids are encoded by more than one codon.</span>
+<span id="cb1-608"><a href="#cb1-608" aria-hidden="true" tabindex="-1"></a>Although there are 64 possible codons (4 bases taken three at a time:</span>
+<span id="cb1-609"><a href="#cb1-609" aria-hidden="true" tabindex="-1"></a>$4^3 = 64$), only 20 standard amino acids are commonly used in protein</span>
+<span id="cb1-610"><a href="#cb1-610" aria-hidden="true" tabindex="-1"></a>synthesis. This redundancy primarily arises at the third position of the</span>
+<span id="cb1-611"><a href="#cb1-611" aria-hidden="true" tabindex="-1"></a>codon, where variations often do not change the specified amino acid.</span>
+<span id="cb1-612"><a href="#cb1-612" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-613"><a href="#cb1-613" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-614"><a href="#cb1-614" aria-hidden="true" tabindex="-1"></a><span class="fu">### Codon Usage Bias: Non-Uniform Codon Frequencies</span></span>
+<span id="cb1-615"><a href="#cb1-615" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-616"><a href="#cb1-616" aria-hidden="true" tabindex="-1"></a>::: tcolorbox</span>
+<span id="cb1-617"><a href="#cb1-617" aria-hidden="true" tabindex="-1"></a>**Codon usage bias** refers to the observation that synonymous codons</span>
+<span id="cb1-618"><a href="#cb1-618" aria-hidden="true" tabindex="-1"></a>(codons that specify the same amino acid) are not used equally</span>
+<span id="cb1-619"><a href="#cb1-619" aria-hidden="true" tabindex="-1"></a>frequently in different organisms or even in different genes within the</span>
+<span id="cb1-620"><a href="#cb1-620" aria-hidden="true" tabindex="-1"></a>same organism. This bias can be influenced by various factors, including</span>
+<span id="cb1-621"><a href="#cb1-621" aria-hidden="true" tabindex="-1"></a>the availability of specific tRNA&nbsp;molecules, the base composition of the</span>
+<span id="cb1-622"><a href="#cb1-622" aria-hidden="true" tabindex="-1"></a>genome (GC content), and the optimization of translational efficiency.</span>
+<span id="cb1-623"><a href="#cb1-623" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-624"><a href="#cb1-624" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-625"><a href="#cb1-625" aria-hidden="true" tabindex="-1"></a><span class="fu">### Wobble Hypothesis: Flexible Base Pairing at the Third Codon Position</span></span>
+<span id="cb1-626"><a href="#cb1-626" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-627"><a href="#cb1-627" aria-hidden="true" tabindex="-1"></a>::: tcolorbox</span>
+<span id="cb1-628"><a href="#cb1-628" aria-hidden="true" tabindex="-1"></a>The **wobble hypothesis** explains how a limited number of tRNA&nbsp;species</span>
+<span id="cb1-629"><a href="#cb1-629" aria-hidden="true" tabindex="-1"></a>can recognize multiple codons for the same amino acid. Wobble occurs at</span>
+<span id="cb1-630"><a href="#cb1-630" aria-hidden="true" tabindex="-1"></a>the third codon position (which corresponds to the 5' base of the</span>
+<span id="cb1-631"><a href="#cb1-631" aria-hidden="true" tabindex="-1"></a>anticodon). It allows for non-standard base pairing between the third</span>
+<span id="cb1-632"><a href="#cb1-632" aria-hidden="true" tabindex="-1"></a>codon base and the first anticodon base. For example, guanine () in the</span>
+<span id="cb1-633"><a href="#cb1-633" aria-hidden="true" tabindex="-1"></a>anticodon can pair with uracil () or cytosine () in the codon, in</span>
+<span id="cb1-634"><a href="#cb1-634" aria-hidden="true" tabindex="-1"></a>addition to its standard pairing with cytosine.</span>
+<span id="cb1-635"><a href="#cb1-635" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-636"><a href="#cb1-636" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-637"><a href="#cb1-637" aria-hidden="true" tabindex="-1"></a>**Inosine ()**, a modified nucleoside, is frequently found in the</span>
+<span id="cb1-638"><a href="#cb1-638" aria-hidden="true" tabindex="-1"></a>anticodon of tRNA, particularly at the wobble position (5' position of</span>
+<span id="cb1-639"><a href="#cb1-639" aria-hidden="true" tabindex="-1"></a>the anticodon). Inosine exhibits versatile base-pairing properties,</span>
+<span id="cb1-640"><a href="#cb1-640" aria-hidden="true" tabindex="-1"></a>capable of pairing with , , and , but not with . For instance, a single</span>
+<span id="cb1-641"><a href="#cb1-641" aria-hidden="true" tabindex="-1"></a>tRNA&nbsp;for isoleucine containing inosine in its anticodon can recognize</span>
+<span id="cb1-642"><a href="#cb1-642" aria-hidden="true" tabindex="-1"></a>codons , , and , all of which code for isoleucine, but it will not</span>
+<span id="cb1-643"><a href="#cb1-643" aria-hidden="true" tabindex="-1"></a>recognize , which is a codon for methionine.</span>
+<span id="cb1-644"><a href="#cb1-644" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-645"><a href="#cb1-645" aria-hidden="true" tabindex="-1"></a><span class="fu">### Universality and Exceptions to the Genetic Code</span></span>
+<span id="cb1-646"><a href="#cb1-646" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-647"><a href="#cb1-647" aria-hidden="true" tabindex="-1"></a>::: tcolorbox</span>
+<span id="cb1-648"><a href="#cb1-648" aria-hidden="true" tabindex="-1"></a>The genetic code is considered nearly **universal**, as it is used by</span>
+<span id="cb1-649"><a href="#cb1-649" aria-hidden="true" tabindex="-1"></a>almost all known living organisms, from bacteria to humans. This</span>
+<span id="cb1-650"><a href="#cb1-650" aria-hidden="true" tabindex="-1"></a>universality underscores the common evolutionary origin of life.</span>
+<span id="cb1-651"><a href="#cb1-651" aria-hidden="true" tabindex="-1"></a>However, there are some exceptions and variations to the standard</span>
+<span id="cb1-652"><a href="#cb1-652" aria-hidden="true" tabindex="-1"></a>genetic code, particularly in mitochondria, chloroplasts, and certain</span>
+<span id="cb1-653"><a href="#cb1-653" aria-hidden="true" tabindex="-1"></a>specialized organisms. These variations often involve the reassignment</span>
+<span id="cb1-654"><a href="#cb1-654" aria-hidden="true" tabindex="-1"></a>of stop codons or codons for less common or specialized amino acids.</span>
+<span id="cb1-655"><a href="#cb1-655" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-656"><a href="#cb1-656" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-657"><a href="#cb1-657" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Selenocysteine: The 21st Amino Acid</span></span>
+<span id="cb1-658"><a href="#cb1-658" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-659"><a href="#cb1-659" aria-hidden="true" tabindex="-1"></a>::: tcolorbox</span>
+<span id="cb1-660"><a href="#cb1-660" aria-hidden="true" tabindex="-1"></a>**Selenocysteine** is recognized as the 21st proteinogenic amino acid,</span>
+<span id="cb1-661"><a href="#cb1-661" aria-hidden="true" tabindex="-1"></a>incorporated into selenoproteins. It is analogous to cysteine but</span>
+<span id="cb1-662"><a href="#cb1-662" aria-hidden="true" tabindex="-1"></a>contains selenium instead of sulfur. Uniquely, selenocysteine is encoded</span>
+<span id="cb1-663"><a href="#cb1-663" aria-hidden="true" tabindex="-1"></a>by the stop codon UGA in both prokaryotes (*E. coli*) and eukaryotes</span>
+<span id="cb1-664"><a href="#cb1-664" aria-hidden="true" tabindex="-1"></a>(including humans). The recoding of UGA from a stop codon to a</span>
+<span id="cb1-665"><a href="#cb1-665" aria-hidden="true" tabindex="-1"></a>selenocysteine codon requires specific contextual signals in the</span>
+<span id="cb1-666"><a href="#cb1-666" aria-hidden="true" tabindex="-1"></a>mRNA&nbsp;and specialized cellular machinery.</span>
+<span id="cb1-667"><a href="#cb1-667" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-668"><a href="#cb1-668" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-669"><a href="#cb1-669" aria-hidden="true" tabindex="-1"></a>The mechanism for selenocysteine incorporation involves:</span>
+<span id="cb1-670"><a href="#cb1-670" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-671"><a href="#cb1-671" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**UGA Codon Context and SECIS Element**: A specific mRNA&nbsp;secondary</span>
+<span id="cb1-672"><a href="#cb1-672" aria-hidden="true" tabindex="-1"></a>    structure, known as the SECIS (selenocysteine insertion sequence)</span>
+<span id="cb1-673"><a href="#cb1-673" aria-hidden="true" tabindex="-1"></a>    element, is located in the 3' untranslated region (3' UTR) in</span>
+<span id="cb1-674"><a href="#cb1-674" aria-hidden="true" tabindex="-1"></a>    eukaryotes and immediately downstream of the UGA codon in</span>
+<span id="cb1-675"><a href="#cb1-675" aria-hidden="true" tabindex="-1"></a>    prokaryotes. This element is crucial for recoding UGA.</span>
+<span id="cb1-676"><a href="#cb1-676" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-677"><a href="#cb1-677" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Specialized tRNA^Sec^** : A unique tRNA&nbsp;species, designated</span>
+<span id="cb1-678"><a href="#cb1-678" aria-hidden="true" tabindex="-1"></a>    tRNA^Sec^, is specifically charged with selenocysteine.</span>
+<span id="cb1-679"><a href="#cb1-679" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-680"><a href="#cb1-680" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Specialized Elongation Factors**: A specialized elongation factor</span>
+<span id="cb1-681"><a href="#cb1-681" aria-hidden="true" tabindex="-1"></a>    is required to deliver selenocysteinyl-tRNA^Sec^ to the ribosome at</span>
+<span id="cb1-682"><a href="#cb1-682" aria-hidden="true" tabindex="-1"></a>    the UGA codon. In bacteria, this is SelB, and in eukaryotes, it is</span>
+<span id="cb1-683"><a href="#cb1-683" aria-hidden="true" tabindex="-1"></a>    eEFSec (eukaryotic elongation factor for selenocysteine).</span>
+<span id="cb1-684"><a href="#cb1-684" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-685"><a href="#cb1-685" aria-hidden="true" tabindex="-1"></a>Selenocysteine is essential for the function of selenoproteins, many of</span>
+<span id="cb1-686"><a href="#cb1-686" aria-hidden="true" tabindex="-1"></a>which play critical roles in antioxidant defense and redox homeostasis.</span>
+<span id="cb1-687"><a href="#cb1-687" aria-hidden="true" tabindex="-1"></a>Examples include glutathione peroxidases and formate dehydrogenases,</span>
+<span id="cb1-688"><a href="#cb1-688" aria-hidden="true" tabindex="-1"></a>which are involved in scavenging reactive oxygen species and protecting</span>
+<span id="cb1-689"><a href="#cb1-689" aria-hidden="true" tabindex="-1"></a>cells from oxidative damage. The incorporation of selenocysteine</span>
+<span id="cb1-690"><a href="#cb1-690" aria-hidden="true" tabindex="-1"></a>highlights a remarkable example of how the genetic code can be adapted</span>
+<span id="cb1-691"><a href="#cb1-691" aria-hidden="true" tabindex="-1"></a>and expanded to incorporate specialized amino acids for specific</span>
+<span id="cb1-692"><a href="#cb1-692" aria-hidden="true" tabindex="-1"></a>biological functions.</span>
+<span id="cb1-693"><a href="#cb1-693" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-694"><a href="#cb1-694" aria-hidden="true" tabindex="-1"></a><span class="fu"># Conclusion</span></span>
+<span id="cb1-695"><a href="#cb1-695" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-696"><a href="#cb1-696" aria-hidden="true" tabindex="-1"></a>In this lecture, we have explored advanced topics in RNA&nbsp;maturation and</span>
+<span id="cb1-697"><a href="#cb1-697" aria-hidden="true" tabindex="-1"></a>initiated our discussion on protein synthesis. We detailed the</span>
+<span id="cb1-698"><a href="#cb1-698" aria-hidden="true" tabindex="-1"></a>mechanisms of trans-splicing, particularly in trypanosomes, and its</span>
+<span id="cb1-699"><a href="#cb1-699" aria-hidden="true" tabindex="-1"></a>implications for gene regulation and the generation of chimeric RNA&nbsp;and</span>
+<span id="cb1-700"><a href="#cb1-700" aria-hidden="true" tabindex="-1"></a>proteins. We then delved into RNA&nbsp;editing, covering its diverse</span>
+<span id="cb1-701"><a href="#cb1-701" aria-hidden="true" tabindex="-1"></a>mechanisms, enzymatic machinery, and roles in rRNA&nbsp;maturation and in</span>
+<span id="cb1-702"><a href="#cb1-702" aria-hidden="true" tabindex="-1"></a>both trypanosomes and eukaryotes, including its relevance to</span>
+<span id="cb1-703"><a href="#cb1-703" aria-hidden="true" tabindex="-1"></a>neurological disorders and apolipoprotein isoforms.</span>
+<span id="cb1-704"><a href="#cb1-704" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-705"><a href="#cb1-705" aria-hidden="true" tabindex="-1"></a>Transitioning to protein synthesis, we introduced the key</span>
+<span id="cb1-706"><a href="#cb1-706" aria-hidden="true" tabindex="-1"></a>players---ribosomes, mRNA, and tRNA---and examined the structural</span>
+<span id="cb1-707"><a href="#cb1-707" aria-hidden="true" tabindex="-1"></a>aspects of ribosomes and tRNA&nbsp;molecules. We also discussed the</span>
+<span id="cb1-708"><a href="#cb1-708" aria-hidden="true" tabindex="-1"></a>fundamental properties of the genetic code, including its degeneracy,</span>
+<span id="cb1-709"><a href="#cb1-709" aria-hidden="true" tabindex="-1"></a>codon usage bias, and the wobble hypothesis, explaining how these</span>
+<span id="cb1-710"><a href="#cb1-710" aria-hidden="true" tabindex="-1"></a>features contribute to the efficiency and robustness of translation.</span>
+<span id="cb1-711"><a href="#cb1-711" aria-hidden="true" tabindex="-1"></a>Finally, we touched upon the universality and variations of the genetic</span>
+<span id="cb1-712"><a href="#cb1-712" aria-hidden="true" tabindex="-1"></a>code, highlighting the unique case of selenocysteine incorporation.</span>
+<span id="cb1-713"><a href="#cb1-713" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-714"><a href="#cb1-714" aria-hidden="true" tabindex="-1"></a>Key takeaways from this lecture include:</span>
+<span id="cb1-715"><a href="#cb1-715" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-716"><a href="#cb1-716" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Trans-splicing is a unique RNA&nbsp;processing mechanism in certain</span>
+<span id="cb1-717"><a href="#cb1-717" aria-hidden="true" tabindex="-1"></a>    organisms, leading to chimeric RNA&nbsp;molecules and regulatory</span>
+<span id="cb1-718"><a href="#cb1-718" aria-hidden="true" tabindex="-1"></a>    functions.</span>
+<span id="cb1-719"><a href="#cb1-719" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-720"><a href="#cb1-720" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>RNA&nbsp;editing is a post-transcriptional modification process that</span>
+<span id="cb1-721"><a href="#cb1-721" aria-hidden="true" tabindex="-1"></a>    alters RNA&nbsp;sequences, crucial for rRNA&nbsp;maturation and gene</span>
+<span id="cb1-722"><a href="#cb1-722" aria-hidden="true" tabindex="-1"></a>    expression regulation.</span>
+<span id="cb1-723"><a href="#cb1-723" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-724"><a href="#cb1-724" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Ribosomes are ribozymes, with rRNA&nbsp;playing a central catalytic role</span>
+<span id="cb1-725"><a href="#cb1-725" aria-hidden="true" tabindex="-1"></a>    in protein synthesis.</span>
+<span id="cb1-726"><a href="#cb1-726" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-727"><a href="#cb1-727" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>The genetic code is degenerate and nearly universal, with variations</span>
+<span id="cb1-728"><a href="#cb1-728" aria-hidden="true" tabindex="-1"></a>    that reflect evolutionary adaptations and specific functional needs.</span>
+<span id="cb1-729"><a href="#cb1-729" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-730"><a href="#cb1-730" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Selenocysteine incorporation exemplifies a non-canonical use of a</span>
+<span id="cb1-731"><a href="#cb1-731" aria-hidden="true" tabindex="-1"></a>    stop codon for encoding a crucial amino acid in specific proteins.</span>
+<span id="cb1-732"><a href="#cb1-732" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-733"><a href="#cb1-733" aria-hidden="true" tabindex="-1"></a>In our next lecture, we will continue our exploration of protein</span>
+<span id="cb1-734"><a href="#cb1-734" aria-hidden="true" tabindex="-1"></a>synthesis, focusing on the detailed steps of translation, the factors</span>
+<span id="cb1-735"><a href="#cb1-735" aria-hidden="true" tabindex="-1"></a>involved in initiation, elongation, and termination, and the regulatory</span>
+<span id="cb1-736"><a href="#cb1-736" aria-hidden="true" tabindex="-1"></a>mechanisms that govern this essential cellular process. We will also</span>
+<span id="cb1-737"><a href="#cb1-737" aria-hidden="true" tabindex="-1"></a>discuss the differences in translation between prokaryotes and</span>
+<span id="cb1-738"><a href="#cb1-738" aria-hidden="true" tabindex="-1"></a>eukaryotes and the implications for antibiotic therapies targeting</span>
+<span id="cb1-739"><a href="#cb1-739" aria-hidden="true" tabindex="-1"></a>bacterial protein synthesis.</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

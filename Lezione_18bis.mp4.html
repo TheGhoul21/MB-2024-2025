@@ -1,0 +1,1595 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Your Name">
+<meta name="dcterms.date" content="2025-02-05">
+
+<title>Lecture Notes on RNA Splicing Mechanism and Regulation – Your Site Name</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-6bd9cfa162949bde0a231f530c97869d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Your Site Name</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-list"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_1.mp4.html">
+            Lecture Notes on Molecular Mechanisms of Information Flow
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_10.mp4.html">
+            Lecture Notes on Chromatin Structure and DNA Replication
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_11.mp4.html">
+            Lecture Notes: DNA Replication - Processivity, Mechanism, and Regulation
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_12.mp4.html">
+            Replication Control in Prokaryotes and Eukaryotes
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_13.mp4.html">
+            Telomeres, Replication of Linear Chromosomes, and Nucleic Acid Quantification
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_14.mp4.html">
+            Telomeres, Senescence, and Genomic Instability
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_16.mp4.html">
+            Fundamentals of Epigenetic Regulation
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_17.mp4.html">
+            Regulation of Chromatin and RNA Processing
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_18.mp4.html">
+            Lecture Notes: RNA Degradation, Silencing, and Splicing
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_18bis.mp4.html">
+            Lecture Notes on RNA Splicing Mechanism and Regulation
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_19.mp4.html">
+            RNA Maturation and Protein Synthesis
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_20.mp4.html">
+            Functional Aspects of Protein Synthesis and Regulatory Events
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_21.mp4.html">
+            Lecture Notes on Translation and DNA Repair
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_3.mp4.html">
+            Lecture Notes on Protein-DNA Interactions and DNA Properties
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_4.mp4.html">
+            Lecture Notes on RNA, Ribozymes, and DNA Superstructures
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_5.mp4.html">
+            Topological Parameters of DNA and Genome Complexity
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_6.mp4.html">
+            Architettura del Genoma Umano
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_7.mp4.html">
+            Genomic Architecture and Gene Regulation
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Lezione_9.mp4.html">
+            Eukaryotic DNA Replication: Lecture Notes
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Videolezione_16.mp4.html">
+            Quantitative and Qualitative Gene Regulation in Prokaryotes
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Videolezione_18.mp4.html">
+            Eukaryotic Gene Transcription: Molecular Mechanisms and Specificity Control
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Videolezione_19.mp4.html">
+            Mechanisms of Transcription Factor Activation and Families of Transcription Factors
+            </a>
+          </li>
+      </ul>
+    </div>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#the-splicing-mechanism" id="toc-the-splicing-mechanism" class="nav-link" data-scroll-target="#the-splicing-mechanism">The Splicing Mechanism</a>
+  <ul class="collapse">
+  <li><a href="#spliceosome-assembly" id="toc-spliceosome-assembly" class="nav-link" data-scroll-target="#spliceosome-assembly">Spliceosome Assembly</a></li>
+  <li><a href="#catalytic-steps-transesterification-reactions" id="toc-catalytic-steps-transesterification-reactions" class="nav-link" data-scroll-target="#catalytic-steps-transesterification-reactions">Catalytic Steps: Transesterification Reactions</a></li>
+  <li><a href="#atp-hydrolysis-and-spliceosome-dynamics" id="toc-atp-hydrolysis-and-spliceosome-dynamics" class="nav-link" data-scroll-target="#atp-hydrolysis-and-spliceosome-dynamics">ATP Hydrolysis and Spliceosome Dynamics</a></li>
+  </ul></li>
+  <li><a href="#regulation-of-splicing-and-alternative-splicing" id="toc-regulation-of-splicing-and-alternative-splicing" class="nav-link" data-scroll-target="#regulation-of-splicing-and-alternative-splicing">Regulation of Splicing and Alternative Splicing</a>
+  <ul class="collapse">
+  <li><a href="#alternative-splicing-expanding-protein-diversity" id="toc-alternative-splicing-expanding-protein-diversity" class="nav-link" data-scroll-target="#alternative-splicing-expanding-protein-diversity">Alternative Splicing: Expanding Protein Diversity</a></li>
+  <li><a href="#tissue-specificity-of-splicing" id="toc-tissue-specificity-of-splicing" class="nav-link" data-scroll-target="#tissue-specificity-of-splicing">Tissue Specificity of Splicing</a></li>
+  <li><a href="#splicing-regulatory-proteins-orchestrating-splicing-choices" id="toc-splicing-regulatory-proteins-orchestrating-splicing-choices" class="nav-link" data-scroll-target="#splicing-regulatory-proteins-orchestrating-splicing-choices">Splicing Regulatory Proteins: Orchestrating Splicing Choices</a></li>
+  <li><a href="#cis-regulatory-sequences-enhancers-and-silencers" id="toc-cis-regulatory-sequences-enhancers-and-silencers" class="nav-link" data-scroll-target="#cis-regulatory-sequences-enhancers-and-silencers">Cis-Regulatory Sequences: Enhancers and Silencers</a></li>
+  <li><a href="#nuclear-speckles-subnuclear-compartments-for-splicing" id="toc-nuclear-speckles-subnuclear-compartments-for-splicing" class="nav-link" data-scroll-target="#nuclear-speckles-subnuclear-compartments-for-splicing">Nuclear Speckles: Subnuclear Compartments for Splicing</a></li>
+  </ul></li>
+  <li><a href="#biological-and-evolutionary-significance-of-splicing" id="toc-biological-and-evolutionary-significance-of-splicing" class="nav-link" data-scroll-target="#biological-and-evolutionary-significance-of-splicing">Biological and Evolutionary Significance of Splicing</a>
+  <ul class="collapse">
+  <li><a href="#coupling-of-splicing-and-rna-export" id="toc-coupling-of-splicing-and-rna-export" class="nav-link" data-scroll-target="#coupling-of-splicing-and-rna-export">Coupling of Splicing and RNA Export</a></li>
+  <li><a href="#phylogenetic-advantages-of-spliceosomal-splicing" id="toc-phylogenetic-advantages-of-spliceosomal-splicing" class="nav-link" data-scroll-target="#phylogenetic-advantages-of-spliceosomal-splicing">Phylogenetic Advantages of Spliceosomal Splicing</a></li>
+  <li><a href="#impact-of-alternative-splicing-on-protein-function" id="toc-impact-of-alternative-splicing-on-protein-function" class="nav-link" data-scroll-target="#impact-of-alternative-splicing-on-protein-function">Impact of Alternative Splicing on Protein Function</a></li>
+  <li><a href="#splicing-defects-in-human-diseases" id="toc-splicing-defects-in-human-diseases" class="nav-link" data-scroll-target="#splicing-defects-in-human-diseases">Splicing Defects in Human Diseases</a></li>
+  <li><a href="#exon-shuffling-a-driver-of-protein-evolution" id="toc-exon-shuffling-a-driver-of-protein-evolution" class="nav-link" data-scroll-target="#exon-shuffling-a-driver-of-protein-evolution">Exon Shuffling: A Driver of Protein Evolution</a></li>
+  <li><a href="#extreme-example-of-alternative-splicing-dscam-gene" id="toc-extreme-example-of-alternative-splicing-dscam-gene" class="nav-link" data-scroll-target="#extreme-example-of-alternative-splicing-dscam-gene">Extreme Example of Alternative Splicing: Dscam Gene</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Lecture Notes on RNA Splicing Mechanism and Regulation</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Your Name </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 5, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>This lecture delves into the intricate process of RNA splicing, a crucial step in gene expression in eukaryotic cells. We will explore the molecular mechanisms of splicing, focusing on the spliceosome, a dynamic molecular machine responsible for intron removal and exon joining. Furthermore, we will discuss the regulation of splicing, including alternative splicing, its biological significance in generating protein diversity, and its implications in human diseases. Key concepts covered include snRNPs, spliceosome assembly, transesterification reactions, alternative splicing types, splicing regulatory proteins, and the evolutionary advantages of splicing.</p>
+</section>
+<section id="the-splicing-mechanism" class="level1">
+<h1>The Splicing Mechanism</h1>
+<p>The splicing mechanism is a precise process that removes non-coding regions (introns) from precursor messenger RNA (pre-mRNA) and joins coding regions (exons) to form mature messenger RNA (mRNA). This process is catalyzed by the spliceosome, a large and dynamic ribonucleoprotein complex.</p>
+<section id="spliceosome-assembly" class="level2">
+<h2 class="anchored" data-anchor-id="spliceosome-assembly">Spliceosome Assembly</h2>
+<p>The spliceosome assembles in a step-wise manner on the pre-mRNA, guided by small nuclear ribonucleoproteins (snRNPs) and associated protein factors.</p>
+<section id="early-complex-formation" class="level3">
+<h3 class="anchored" data-anchor-id="early-complex-formation">Early Complex Formation</h3>
+<p>The initial step involves the binding of U2AF proteins to the polypyrimidine tract and the 3’ splice site region. Subsequently, U2 snRNP is recruited to the branch site, and U1 snRNP binds to the 5’ splice site.</p>
+<ul>
+<li><p><strong>U2AF Proteins:</strong> Recognize the polypyrimidine tract and 3’ splice site, facilitating U2 snRNP binding.</p></li>
+<li><p><strong>U2 snRNP:</strong> Recognizes and binds to the branch site adenosine within the intron, essential for the first transesterification reaction. Its positioning is facilitated by the prior binding of U2AF.</p></li>
+<li><p><strong>U1 snRNP:</strong> Recognizes and binds to the 5’ splice site through RNA-RNA base pairing with its snRNA component.</p></li>
+</ul>
+</section>
+<section id="spliceosomal-complexes-and-atp-dependence" class="level3">
+<h3 class="anchored" data-anchor-id="spliceosomal-complexes-and-atp-dependence">Spliceosomal Complexes and ATP Dependence</h3>
+<p>The assembly process proceeds through distinct complexes, with ATP hydrolysis playing critical roles at specific transitions.</p>
+<section id="complex-e-earlypre-spliceosome" class="level4">
+<h4 class="anchored" data-anchor-id="complex-e-earlypre-spliceosome">Complex E (Early/Pre-spliceosome)</h4>
+<p>The initial commitment complex, formed by U1 snRNP binding to the 5’ splice site and U2AF association at the branch site region. This complex formation is ATP-independent.</p>
+</section>
+<section id="complex-a-formation" class="level4">
+<h4 class="anchored" data-anchor-id="complex-a-formation">Complex A Formation</h4>
+<p>Transition from Complex E to Complex A is ATP-dependent. Complex A is characterized by U2 snRNP binding to the branch site. This ATP hydrolysis step commits the complex to the splicing pathway.</p>
+</section>
+</section>
+</section>
+<section id="catalytic-steps-transesterification-reactions" class="level2">
+<h2 class="anchored" data-anchor-id="catalytic-steps-transesterification-reactions">Catalytic Steps: Transesterification Reactions</h2>
+<p>Splicing involves two sequential transesterification reactions catalyzed by the spliceosome.</p>
+<section id="snrnp-roles-in-catalysis" class="level3">
+<h3 class="anchored" data-anchor-id="snrnp-roles-in-catalysis">snRNP Roles in Catalysis</h3>
+<ul>
+<li><p><strong>U5 snRNP:</strong> Positions itself across the two exons, bringing them into proximity for the second transesterification reaction that joins the exons.</p></li>
+<li><p><strong>U6 snRNP:</strong> The catalytically active snRNP. Its activity is regulated by U4 snRNP.</p></li>
+<li><p><strong>U4 snRNP:</strong> Associates with U6 snRNP and masks its catalytic activity, preventing premature reactions until proper spliceosome assembly. U4 release is essential for activating U6.</p></li>
+</ul>
+</section>
+<section id="first-transesterification-reaction" class="level3">
+<h3 class="anchored" data-anchor-id="first-transesterification-reaction">First Transesterification Reaction</h3>
+<p>Initiated upon U4 snRNP release, allowing U6-U2 interaction and activation of catalytic activity.</p>
+<ul>
+<li><p><strong>Mechanism:</strong> The 2’-hydroxyl of the branch site adenosine attacks the 5’ splice site phosphate. This cleaves the 5’ exon and forms a lariat intermediate, with a 2’-5’ phosphodiester bond linking the intron’s 5’ end to the branch site.</p></li>
+<li><p><strong>Regulation by U4:</strong> U4 snRNP acts as a crucial regulator, ensuring the first transesterification occurs only after proper spliceosome assembly, preventing non-specific reactions.</p></li>
+</ul>
+</section>
+<section id="second-transesterification-reaction" class="level3">
+<h3 class="anchored" data-anchor-id="second-transesterification-reaction">Second Transesterification Reaction</h3>
+<p>Joins the 5’ and 3’ exons, releasing the intron lariat.</p>
+<ul>
+<li><p><strong>Mechanism:</strong> The 3’-hydroxyl of the 5’ exon attacks the 3’ splice site phosphate, ligating the exons with a phosphodiester bond and releasing the intron lariat.</p></li>
+<li><p><strong>Role of U5:</strong> U5 snRNP facilitates this step by aligning the 5’ and 3’ exons.</p></li>
+</ul>
+<p>Following the second transesterification, the intron lariat is released and degraded.</p>
+</section>
+</section>
+<section id="atp-hydrolysis-and-spliceosome-dynamics" class="level2">
+<h2 class="anchored" data-anchor-id="atp-hydrolysis-and-spliceosome-dynamics">ATP Hydrolysis and Spliceosome Dynamics</h2>
+<p>ATP hydrolysis drives essential conformational changes within the spliceosome, ensuring fidelity and progression through the catalytic cycle. Approximately three ATP molecules are hydrolyzed per intron removed.</p>
+<ul>
+<li><p><strong>Complex A to B Transition:</strong> ATP hydrolysis is required for the transition from Complex A to Complex B (or a similar intermediate), associated with the entry of U4/U6 snRNP and rearrangements for catalysis.</p></li>
+<li><p><strong>U4 Release:</strong> ATP hydrolysis powers the release of U4 snRNP, activating U6 snRNP for catalysis.</p></li>
+<li><p><strong>Second Transesterification and Disassembly:</strong> ATP hydrolysis is also needed for the second transesterification, spliceosome disassembly, and recycling of components.</p></li>
+</ul>
+<p>These ATP-dependent steps provide energy for dynamic conformational changes, analogous to the high ATP/GTP requirements in protein synthesis, highlighting the energy investment in accurate RNA processing.</p>
+</section>
+</section>
+<section id="regulation-of-splicing-and-alternative-splicing" class="level1">
+<h1>Regulation of Splicing and Alternative Splicing</h1>
+<p>Splicing is not merely a constitutive process; it is highly regulated, allowing for the generation of multiple mRNA and protein isoforms from a single gene through alternative splicing. This regulatory layer significantly expands the functional capacity of the genome.</p>
+<section id="alternative-splicing-expanding-protein-diversity" class="level2">
+<h2 class="anchored" data-anchor-id="alternative-splicing-expanding-protein-diversity">Alternative Splicing: Expanding Protein Diversity</h2>
+<p>Alternative splicing is a pivotal mechanism enabling a single gene to encode multiple proteins. By varying the selection of exons, or parts thereof, and introns, diverse mRNA isoforms arise from a single pre-mRNA transcript. This process dramatically increases proteomic diversity without a proportional increase in gene number. Approximately 75% of human genes are estimated to undergo alternative splicing, with a significant fraction (around 20%) affecting untranslated regions (UTRs), particularly the 3’ UTR, influencing mRNA stability, localization, and translation efficiency.</p>
+<section id="modes-of-alternative-splicing" class="level3">
+<h3 class="anchored" data-anchor-id="modes-of-alternative-splicing">Modes of Alternative Splicing</h3>
+<p>Alternative splicing manifests in several distinct modes:</p>
+<section id="exon-skipping-cassette-exon" class="level4">
+<h4 class="anchored" data-anchor-id="exon-skipping-cassette-exon">Exon Skipping (Cassette Exon)</h4>
+<p>In this most common form, a particular exon may be either included or excluded from the mature mRNA product. For example, exon 2 might be skipped in certain isoforms.</p>
+</section>
+<section id="exon-extension-alternative-splice-site-selection" class="level4">
+<h4 class="anchored" data-anchor-id="exon-extension-alternative-splice-site-selection">Exon Extension (Alternative Splice Site Selection)</h4>
+<p>This mode involves extending or shortening an exon by selecting alternative 5’ or 3’ splice sites. This can lead to inclusion of intronic sequences or exclusion of exonic sequences, effectively altering exon boundaries.</p>
+</section>
+<section id="intron-retention" class="level4">
+<h4 class="anchored" data-anchor-id="intron-retention">Intron Retention</h4>
+<p>Contrary to typical splicing, an intron is retained in the mature mRNA. This is less frequent in mammals but can introduce premature stop codons or affect mRNA localization and function.</p>
+</section>
+<section id="mutually-exclusive-exons-alternative-exon-fusion" class="level4">
+<h4 class="anchored" data-anchor-id="mutually-exclusive-exons-alternative-exon-fusion">Mutually Exclusive Exons (Alternative Exon Fusion)</h4>
+<p>In this scenario, one exon is selected from a set of two or more, while the others are excluded in a mutually exclusive manner. For instance, exon 1 might be spliced to exon 2, excluding exon 3, or alternatively, exon 1 is spliced to exon 3, excluding exon 2, resulting in distinct protein isoforms.</p>
+<div class="tcolorbox">
+<p><strong>Remark:</strong> Alternative splicing is a major contributor to proteomic diversity and gene regulation in eukaryotes. It allows for tissue-specific and developmental stage-specific protein expression, and its dysregulation is implicated in various diseases.</p>
+</div>
+</section>
+</section>
+</section>
+<section id="tissue-specificity-of-splicing" class="level2">
+<h2 class="anchored" data-anchor-id="tissue-specificity-of-splicing">Tissue Specificity of Splicing</h2>
+<p>Alternative splicing often exhibits tissue specificity, meaning that different isoforms of a protein are produced in different tissues or cell types. This specificity arises from the differential expression and activity of splicing regulatory proteins that vary across tissues.</p>
+</section>
+<section id="splicing-regulatory-proteins-orchestrating-splicing-choices" class="level2">
+<h2 class="anchored" data-anchor-id="splicing-regulatory-proteins-orchestrating-splicing-choices">Splicing Regulatory Proteins: Orchestrating Splicing Choices</h2>
+<p>Splicing regulatory proteins, including SR proteins and hnRNPs, play a crucial role in determining splice site selection and alternative splicing patterns.</p>
+<section id="sr-proteins-splicing-enhancers" class="level3">
+<h3 class="anchored" data-anchor-id="sr-proteins-splicing-enhancers">SR Proteins: Splicing Enhancers</h3>
+<p>SR (serine/arginine-rich) proteins are a family of conserved splicing factors that generally function as splicing activators or enhancers. They promote spliceosome assembly at specific splice sites. SR proteins bind to <strong>exonic splicing enhancer (ESE)</strong> sequences, typically located in exons. This binding facilitates the recruitment of spliceosomal components to nearby splice sites, promoting the inclusion of the adjacent exon. SR proteins exhibit tissue-specific expression, contributing to tissue-specific splicing patterns.</p>
+</section>
+<section id="hnrnp-a1-splicing-repressor" class="level3">
+<h3 class="anchored" data-anchor-id="hnrnp-a1-splicing-repressor">hnRNP A1: Splicing Repressor</h3>
+<p>Heterogeneous nuclear ribonucleoproteins (hnRNPs) are a diverse family of RNA-binding proteins involved in various aspects of RNA processing. Some hnRNPs, such as hnRNP A1, act as splicing repressors. hnRNP A1 can bind to <strong>exonic splicing silencer (ESS)</strong> sequences, often found in exons. Binding of hnRNP A1 to ESSs can inhibit spliceosome assembly at a nearby splice site, leading to exon skipping or intron retention by preventing the recognition of splice sites. hnRNP A1 acts antagonistically to SR proteins.</p>
+</section>
+</section>
+<section id="cis-regulatory-sequences-enhancers-and-silencers" class="level2">
+<h2 class="anchored" data-anchor-id="cis-regulatory-sequences-enhancers-and-silencers">Cis-Regulatory Sequences: Enhancers and Silencers</h2>
+<p>Splicing regulation is mediated by <em>cis</em>-acting regulatory sequences located within the pre-mRNA transcript itself. These sequences are broadly classified as splicing enhancers and silencers.</p>
+<section id="splicing-enhancers-ese-and-ise" class="level3">
+<h3 class="anchored" data-anchor-id="splicing-enhancers-ese-and-ise">Splicing Enhancers (ESE and ISE)</h3>
+<p>Splicing enhancers are sequences that promote splicing. They can be located in exons (<strong>exonic splicing enhancers - ESEs</strong>) or introns (<strong>intronic splicing enhancers - ISEs</strong>). SR proteins typically bind to ESEs and ISEs, facilitating spliceosome assembly and enhancing the splicing of nearby introns and exons.</p>
+</section>
+<section id="splicing-silencers-ess-and-iss" class="level3">
+<h3 class="anchored" data-anchor-id="splicing-silencers-ess-and-iss">Splicing Silencers (ESS and ISS)</h3>
+<p>Splicing silencers are sequences that inhibit splicing. They can also be located in exons (<strong>exonic splicing silencers - ESSs</strong>) or introns (<strong>intronic splicing silencers - ISSs</strong>). hnRNPs, such as hnRNP A1, can bind to ESSs and ISSs, preventing spliceosome assembly and repressing splicing at adjacent splice sites.</p>
+</section>
+</section>
+<section id="nuclear-speckles-subnuclear-compartments-for-splicing" class="level2">
+<h2 class="anchored" data-anchor-id="nuclear-speckles-subnuclear-compartments-for-splicing">Nuclear Speckles: Subnuclear Compartments for Splicing</h2>
+<p>Nuclear speckles are subnuclear structures enriched in splicing factors, including SR proteins and snRNPs. They are considered dynamic storage and/or assembly sites for splicing machinery. Alternative splicing events are thought to occur in proximity to or within nuclear speckles, where a high concentration of splicing regulatory proteins facilitates efficient and regulated splicing.</p>
+<div class="tcolorbox">
+<p><strong>Remark:</strong> Alternative splicing can sometimes introduce premature termination codons (PTCs). Nonsense-mediated decay (NMD) is a surveillance pathway that degrades mRNAs containing PTCs. This pathway co-evolved with splicing to mitigate the potential cost of alternative splicing by eliminating aberrant transcripts.</p>
+</div>
+</section>
+</section>
+<section id="biological-and-evolutionary-significance-of-splicing" class="level1">
+<h1>Biological and Evolutionary Significance of Splicing</h1>
+<p>RNA splicing is not merely a processing step but a pivotal biological process with significant evolutionary ramifications, impacting RNA export, protein diversity, and genome evolution.</p>
+<section id="coupling-of-splicing-and-rna-export" class="level2">
+<h2 class="anchored" data-anchor-id="coupling-of-splicing-and-rna-export">Coupling of Splicing and RNA Export</h2>
+<p>Splicing is functionally linked to the export of mature mRNA from the nucleus to the cytoplasm, ensuring that only correctly processed transcripts are translated.</p>
+<section id="exon-junction-complexes-ejcs-and-nuclear-export" class="level3">
+<h3 class="anchored" data-anchor-id="exon-junction-complexes-ejcs-and-nuclear-export">Exon Junction Complexes (EJCs) and Nuclear Export</h3>
+<p>Following successful intron removal, exon junction complexes (EJCs) are deposited approximately 20-24 nucleotides upstream of exon-exon junctions. These EJCs serve dual roles:</p>
+<ul>
+<li><p><strong>mRNA Export Facilitation:</strong> EJCs are recognized by nuclear export factors like REF and TAP. This interaction facilitates the docking of the mRNA to the nuclear pore complex and its subsequent translocation to the cytoplasm.</p></li>
+<li><p><strong>Nonsense-Mediated Decay (NMD) Trigger:</strong> EJCs also act as markers for the nonsense-mediated decay (NMD) pathway. If a premature termination codon (PTC) is present upstream of an EJC, the mRNA is targeted for degradation, preventing the translation of truncated and potentially non-functional proteins.</p></li>
+</ul>
+</section>
+</section>
+<section id="phylogenetic-advantages-of-spliceosomal-splicing" class="level2">
+<h2 class="anchored" data-anchor-id="phylogenetic-advantages-of-spliceosomal-splicing">Phylogenetic Advantages of Spliceosomal Splicing</h2>
+<p>The evolution of spliceosomal splicing conferred significant evolutionary advantages, particularly in increasing genomic complexity and proteomic diversity.</p>
+<section id="intron-size-flexibility-and-regulatory-expansion" class="level3">
+<h3 class="anchored" data-anchor-id="intron-size-flexibility-and-regulatory-expansion">Intron Size Flexibility and Regulatory Expansion</h3>
+<p>Spliceosomes liberated introns from strict size constraints, allowing for substantial intron expansion in eukaryotic genomes. Larger introns became reservoirs for regulatory sequences, such as enhancers and silencers, which modulate gene transcription and splicing patterns. This expansion of regulatory space within introns facilitated more complex and nuanced gene regulation.</p>
+</section>
+<section id="alternative-splicing-and-proteomic-diversification" class="level3">
+<h3 class="anchored" data-anchor-id="alternative-splicing-and-proteomic-diversification">Alternative Splicing and Proteomic Diversification</h3>
+<p>Alternative splicing emerged as a powerful mechanism for generating multiple protein isoforms from a single gene. This dramatically increased the coding potential of the genome without a proportional increase in gene number. By selectively including or excluding exons, or parts thereof, alternative splicing enables the production of proteins with diverse functions, tissue-specific expression, and developmental stage-specific regulation.</p>
+</section>
+<section id="exon-shuffling-and-gene-evolution" class="level3">
+<h3 class="anchored" data-anchor-id="exon-shuffling-and-gene-evolution">Exon Shuffling and Gene Evolution</h3>
+<p>The presence of introns facilitated exon shuffling, a crucial process in protein evolution. Introns flank exons, which often encode discrete protein domains. Non-homologous recombination events within intronic regions can lead to the shuffling of exons between genes. This process allows for the creation of novel genes with new combinations of pre-existing protein domains, accelerating the evolution of protein function and structural diversity. The larger the intronic regions, the higher the probability of such recombination events.</p>
+</section>
+</section>
+<section id="impact-of-alternative-splicing-on-protein-function" class="level2">
+<h2 class="anchored" data-anchor-id="impact-of-alternative-splicing-on-protein-function">Impact of Alternative Splicing on Protein Function</h2>
+<p>Alternative splicing profoundly influences protein function, affecting both the quantity and quality of protein products, as well as their localization and activity.</p>
+<section id="regulation-of-protein-quantity-and-quality-via-nmd" class="level3">
+<h3 class="anchored" data-anchor-id="regulation-of-protein-quantity-and-quality-via-nmd">Regulation of Protein Quantity and Quality via NMD</h3>
+<p>Alternative splicing can modulate mRNA stability and translation efficiency. Furthermore, by introducing premature termination codons (PTCs) through frameshifts or inclusion of stop codons, alternative splicing isoforms can be targeted for degradation by nonsense-mediated decay (NMD). This mechanism serves as a quality control system, reducing the expression of aberrant transcripts, and also as a regulatory mechanism to control protein levels by selectively degrading specific isoforms.</p>
+</section>
+<section id="tissue-specific-isoforms-and-protein-localization" class="level3">
+<h3 class="anchored" data-anchor-id="tissue-specific-isoforms-and-protein-localization">Tissue-Specific Isoforms and Protein Localization</h3>
+<p>Alternative splicing is a key driver of tissue-specific protein isoform expression. Different tissues can express distinct sets of splicing regulatory proteins, leading to tissue-specific splicing patterns and the production of protein isoforms tailored to the functional requirements of each tissue. For example, the Calcium/calmodulin-dependent protein kinase type II delta (<em>CaMKII<span class="math inline">\(\delta\)</span></em>) gene undergoes alternative splicing to produce neuronal isoforms localized in the cytoplasm and cardiac isoforms localized in the nucleus. This difference is due to the inclusion or skipping of an exon encoding a nuclear localization signal (NLS) in cardiac versus neuronal tissues, respectively.</p>
+</section>
+</section>
+<section id="splicing-defects-in-human-diseases" class="level2">
+<h2 class="anchored" data-anchor-id="splicing-defects-in-human-diseases">Splicing Defects in Human Diseases</h2>
+<p>Aberrant splicing is implicated in a wide range of human diseases, highlighting the critical importance of precise splicing regulation.</p>
+<section id="pathogenic-splicing-mutations-and-mechanisms" class="level3">
+<h3 class="anchored" data-anchor-id="pathogenic-splicing-mutations-and-mechanisms">Pathogenic Splicing Mutations and Mechanisms</h3>
+<p>Mutations affecting splice sites or splicing regulatory sequences can disrupt normal splicing patterns, leading to various splicing defects and disease phenotypes. These defects include:</p>
+<ul>
+<li><p><strong>Exon Skipping:</strong> Exclusion of an exon that is normally included.</p></li>
+<li><p><strong>Cryptic Splice Site Activation:</strong> Activation of splice sites within exons or introns that are not normally used.</p></li>
+<li><p><strong>Intron Retention:</strong> Failure to remove an intron.</p></li>
+<li><p><strong>Pseudoexon Inclusion:</strong> Inclusion of intronic sequences as part of an exon.</p></li>
+</ul>
+<p>Approximately 15% of all human pathogenic mutations are estimated to affect splicing, underscoring the significant contribution of splicing defects to human disease. Over 200 mutations in splice sites are currently associated with human pathologies.</p>
+</section>
+<section id="splicing-related-pathologies" class="level3">
+<h3 class="anchored" data-anchor-id="splicing-related-pathologies">Splicing-Related Pathologies</h3>
+<p>Splicing defects are implicated in a diverse array of diseases, including various cancers, neurodegenerative disorders, and genetic diseases. The disruption of normal splicing can lead to the production of non-functional or dysfunctional proteins, contributing to disease pathogenesis.</p>
+</section>
+</section>
+<section id="exon-shuffling-a-driver-of-protein-evolution" class="level2">
+<h2 class="anchored" data-anchor-id="exon-shuffling-a-driver-of-protein-evolution">Exon Shuffling: A Driver of Protein Evolution</h2>
+<p>Exon shuffling is a fundamental evolutionary mechanism that has shaped the protein landscape.</p>
+<section id="domain-recombination-and-protein-innovation" class="level3">
+<h3 class="anchored" data-anchor-id="domain-recombination-and-protein-innovation">Domain Recombination and Protein Innovation</h3>
+<p>Exons frequently encode protein domains, which are modular units of protein structure and function. Exon shuffling facilitates the recombination of these domain-encoding units, allowing for the creation of novel proteins with new combinations of functional domains. This "mix-and-match" process accelerates protein evolution by generating proteins with potentially new or modified functions. Evolution leverages pre-existing, functional domains, rather than requiring de novo invention of protein modules.</p>
+</section>
+<section id="evolutionary-advantage-of-domain-shuffling" class="level3">
+<h3 class="anchored" data-anchor-id="evolutionary-advantage-of-domain-shuffling">Evolutionary Advantage of Domain Shuffling</h3>
+<p>Exon shuffling provides an efficient route to protein innovation. By recombining and reusing existing functional domains that have already been validated by natural selection, exon shuffling increases the likelihood that the resulting novel proteins will be functional and potentially confer an evolutionary advantage. This mechanism has been instrumental in the evolution of complex protein architectures and the diversification of protein families.</p>
+</section>
+</section>
+<section id="extreme-example-of-alternative-splicing-dscam-gene" class="level2">
+<h2 class="anchored" data-anchor-id="extreme-example-of-alternative-splicing-dscam-gene">Extreme Example of Alternative Splicing: Dscam Gene</h2>
+<p>The <em>Dscam</em> (Down syndrome cell adhesion molecule) gene in <em>Drosophila melanogaster</em> exemplifies the extraordinary protein diversity achievable through alternative splicing.</p>
+<section id="massive-isoform-diversity" class="level3">
+<h3 class="anchored" data-anchor-id="massive-isoform-diversity">Massive Isoform Diversity</h3>
+<p>The <em>Dscam</em> gene is capable of producing over 38,000 distinct protein isoforms through extensive alternative splicing. This remarkable diversity arises from multiple clusters of exons that are spliced in a mutually exclusive manner. Specifically, exons 4, 6, 9, and 17 contain multiple alternative versions. Exon 4 has 12 alternatives, exon 6 has 48, exon 9 has 33, and exon 17 has 2. The combinatorial permutations of these alternative exons generate the vast repertoire of isoforms.</p>
+</section>
+<section id="functional-significance-in-neuronal-identity-and-immunity" class="level3">
+<h3 class="anchored" data-anchor-id="functional-significance-in-neuronal-identity-and-immunity">Functional Significance in Neuronal Identity and Immunity</h3>
+<p>The diverse <em>Dscam</em> isoforms play critical roles in neuronal development, particularly in axon guidance and neuronal self-recognition, and in innate immunity. In the nervous system, the isoforms mediate specific cell-cell interactions, contributing to the precise wiring of neuronal circuits. In the immune system, <em>Dscam</em> isoforms are involved in pathogen recognition. This extreme example underscores the power of alternative splicing to generate immense protein diversity from a single gene, enabling complex biological functions such as cell-cell communication and immune specificity. This gene’s function is linked to neuronal differentiation and syndromes affecting brain development, as well as playing a role in innate immunity and cell-cell interaction specificity.</p>
+</section>
+</section>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<p>This lecture has provided a comprehensive overview of RNA splicing, from its intricate molecular mechanisms to its profound biological and evolutionary significance. We have dissected the step-wise assembly of the spliceosome, emphasizing the critical roles of snRNPs and the energy provided by ATP hydrolysis in driving the two sequential transesterification reactions. We explored the regulation of splicing, focusing on alternative splicing as a major mechanism for generating protein diversity and functional complexity from a limited genome. Key regulatory elements, including SR proteins, hnRNP A1, and <em>cis</em>-acting splicing enhancers and silencers, were discussed in the context of tissue-specific splicing patterns. Furthermore, we highlighted the functional coupling of splicing to mRNA export and nonsense-mediated decay, underscoring the integrated nature of RNA processing pathways. The evolutionary advantages conferred by spliceosomal splicing, such as intron size flexibility, exon shuffling, and the expansion of regulatory potential, were examined. Finally, we addressed the implications of splicing defects in human diseases, emphasizing the clinical relevance of this fundamental biological process.</p>
+<p>Key takeaways from this lecture include:</p>
+<ul>
+<li><p><strong>Dynamic Spliceosome Assembly:</strong> The spliceosome is not a static entity but a dynamically assembled molecular machine with distinct stages and complex rearrangements.</p></li>
+<li><p><strong>Catalytic Mechanism of Splicing:</strong> Splicing proceeds through two sequential transesterification reactions, precisely executed by the spliceosome’s catalytic core.</p></li>
+<li><p><strong>Alternative Splicing and Proteome Expansion:</strong> Alternative splicing is a powerful mechanism for generating vast protein diversity, significantly expanding the functional capacity of the genome.</p></li>
+<li><p><strong>Splicing Regulation and Specificity:</strong> Splicing is tightly regulated by a network of <em>trans</em>-acting proteins and <em>cis</em>-acting RNA sequences, enabling precise control over gene expression and protein isoform production.</p></li>
+<li><p><strong>Evolutionary Impact of Splicing:</strong> Spliceosomal splicing has been a major driver of eukaryotic genome evolution, facilitating genomic complexity and proteomic diversification.</p></li>
+</ul>
+<p>Further avenues of investigation stemming from this lecture include:</p>
+<ul>
+<li><p>Elucidating the intricate signaling pathways that modulate the activity and specificity of splicing regulatory proteins in response to cellular cues.</p></li>
+<li><p>Determining the high-resolution structural dynamics of the spliceosome and the conformational transitions that underpin its catalytic cycle.</p></li>
+<li><p>Developing therapeutic strategies to target and correct splicing defects in human diseases, leveraging our growing understanding of splicing mechanisms and regulation.</p></li>
+</ul>
+
+
+<!-- -->
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Lecture Notes on RNA Splicing Mechanism and Regulation"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Your Name"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2025-02-05"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true  # Table of Contents</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">    toc-depth: 2</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">    theme: cosmo  # Or "journal" for Distill-like minimalism</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu"># Introduction</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>This lecture delves into the intricate process of RNA splicing, a</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>crucial step in gene expression in eukaryotic cells. We will explore the</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>molecular mechanisms of splicing, focusing on the spliceosome, a dynamic</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>molecular machine responsible for intron removal and exon joining.</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>Furthermore, we will discuss the regulation of splicing, including</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>alternative splicing, its biological significance in generating protein</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>diversity, and its implications in human diseases. Key concepts covered</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>include snRNPs, spliceosome assembly, transesterification reactions,</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>alternative splicing types, splicing regulatory proteins, and the</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>evolutionary advantages of splicing.</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="fu"># The Splicing Mechanism</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>The splicing mechanism is a precise process that removes non-coding</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>regions (introns) from precursor messenger RNA (pre-mRNA) and joins</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>coding regions (exons) to form mature messenger RNA (mRNA). This process</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>is catalyzed by the spliceosome, a large and dynamic ribonucleoprotein</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>complex.</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="fu">## Spliceosome Assembly</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>The spliceosome assembles in a step-wise manner on the pre-mRNA, guided</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>by small nuclear ribonucleoproteins (snRNPs) and associated protein</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>factors.</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="fu">### Early Complex Formation</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>The initial step involves the binding of U2AF proteins to the</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>polypyrimidine tract and the 3' splice site region. Subsequently, U2</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>snRNP is recruited to the branch site, and U1 snRNP binds to the 5'</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>splice site.</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**U2AF Proteins:** Recognize the polypyrimidine tract and 3' splice</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>    site, facilitating U2 snRNP binding.</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**U2 snRNP:** Recognizes and binds to the branch site adenosine</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>    within the intron, essential for the first transesterification</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>    reaction. Its positioning is facilitated by the prior binding of</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>    U2AF.</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**U1 snRNP:** Recognizes and binds to the 5' splice site through</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>    RNA-RNA base pairing with its snRNA component.</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="fu">### Spliceosomal Complexes and ATP Dependence</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>The assembly process proceeds through distinct complexes, with ATP</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>hydrolysis playing critical roles at specific transitions.</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Complex E (Early/Pre-spliceosome)</span></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>The initial commitment complex, formed by U1 snRNP binding to the 5'</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>splice site and U2AF association at the branch site region. This complex</span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>formation is ATP-independent.</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Complex A Formation</span></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>Transition from Complex E to Complex A is ATP-dependent. Complex A is</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>characterized by U2 snRNP binding to the branch site. This ATP</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>hydrolysis step commits the complex to the splicing pathway.</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="fu">## Catalytic Steps: Transesterification Reactions</span></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>Splicing involves two sequential transesterification reactions catalyzed</span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>by the spliceosome.</span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a><span class="fu">### snRNP Roles in Catalysis</span></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**U5 snRNP:** Positions itself across the two exons, bringing them</span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>    into proximity for the second transesterification reaction that</span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>    joins the exons.</span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**U6 snRNP:** The catalytically active snRNP. Its activity is</span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>    regulated by U4 snRNP.</span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**U4 snRNP:** Associates with U6 snRNP and masks its catalytic</span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>    activity, preventing premature reactions until proper spliceosome</span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>    assembly. U4 release is essential for activating U6.</span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="fu">### First Transesterification Reaction</span></span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>Initiated upon U4 snRNP release, allowing U6-U2 interaction and</span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>activation of catalytic activity.</span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Mechanism:** The 2'-hydroxyl of the branch site adenosine attacks</span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>    the 5' splice site phosphate. This cleaves the 5' exon and forms a</span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>    lariat intermediate, with a 2'-5' phosphodiester bond linking the</span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>    intron's 5' end to the branch site.</span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Regulation by U4:** U4 snRNP acts as a crucial regulator, ensuring</span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>    the first transesterification occurs only after proper spliceosome</span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a>    assembly, preventing non-specific reactions.</span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a><span class="fu">### Second Transesterification Reaction</span></span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a>Joins the 5' and 3' exons, releasing the intron lariat.</span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Mechanism:** The 3'-hydroxyl of the 5' exon attacks the 3' splice</span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>    site phosphate, ligating the exons with a phosphodiester bond and</span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>    releasing the intron lariat.</span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Role of U5:** U5 snRNP facilitates this step by aligning the 5'</span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>    and 3' exons.</span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>Following the second transesterification, the intron lariat is released</span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a>and degraded.</span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a><span class="fu">## ATP Hydrolysis and Spliceosome Dynamics</span></span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a>ATP hydrolysis drives essential conformational changes within the</span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a>spliceosome, ensuring fidelity and progression through the catalytic</span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a>cycle. Approximately three ATP molecules are hydrolyzed per intron</span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>removed.</span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Complex A to B Transition:** ATP hydrolysis is required for the</span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a>    transition from Complex A to Complex B (or a similar intermediate),</span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>    associated with the entry of U4/U6 snRNP and rearrangements for</span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a>    catalysis.</span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**U4 Release:** ATP hydrolysis powers the release of U4 snRNP,</span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>    activating U6 snRNP for catalysis.</span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Second Transesterification and Disassembly:** ATP hydrolysis is</span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>    also needed for the second transesterification, spliceosome</span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>    disassembly, and recycling of components.</span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>These ATP-dependent steps provide energy for dynamic conformational</span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a>changes, analogous to the high ATP/GTP requirements in protein</span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>synthesis, highlighting the energy investment in accurate RNA</span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>processing.</span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a><span class="fu"># Regulation of Splicing and Alternative Splicing</span></span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>Splicing is not merely a constitutive process; it is highly regulated,</span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a>allowing for the generation of multiple mRNA and protein isoforms from a</span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a>single gene through alternative splicing. This regulatory layer</span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>significantly expands the functional capacity of the genome.</span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a><span class="fu">## Alternative Splicing: Expanding Protein Diversity</span></span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>Alternative splicing is a pivotal mechanism enabling a single gene to</span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a>encode multiple proteins. By varying the selection of exons, or parts</span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>thereof, and introns, diverse mRNA isoforms arise from a single pre-mRNA</span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>transcript. This process dramatically increases proteomic diversity</span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a>without a proportional increase in gene number. Approximately 75% of</span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a>human genes are estimated to undergo alternative splicing, with a</span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a>significant fraction (around 20%) affecting untranslated regions (UTRs),</span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a>particularly the 3' UTR, influencing mRNA stability, localization, and</span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a>translation efficiency.</span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a><span class="fu">### Modes of Alternative Splicing</span></span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a>Alternative splicing manifests in several distinct modes:</span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Exon Skipping (Cassette Exon)</span></span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a>In this most common form, a particular exon may be either included or</span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a>excluded from the mature mRNA product. For example, exon 2 might be</span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a>skipped in certain isoforms.</span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Exon Extension (Alternative Splice Site Selection)</span></span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>This mode involves extending or shortening an exon by selecting</span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a>alternative 5' or 3' splice sites. This can lead to inclusion of</span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a>intronic sequences or exclusion of exonic sequences, effectively</span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a>altering exon boundaries.</span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Intron Retention</span></span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>Contrary to typical splicing, an intron is retained in the mature mRNA.</span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>This is less frequent in mammals but can introduce premature stop codons</span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a>or affect mRNA localization and function.</span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Mutually Exclusive Exons (Alternative Exon Fusion)</span></span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>In this scenario, one exon is selected from a set of two or more, while</span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a>the others are excluded in a mutually exclusive manner. For instance,</span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a>exon 1 might be spliced to exon 2, excluding exon 3, or alternatively,</span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a>exon 1 is spliced to exon 3, excluding exon 2, resulting in distinct</span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>protein isoforms.</span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>::: tcolorbox</span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>**Remark:** Alternative splicing is a major contributor to proteomic</span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a>diversity and gene regulation in eukaryotes. It allows for</span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a>tissue-specific and developmental stage-specific protein expression, and</span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a>its dysregulation is implicated in various diseases.</span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a><span class="fu">## Tissue Specificity of Splicing</span></span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>Alternative splicing often exhibits tissue specificity, meaning that</span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a>different isoforms of a protein are produced in different tissues or</span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>cell types. This specificity arises from the differential expression and</span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a>activity of splicing regulatory proteins that vary across tissues.</span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a><span class="fu">## Splicing Regulatory Proteins: Orchestrating Splicing Choices</span></span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a>Splicing regulatory proteins, including SR proteins and hnRNPs, play a</span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a>crucial role in determining splice site selection and alternative</span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a>splicing patterns.</span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a><span class="fu">### SR Proteins: Splicing Enhancers</span></span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>SR (serine/arginine-rich) proteins are a family of conserved splicing</span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a>factors that generally function as splicing activators or enhancers.</span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a>They promote spliceosome assembly at specific splice sites. SR proteins</span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>bind to **exonic splicing enhancer (ESE)** sequences, typically located</span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a>in exons. This binding facilitates the recruitment of spliceosomal</span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a>components to nearby splice sites, promoting the inclusion of the</span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>adjacent exon. SR proteins exhibit tissue-specific expression,</span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>contributing to tissue-specific splicing patterns.</span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a><span class="fu">### hnRNP A1: Splicing Repressor</span></span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a>Heterogeneous nuclear ribonucleoproteins (hnRNPs) are a diverse family</span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a>of RNA-binding proteins involved in various aspects of RNA processing.</span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a>Some hnRNPs, such as hnRNP A1, act as splicing repressors. hnRNP A1 can</span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>bind to **exonic splicing silencer (ESS)** sequences, often found in</span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a>exons. Binding of hnRNP A1 to ESSs can inhibit spliceosome assembly at a</span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a>nearby splice site, leading to exon skipping or intron retention by</span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a>preventing the recognition of splice sites. hnRNP A1 acts</span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>antagonistically to SR proteins.</span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a><span class="fu">## Cis-Regulatory Sequences: Enhancers and Silencers</span></span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>Splicing regulation is mediated by *cis*-acting regulatory sequences</span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a>located within the pre-mRNA transcript itself. These sequences are</span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a>broadly classified as splicing enhancers and silencers.</span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a><span class="fu">### Splicing Enhancers (ESE and ISE)</span></span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a>Splicing enhancers are sequences that promote splicing. They can be</span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a>located in exons (**exonic splicing enhancers - ESEs**) or introns</span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a>(**intronic splicing enhancers - ISEs**). SR proteins typically bind to</span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a>ESEs and ISEs, facilitating spliceosome assembly and enhancing the</span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a>splicing of nearby introns and exons.</span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a><span class="fu">### Splicing Silencers (ESS and ISS)</span></span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a>Splicing silencers are sequences that inhibit splicing. They can also be</span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a>located in exons (**exonic splicing silencers - ESSs**) or introns</span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a>(**intronic splicing silencers - ISSs**). hnRNPs, such as hnRNP A1, can</span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a>bind to ESSs and ISSs, preventing spliceosome assembly and repressing</span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a>splicing at adjacent splice sites.</span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a><span class="fu">## Nuclear Speckles: Subnuclear Compartments for Splicing</span></span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a>Nuclear speckles are subnuclear structures enriched in splicing factors,</span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a>including SR proteins and snRNPs. They are considered dynamic storage</span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a>and/or assembly sites for splicing machinery. Alternative splicing</span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a>events are thought to occur in proximity to or within nuclear speckles,</span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a>where a high concentration of splicing regulatory proteins facilitates</span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a>efficient and regulated splicing.</span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a>::: tcolorbox</span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a>**Remark:** Alternative splicing can sometimes introduce premature</span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a>termination codons (PTCs). Nonsense-mediated decay (NMD) is a</span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a>surveillance pathway that degrades mRNAs containing PTCs. This pathway</span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a>co-evolved with splicing to mitigate the potential cost of alternative</span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a>splicing by eliminating aberrant transcripts.</span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a><span class="fu"># Biological and Evolutionary Significance of Splicing</span></span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a>RNA splicing is not merely a processing step but a pivotal biological</span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a>process with significant evolutionary ramifications, impacting RNA</span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a>export, protein diversity, and genome evolution.</span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a><span class="fu">## Coupling of Splicing and RNA Export</span></span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a>Splicing is functionally linked to the export of mature mRNA from the</span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a>nucleus to the cytoplasm, ensuring that only correctly processed</span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a>transcripts are translated.</span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exon Junction Complexes (EJCs) and Nuclear Export</span></span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a>Following successful intron removal, exon junction complexes (EJCs) are</span>
+<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a>deposited approximately 20-24 nucleotides upstream of exon-exon</span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a>junctions. These EJCs serve dual roles:</span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**mRNA Export Facilitation:** EJCs are recognized by nuclear export</span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a>    factors like REF and TAP. This interaction facilitates the docking</span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a>    of the mRNA to the nuclear pore complex and its subsequent</span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a>    translocation to the cytoplasm.</span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Nonsense-Mediated Decay (NMD) Trigger:** EJCs also act as markers</span>
+<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a>    for the nonsense-mediated decay (NMD) pathway. If a premature</span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a>    termination codon (PTC) is present upstream of an EJC, the mRNA is</span>
+<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a>    targeted for degradation, preventing the translation of truncated</span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a>    and potentially non-functional proteins.</span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a><span class="fu">## Phylogenetic Advantages of Spliceosomal Splicing</span></span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a>The evolution of spliceosomal splicing conferred significant</span>
+<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a>evolutionary advantages, particularly in increasing genomic complexity</span>
+<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a>and proteomic diversity.</span>
+<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a><span class="fu">### Intron Size Flexibility and Regulatory Expansion</span></span>
+<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a>Spliceosomes liberated introns from strict size constraints, allowing</span>
+<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a>for substantial intron expansion in eukaryotic genomes. Larger introns</span>
+<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a>became reservoirs for regulatory sequences, such as enhancers and</span>
+<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a>silencers, which modulate gene transcription and splicing patterns. This</span>
+<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a>expansion of regulatory space within introns facilitated more complex</span>
+<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a>and nuanced gene regulation.</span>
+<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a><span class="fu">### Alternative Splicing and Proteomic Diversification</span></span>
+<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a>Alternative splicing emerged as a powerful mechanism for generating</span>
+<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a>multiple protein isoforms from a single gene. This dramatically</span>
+<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a>increased the coding potential of the genome without a proportional</span>
+<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>increase in gene number. By selectively including or excluding exons, or</span>
+<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a>parts thereof, alternative splicing enables the production of proteins</span>
+<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a>with diverse functions, tissue-specific expression, and developmental</span>
+<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a>stage-specific regulation.</span>
+<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exon Shuffling and Gene Evolution</span></span>
+<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a>The presence of introns facilitated exon shuffling, a crucial process in</span>
+<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a>protein evolution. Introns flank exons, which often encode discrete</span>
+<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a>protein domains. Non-homologous recombination events within intronic</span>
+<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a>regions can lead to the shuffling of exons between genes. This process</span>
+<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a>allows for the creation of novel genes with new combinations of</span>
+<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a>pre-existing protein domains, accelerating the evolution of protein</span>
+<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a>function and structural diversity. The larger the intronic regions, the</span>
+<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a>higher the probability of such recombination events.</span>
+<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a><span class="fu">## Impact of Alternative Splicing on Protein Function</span></span>
+<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a>Alternative splicing profoundly influences protein function, affecting</span>
+<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a>both the quantity and quality of protein products, as well as their</span>
+<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a>localization and activity.</span>
+<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a><span class="fu">### Regulation of Protein Quantity and Quality via NMD</span></span>
+<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a>Alternative splicing can modulate mRNA stability and translation</span>
+<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a>efficiency. Furthermore, by introducing premature termination codons</span>
+<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a>(PTCs) through frameshifts or inclusion of stop codons, alternative</span>
+<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a>splicing isoforms can be targeted for degradation by nonsense-mediated</span>
+<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a>decay (NMD). This mechanism serves as a quality control system, reducing</span>
+<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a>the expression of aberrant transcripts, and also as a regulatory</span>
+<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a>mechanism to control protein levels by selectively degrading specific</span>
+<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a>isoforms.</span>
+<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a><span class="fu">### Tissue-Specific Isoforms and Protein Localization</span></span>
+<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a>Alternative splicing is a key driver of tissue-specific protein isoform</span>
+<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a>expression. Different tissues can express distinct sets of splicing</span>
+<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a>regulatory proteins, leading to tissue-specific splicing patterns and</span>
+<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a>the production of protein isoforms tailored to the functional</span>
+<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a>requirements of each tissue. For example, the</span>
+<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a>Calcium/calmodulin-dependent protein kinase type II delta</span>
+<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a>(*CaMKII$\delta$*) gene undergoes alternative splicing to produce</span>
+<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a>neuronal isoforms localized in the cytoplasm and cardiac isoforms</span>
+<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a>localized in the nucleus. This difference is due to the inclusion or</span>
+<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a>skipping of an exon encoding a nuclear localization signal (NLS) in</span>
+<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a>cardiac versus neuronal tissues, respectively.</span>
+<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a><span class="fu">## Splicing Defects in Human Diseases</span></span>
+<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a>Aberrant splicing is implicated in a wide range of human diseases,</span>
+<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a>highlighting the critical importance of precise splicing regulation.</span>
+<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a><span class="fu">### Pathogenic Splicing Mutations and Mechanisms</span></span>
+<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a>Mutations affecting splice sites or splicing regulatory sequences can</span>
+<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a>disrupt normal splicing patterns, leading to various splicing defects</span>
+<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a>and disease phenotypes. These defects include:</span>
+<span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Exon Skipping:** Exclusion of an exon that is normally included.</span>
+<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Cryptic Splice Site Activation:** Activation of splice sites</span>
+<span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a>    within exons or introns that are not normally used.</span>
+<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Intron Retention:** Failure to remove an intron.</span>
+<span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Pseudoexon Inclusion:** Inclusion of intronic sequences as part of</span>
+<span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a>    an exon.</span>
+<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a>Approximately 15% of all human pathogenic mutations are estimated to</span>
+<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a>affect splicing, underscoring the significant contribution of splicing</span>
+<span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a>defects to human disease. Over 200 mutations in splice sites are</span>
+<span id="cb1-396"><a href="#cb1-396" aria-hidden="true" tabindex="-1"></a>currently associated with human pathologies.</span>
+<span id="cb1-397"><a href="#cb1-397" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-398"><a href="#cb1-398" aria-hidden="true" tabindex="-1"></a><span class="fu">### Splicing-Related Pathologies</span></span>
+<span id="cb1-399"><a href="#cb1-399" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-400"><a href="#cb1-400" aria-hidden="true" tabindex="-1"></a>Splicing defects are implicated in a diverse array of diseases,</span>
+<span id="cb1-401"><a href="#cb1-401" aria-hidden="true" tabindex="-1"></a>including various cancers, neurodegenerative disorders, and genetic</span>
+<span id="cb1-402"><a href="#cb1-402" aria-hidden="true" tabindex="-1"></a>diseases. The disruption of normal splicing can lead to the production</span>
+<span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a>of non-functional or dysfunctional proteins, contributing to disease</span>
+<span id="cb1-404"><a href="#cb1-404" aria-hidden="true" tabindex="-1"></a>pathogenesis.</span>
+<span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-406"><a href="#cb1-406" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exon Shuffling: A Driver of Protein Evolution</span></span>
+<span id="cb1-407"><a href="#cb1-407" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-408"><a href="#cb1-408" aria-hidden="true" tabindex="-1"></a>Exon shuffling is a fundamental evolutionary mechanism that has shaped</span>
+<span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a>the protein landscape.</span>
+<span id="cb1-410"><a href="#cb1-410" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a><span class="fu">### Domain Recombination and Protein Innovation</span></span>
+<span id="cb1-412"><a href="#cb1-412" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-413"><a href="#cb1-413" aria-hidden="true" tabindex="-1"></a>Exons frequently encode protein domains, which are modular units of</span>
+<span id="cb1-414"><a href="#cb1-414" aria-hidden="true" tabindex="-1"></a>protein structure and function. Exon shuffling facilitates the</span>
+<span id="cb1-415"><a href="#cb1-415" aria-hidden="true" tabindex="-1"></a>recombination of these domain-encoding units, allowing for the creation</span>
+<span id="cb1-416"><a href="#cb1-416" aria-hidden="true" tabindex="-1"></a>of novel proteins with new combinations of functional domains. This</span>
+<span id="cb1-417"><a href="#cb1-417" aria-hidden="true" tabindex="-1"></a>\"mix-and-match\" process accelerates protein evolution by generating</span>
+<span id="cb1-418"><a href="#cb1-418" aria-hidden="true" tabindex="-1"></a>proteins with potentially new or modified functions. Evolution leverages</span>
+<span id="cb1-419"><a href="#cb1-419" aria-hidden="true" tabindex="-1"></a>pre-existing, functional domains, rather than requiring de novo</span>
+<span id="cb1-420"><a href="#cb1-420" aria-hidden="true" tabindex="-1"></a>invention of protein modules.</span>
+<span id="cb1-421"><a href="#cb1-421" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-422"><a href="#cb1-422" aria-hidden="true" tabindex="-1"></a><span class="fu">### Evolutionary Advantage of Domain Shuffling</span></span>
+<span id="cb1-423"><a href="#cb1-423" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-424"><a href="#cb1-424" aria-hidden="true" tabindex="-1"></a>Exon shuffling provides an efficient route to protein innovation. By</span>
+<span id="cb1-425"><a href="#cb1-425" aria-hidden="true" tabindex="-1"></a>recombining and reusing existing functional domains that have already</span>
+<span id="cb1-426"><a href="#cb1-426" aria-hidden="true" tabindex="-1"></a>been validated by natural selection, exon shuffling increases the</span>
+<span id="cb1-427"><a href="#cb1-427" aria-hidden="true" tabindex="-1"></a>likelihood that the resulting novel proteins will be functional and</span>
+<span id="cb1-428"><a href="#cb1-428" aria-hidden="true" tabindex="-1"></a>potentially confer an evolutionary advantage. This mechanism has been</span>
+<span id="cb1-429"><a href="#cb1-429" aria-hidden="true" tabindex="-1"></a>instrumental in the evolution of complex protein architectures and the</span>
+<span id="cb1-430"><a href="#cb1-430" aria-hidden="true" tabindex="-1"></a>diversification of protein families.</span>
+<span id="cb1-431"><a href="#cb1-431" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-432"><a href="#cb1-432" aria-hidden="true" tabindex="-1"></a><span class="fu">## Extreme Example of Alternative Splicing: Dscam Gene</span></span>
+<span id="cb1-433"><a href="#cb1-433" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-434"><a href="#cb1-434" aria-hidden="true" tabindex="-1"></a>The *Dscam* (Down syndrome cell adhesion molecule) gene in *Drosophila</span>
+<span id="cb1-435"><a href="#cb1-435" aria-hidden="true" tabindex="-1"></a>melanogaster* exemplifies the extraordinary protein diversity achievable</span>
+<span id="cb1-436"><a href="#cb1-436" aria-hidden="true" tabindex="-1"></a>through alternative splicing.</span>
+<span id="cb1-437"><a href="#cb1-437" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-438"><a href="#cb1-438" aria-hidden="true" tabindex="-1"></a><span class="fu">### Massive Isoform Diversity</span></span>
+<span id="cb1-439"><a href="#cb1-439" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-440"><a href="#cb1-440" aria-hidden="true" tabindex="-1"></a>The *Dscam* gene is capable of producing over 38,000 distinct protein</span>
+<span id="cb1-441"><a href="#cb1-441" aria-hidden="true" tabindex="-1"></a>isoforms through extensive alternative splicing. This remarkable</span>
+<span id="cb1-442"><a href="#cb1-442" aria-hidden="true" tabindex="-1"></a>diversity arises from multiple clusters of exons that are spliced in a</span>
+<span id="cb1-443"><a href="#cb1-443" aria-hidden="true" tabindex="-1"></a>mutually exclusive manner. Specifically, exons 4, 6, 9, and 17 contain</span>
+<span id="cb1-444"><a href="#cb1-444" aria-hidden="true" tabindex="-1"></a>multiple alternative versions. Exon 4 has 12 alternatives, exon 6 has</span>
+<span id="cb1-445"><a href="#cb1-445" aria-hidden="true" tabindex="-1"></a>48, exon 9 has 33, and exon 17 has 2. The combinatorial permutations of</span>
+<span id="cb1-446"><a href="#cb1-446" aria-hidden="true" tabindex="-1"></a>these alternative exons generate the vast repertoire of isoforms.</span>
+<span id="cb1-447"><a href="#cb1-447" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-448"><a href="#cb1-448" aria-hidden="true" tabindex="-1"></a><span class="fu">### Functional Significance in Neuronal Identity and Immunity</span></span>
+<span id="cb1-449"><a href="#cb1-449" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-450"><a href="#cb1-450" aria-hidden="true" tabindex="-1"></a>The diverse *Dscam* isoforms play critical roles in neuronal</span>
+<span id="cb1-451"><a href="#cb1-451" aria-hidden="true" tabindex="-1"></a>development, particularly in axon guidance and neuronal</span>
+<span id="cb1-452"><a href="#cb1-452" aria-hidden="true" tabindex="-1"></a>self-recognition, and in innate immunity. In the nervous system, the</span>
+<span id="cb1-453"><a href="#cb1-453" aria-hidden="true" tabindex="-1"></a>isoforms mediate specific cell-cell interactions, contributing to the</span>
+<span id="cb1-454"><a href="#cb1-454" aria-hidden="true" tabindex="-1"></a>precise wiring of neuronal circuits. In the immune system, *Dscam*</span>
+<span id="cb1-455"><a href="#cb1-455" aria-hidden="true" tabindex="-1"></a>isoforms are involved in pathogen recognition. This extreme example</span>
+<span id="cb1-456"><a href="#cb1-456" aria-hidden="true" tabindex="-1"></a>underscores the power of alternative splicing to generate immense</span>
+<span id="cb1-457"><a href="#cb1-457" aria-hidden="true" tabindex="-1"></a>protein diversity from a single gene, enabling complex biological</span>
+<span id="cb1-458"><a href="#cb1-458" aria-hidden="true" tabindex="-1"></a>functions such as cell-cell communication and immune specificity. This</span>
+<span id="cb1-459"><a href="#cb1-459" aria-hidden="true" tabindex="-1"></a>gene's function is linked to neuronal differentiation and syndromes</span>
+<span id="cb1-460"><a href="#cb1-460" aria-hidden="true" tabindex="-1"></a>affecting brain development, as well as playing a role in innate</span>
+<span id="cb1-461"><a href="#cb1-461" aria-hidden="true" tabindex="-1"></a>immunity and cell-cell interaction specificity.</span>
+<span id="cb1-462"><a href="#cb1-462" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-463"><a href="#cb1-463" aria-hidden="true" tabindex="-1"></a><span class="fu"># Conclusion</span></span>
+<span id="cb1-464"><a href="#cb1-464" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-465"><a href="#cb1-465" aria-hidden="true" tabindex="-1"></a>This lecture has provided a comprehensive overview of RNA splicing, from</span>
+<span id="cb1-466"><a href="#cb1-466" aria-hidden="true" tabindex="-1"></a>its intricate molecular mechanisms to its profound biological and</span>
+<span id="cb1-467"><a href="#cb1-467" aria-hidden="true" tabindex="-1"></a>evolutionary significance. We have dissected the step-wise assembly of</span>
+<span id="cb1-468"><a href="#cb1-468" aria-hidden="true" tabindex="-1"></a>the spliceosome, emphasizing the critical roles of snRNPs and the energy</span>
+<span id="cb1-469"><a href="#cb1-469" aria-hidden="true" tabindex="-1"></a>provided by ATP hydrolysis in driving the two sequential</span>
+<span id="cb1-470"><a href="#cb1-470" aria-hidden="true" tabindex="-1"></a>transesterification reactions. We explored the regulation of splicing,</span>
+<span id="cb1-471"><a href="#cb1-471" aria-hidden="true" tabindex="-1"></a>focusing on alternative splicing as a major mechanism for generating</span>
+<span id="cb1-472"><a href="#cb1-472" aria-hidden="true" tabindex="-1"></a>protein diversity and functional complexity from a limited genome. Key</span>
+<span id="cb1-473"><a href="#cb1-473" aria-hidden="true" tabindex="-1"></a>regulatory elements, including SR proteins, hnRNP A1, and *cis*-acting</span>
+<span id="cb1-474"><a href="#cb1-474" aria-hidden="true" tabindex="-1"></a>splicing enhancers and silencers, were discussed in the context of</span>
+<span id="cb1-475"><a href="#cb1-475" aria-hidden="true" tabindex="-1"></a>tissue-specific splicing patterns. Furthermore, we highlighted the</span>
+<span id="cb1-476"><a href="#cb1-476" aria-hidden="true" tabindex="-1"></a>functional coupling of splicing to mRNA export and nonsense-mediated</span>
+<span id="cb1-477"><a href="#cb1-477" aria-hidden="true" tabindex="-1"></a>decay, underscoring the integrated nature of RNA processing pathways.</span>
+<span id="cb1-478"><a href="#cb1-478" aria-hidden="true" tabindex="-1"></a>The evolutionary advantages conferred by spliceosomal splicing, such as</span>
+<span id="cb1-479"><a href="#cb1-479" aria-hidden="true" tabindex="-1"></a>intron size flexibility, exon shuffling, and the expansion of regulatory</span>
+<span id="cb1-480"><a href="#cb1-480" aria-hidden="true" tabindex="-1"></a>potential, were examined. Finally, we addressed the implications of</span>
+<span id="cb1-481"><a href="#cb1-481" aria-hidden="true" tabindex="-1"></a>splicing defects in human diseases, emphasizing the clinical relevance</span>
+<span id="cb1-482"><a href="#cb1-482" aria-hidden="true" tabindex="-1"></a>of this fundamental biological process.</span>
+<span id="cb1-483"><a href="#cb1-483" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-484"><a href="#cb1-484" aria-hidden="true" tabindex="-1"></a>Key takeaways from this lecture include:</span>
+<span id="cb1-485"><a href="#cb1-485" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-486"><a href="#cb1-486" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Dynamic Spliceosome Assembly:** The spliceosome is not a static</span>
+<span id="cb1-487"><a href="#cb1-487" aria-hidden="true" tabindex="-1"></a>    entity but a dynamically assembled molecular machine with distinct</span>
+<span id="cb1-488"><a href="#cb1-488" aria-hidden="true" tabindex="-1"></a>    stages and complex rearrangements.</span>
+<span id="cb1-489"><a href="#cb1-489" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-490"><a href="#cb1-490" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Catalytic Mechanism of Splicing:** Splicing proceeds through two</span>
+<span id="cb1-491"><a href="#cb1-491" aria-hidden="true" tabindex="-1"></a>    sequential transesterification reactions, precisely executed by the</span>
+<span id="cb1-492"><a href="#cb1-492" aria-hidden="true" tabindex="-1"></a>    spliceosome's catalytic core.</span>
+<span id="cb1-493"><a href="#cb1-493" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-494"><a href="#cb1-494" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Alternative Splicing and Proteome Expansion:** Alternative</span>
+<span id="cb1-495"><a href="#cb1-495" aria-hidden="true" tabindex="-1"></a>    splicing is a powerful mechanism for generating vast protein</span>
+<span id="cb1-496"><a href="#cb1-496" aria-hidden="true" tabindex="-1"></a>    diversity, significantly expanding the functional capacity of the</span>
+<span id="cb1-497"><a href="#cb1-497" aria-hidden="true" tabindex="-1"></a>    genome.</span>
+<span id="cb1-498"><a href="#cb1-498" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-499"><a href="#cb1-499" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Splicing Regulation and Specificity:** Splicing is tightly</span>
+<span id="cb1-500"><a href="#cb1-500" aria-hidden="true" tabindex="-1"></a>    regulated by a network of *trans*-acting proteins and *cis*-acting</span>
+<span id="cb1-501"><a href="#cb1-501" aria-hidden="true" tabindex="-1"></a>    RNA sequences, enabling precise control over gene expression and</span>
+<span id="cb1-502"><a href="#cb1-502" aria-hidden="true" tabindex="-1"></a>    protein isoform production.</span>
+<span id="cb1-503"><a href="#cb1-503" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-504"><a href="#cb1-504" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Evolutionary Impact of Splicing:** Spliceosomal splicing has been</span>
+<span id="cb1-505"><a href="#cb1-505" aria-hidden="true" tabindex="-1"></a>    a major driver of eukaryotic genome evolution, facilitating genomic</span>
+<span id="cb1-506"><a href="#cb1-506" aria-hidden="true" tabindex="-1"></a>    complexity and proteomic diversification.</span>
+<span id="cb1-507"><a href="#cb1-507" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-508"><a href="#cb1-508" aria-hidden="true" tabindex="-1"></a>Further avenues of investigation stemming from this lecture include:</span>
+<span id="cb1-509"><a href="#cb1-509" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-510"><a href="#cb1-510" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Elucidating the intricate signaling pathways that modulate the</span>
+<span id="cb1-511"><a href="#cb1-511" aria-hidden="true" tabindex="-1"></a>    activity and specificity of splicing regulatory proteins in response</span>
+<span id="cb1-512"><a href="#cb1-512" aria-hidden="true" tabindex="-1"></a>    to cellular cues.</span>
+<span id="cb1-513"><a href="#cb1-513" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-514"><a href="#cb1-514" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Determining the high-resolution structural dynamics of the</span>
+<span id="cb1-515"><a href="#cb1-515" aria-hidden="true" tabindex="-1"></a>    spliceosome and the conformational transitions that underpin its</span>
+<span id="cb1-516"><a href="#cb1-516" aria-hidden="true" tabindex="-1"></a>    catalytic cycle.</span>
+<span id="cb1-517"><a href="#cb1-517" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-518"><a href="#cb1-518" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Developing therapeutic strategies to target and correct splicing</span>
+<span id="cb1-519"><a href="#cb1-519" aria-hidden="true" tabindex="-1"></a>    defects in human diseases, leveraging our growing understanding of</span>
+<span id="cb1-520"><a href="#cb1-520" aria-hidden="true" tabindex="-1"></a>    splicing mechanisms and regulation.</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
